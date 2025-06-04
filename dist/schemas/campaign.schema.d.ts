@@ -1,4 +1,4 @@
-import { Document, Types, Schema as MongooseSchema } from 'mongoose';
+import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 import { VoiceType, VoiceSource, CallingModel, CampaignType, TelephonicProviders, CampaignStatus, ContactSourceType, OngoingStatusSubType, RescheduleType } from '../enums/user-enums';
 export type CampaignDocument = Campaign & Document;
 export declare class Campaign {
@@ -46,13 +46,5 @@ export declare class Campaign {
     clientCutoffStart: string;
     clientCutoffEnd: string;
 }
-export declare const CampaignSchema: MongooseSchema<Campaign, import("mongoose").Model<Campaign, any, any, any, Document<unknown, any, Campaign, any> & Campaign & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, Campaign, Document<unknown, {}, import("mongoose").FlatRecord<Campaign>, {}> & import("mongoose").FlatRecord<Campaign> & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}>;
+export declare const CampaignSchema: MongooseSchema<CampaignDocument, Model<CampaignDocument>>;
 //# sourceMappingURL=campaign.schema.d.ts.map

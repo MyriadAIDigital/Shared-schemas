@@ -1,4 +1,4 @@
-import { Document, Types, Schema as MongooseSchema } from 'mongoose';
+import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 import { CallType, CampaignType, CallQueueStatus } from '../enums/user-enums';
 export declare class CallQueueData {
     tenantId: string;
@@ -20,13 +20,5 @@ export declare class CallQueueData {
     updatedAt: Date;
 }
 export type CallQueueDataDocument = CallQueueData & Document;
-export declare const CallQueueDataSchema: MongooseSchema<CallQueueData, import("mongoose").Model<CallQueueData, any, any, any, Document<unknown, any, CallQueueData, any> & CallQueueData & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, CallQueueData, Document<unknown, {}, import("mongoose").FlatRecord<CallQueueData>, {}> & import("mongoose").FlatRecord<CallQueueData> & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}>;
+export declare const CallQueueDataSchema: MongooseSchema<CallQueueDataDocument, Model<CallQueueDataDocument>>;
 //# sourceMappingURL=call-queue-data.schema.d.ts.map

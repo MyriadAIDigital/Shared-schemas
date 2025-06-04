@@ -1,4 +1,4 @@
-import { Document } from 'mongoose';
+import { Document, Model, Schema as MongooseSchema } from 'mongoose';
 declare class PromptSetting {
     promptId: number;
     settings: Record<string, any>;
@@ -42,14 +42,6 @@ export declare class ClientSetting {
     };
     createdBy?: string;
 }
-export declare const ClientSettingSchema: import("mongoose").Schema<ClientSetting, import("mongoose").Model<ClientSetting, any, any, any, Document<unknown, any, ClientSetting, any> & ClientSetting & {
-    _id: import("mongoose").Types.ObjectId;
-} & {
-    __v: number;
-}, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, ClientSetting, Document<unknown, {}, import("mongoose").FlatRecord<ClientSetting>, {}> & import("mongoose").FlatRecord<ClientSetting> & {
-    _id: import("mongoose").Types.ObjectId;
-} & {
-    __v: number;
-}>;
+export declare const ClientSettingSchema: MongooseSchema<ClientSettingDocument, Model<ClientSettingDocument>>;
 export {};
 //# sourceMappingURL=client-setting.schema.d.ts.map
