@@ -1,7 +1,7 @@
 // src/schemas/call-history.schema.ts
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, Types } from 'mongoose';
+import { Document, Model, Schema as MongooseSchema, Types } from 'mongoose';
 import { CallType, TelephonicProviders, VoiceSource, SttProvider } from '../enums/user-enums';
 
 
@@ -255,5 +255,8 @@ export class CallHistory {
     additionalMetadata!: Record<string, any>;
 }
 
-export const CallHistorySchema = SchemaFactory.createForClass(CallHistory);
+export const CallHistorySchema = SchemaFactory.createForClass(CallHistory) as unknown as MongooseSchema<
+    CallHistoryDocument,
+    Model<CallHistoryDocument>
+>;
 CallHistorySchema.index({ contactListId: 1, contactId: 1 });
