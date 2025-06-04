@@ -26,11 +26,11 @@ export class User {
     @Prop({ required: true })
     tenantID!: string;            // <-- ‘!’ added
 
-    @Prop({ required: true, enum: CallingModel, default: CallingModel.DEFAULT })
+    @Prop({ type: String, required: true, enum: CallingModel, default: CallingModel.DEFAULT })
     defaultModel!: CallingModel;  // <-- ‘!’ added
 
-    @Prop({ default: null })
-    refreshToken!: string | null; // <-- ‘!’ added
+    @Prop({ type: String, default: null })
+    refreshToken!: string | null;
 
     @Prop({ type: [String], default: [] })
     additionalEmails!: string[];  // <-- ‘!’ added
