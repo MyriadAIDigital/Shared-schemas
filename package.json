@@ -1,0 +1,30 @@
+{
+  "name": "@myriadai/shared-schemas",
+  "version": "1.0.0",
+  "description": "Shared Mongoose schemas and DTOs for MyriadAI projects",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Sateesh Yadav  <sateesh.bohra@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^7.0.0",
+    "class-validator": "^0.14.0",
+    "class-transformer": "^0.5.1"
+  },
+  "peerDependencies": {
+    "@nestjs/mongoose": "^9.0.0",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4",
+    "@nestjs/mongoose": "^9.1.0",
+    "@types/mongoose": "^5.11.97"
+  }
+}
