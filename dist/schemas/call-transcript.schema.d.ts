@@ -1,4 +1,4 @@
-import { Document, Schema as MongooseSchema } from 'mongoose';
+import { Document, Model, Schema as MongooseSchema } from 'mongoose';
 export type CallTranscriptDocument = CallTranscript & Document;
 export declare class CallTranscript {
     phoneNumber: string;
@@ -19,13 +19,5 @@ export declare class CallTranscript {
         };
     }>;
 }
-export declare const CallTranscriptSchema: MongooseSchema<CallTranscript, import("mongoose").Model<CallTranscript, any, any, any, Document<unknown, any, CallTranscript, any> & CallTranscript & {
-    _id: import("mongoose").Types.ObjectId;
-} & {
-    __v: number;
-}, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, CallTranscript, Document<unknown, {}, import("mongoose").FlatRecord<CallTranscript>, {}> & import("mongoose").FlatRecord<CallTranscript> & {
-    _id: import("mongoose").Types.ObjectId;
-} & {
-    __v: number;
-}>;
+export declare const CallTranscriptSchema: MongooseSchema<CallTranscriptDocument, Model<CallTranscriptDocument>>;
 //# sourceMappingURL=call-transcript.schema.d.ts.map
