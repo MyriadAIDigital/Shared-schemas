@@ -1,7 +1,7 @@
 // src/schemas/workflow.schema.ts
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, Schema as MongooseSchema } from 'mongoose';
+import { Document, Model, Schema as MongooseSchema } from 'mongoose';
 import { StepTypeEnum, WorkflowStepStatus, CampaignType, WorkflowTypeEnum } from '../enums/user-enums';
 
 
@@ -73,5 +73,8 @@ export class Workflow {
     webhookUrl?: string;
 }
 
-export const WorkflowSchema = SchemaFactory.createForClass(Workflow);
+export const WorkflowSchema = SchemaFactory.createForClass(Workflow) as unknown as MongooseSchema<
+    WorkflowDocument,
+    Model<WorkflowDocument>
+>;
 WorkflowSchema.index({ name: 1 }, { unique: true });

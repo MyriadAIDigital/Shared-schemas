@@ -1,7 +1,7 @@
 // src/schemas/user.schema.ts
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import { Document, Model, Schema as MongooseSchema, } from 'mongoose';
 import { CompanyName, Role, CallingModel } from '../enums/user-enums';
 
 export type UserDocument = User & Document;
@@ -45,4 +45,7 @@ export class User {
     clientCutoffEnd!: string;      // <-- ‘!’ added
 }
 
-export const UserSchema = SchemaFactory.createForClass(User);
+export const UserSchema = SchemaFactory.createForClass(User) as unknown as MongooseSchema<
+    UserDocument,
+    Model<UserDocument>
+>;

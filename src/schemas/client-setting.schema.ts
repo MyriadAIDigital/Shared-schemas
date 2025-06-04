@@ -1,7 +1,7 @@
 // src/schemas/client‐setting.schema.ts
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import { Document, Model, Schema as MongooseSchema } from 'mongoose';
 
 @Schema({ _id: false })
 class PromptSetting {
@@ -134,4 +134,7 @@ export class ClientSetting {
 }
 
 // **Do NOT cast to MongooseSchema<…>. Let Nest infer it.**
-export const ClientSettingSchema = SchemaFactory.createForClass(ClientSetting);
+export const ClientSettingSchema = SchemaFactory.createForClass(ClientSetting) as unknown as MongooseSchema<
+    ClientSettingDocument,
+    Model<ClientSettingDocument>
+>;

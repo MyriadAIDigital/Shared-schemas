@@ -1,7 +1,7 @@
 // src/schemas/campaign.schema.ts
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, Types, Schema as MongooseSchema } from 'mongoose';
+import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 import { VoiceType, VoiceSource, CallingModel, CampaignType, TelephonicProviders, CampaignStatus, ContactSourceType, OngoingStatusSubType, RescheduleType } from '../enums/user-enums';
 
 
@@ -139,4 +139,7 @@ export class Campaign {
     clientCutoffEnd!: string;
 }
 
-export const CampaignSchema = SchemaFactory.createForClass(Campaign);
+export const CampaignSchema = SchemaFactory.createForClass(Campaign) as unknown as MongooseSchema<
+    CampaignDocument,
+    Model<CampaignDocument>
+>;

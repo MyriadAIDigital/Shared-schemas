@@ -1,7 +1,7 @@
 // src/schemas/contact-list.schema.ts
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, Types, Schema as MongooseSchema } from 'mongoose';
+import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 import { listType, CountryCode } from '../enums/user-enums';
 
 
@@ -40,4 +40,7 @@ export class ContactList {
     updatedAt!: Date;
 }
 
-export const ContactListSchema = SchemaFactory.createForClass(ContactList);
+export const ContactListSchema = SchemaFactory.createForClass(ContactList) as unknown as MongooseSchema<
+    ContactListDocument,
+    Model<ContactListDocument>
+>;

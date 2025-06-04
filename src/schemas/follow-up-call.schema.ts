@@ -1,7 +1,7 @@
 // src/schemas/follow-up-call.schema.ts
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, Types, Schema as MongooseSchema } from 'mongoose';
+import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 import { IsEnum } from 'class-validator';
 import { CallType, FollowUpStatus } from '../enums/user-enums';
 
@@ -48,7 +48,10 @@ export class FollowUpCall {
     notes!: string | null;
 }
 
-export const FollowUpCallSchema = SchemaFactory.createForClass(FollowUpCall);
+export const FollowUpCallSchema = SchemaFactory.createForClass(FollowUpCall) as unknown as MongooseSchema<
+    FollowUpCallDocument,
+    Model<FollowUpCallDocument>
+>;
 
 // Indexes for efficient querying
 FollowUpCallSchema.index({ followUpDateTimeUtc: 1, campaignId: 1 });

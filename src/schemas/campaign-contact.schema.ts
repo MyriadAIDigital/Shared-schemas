@@ -2,7 +2,7 @@
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import moment from 'moment';
-import { Document, Types, Schema as MongooseSchema } from 'mongoose';
+import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 import { CallStatus } from '../enums/user-enums';
 
 
@@ -59,4 +59,7 @@ export class CampaignContact {
     updatedAt!: Date;
 }
 
-export const CampaignContactSchema = SchemaFactory.createForClass(CampaignContact);
+export const CampaignContactSchema = SchemaFactory.createForClass(CampaignContact) as unknown as MongooseSchema<
+    CampaignContactDocument,
+    Model<CampaignContactDocument>
+>;

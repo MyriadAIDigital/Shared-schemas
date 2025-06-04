@@ -1,7 +1,7 @@
 // src/schemas/daily-call-statistics.schema.ts
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, Types, Schema as MongooseSchema } from 'mongoose';
+import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 
 export type DailyCallStatisticsDocument = DailyCallStatistics & Document;
 
@@ -77,4 +77,7 @@ export class DailyCallStatistics {
     createdAt!: Date;
 }
 
-export const DailyCallStatisticsSchema = SchemaFactory.createForClass(DailyCallStatistics);
+export const DailyCallStatisticsSchema = SchemaFactory.createForClass(DailyCallStatistics) as unknown as MongooseSchema<
+    DailyCallStatisticsDocument,
+    Model<DailyCallStatisticsDocument>
+>;
