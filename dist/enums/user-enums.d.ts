@@ -3,7 +3,7 @@ export declare enum CompanyName {
     LETS_VENTURE = "LETS_VENTURE",
     MYRIADAI = "MYRIADAI",
     CLEARTAX = "CLEARTAX",
-    GOVERNMENT_OF_KARNATAKA = "GOVERNMENT_OF_KARNATAKA",
+    GOVERNMENT_OF_KARNATAKA = "GOVERNMENT_OF_KARNATAKA",// Descriptive key
     WEEKDAY = "WEEKDAY"
 }
 export declare enum Role {

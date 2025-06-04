@@ -15,6 +15,7 @@ const mongoose_1 = require("@nestjs/mongoose");
 const user_enums_1 = require("../enums/user-enums");
 let User = class User {
 };
+exports.User = User;
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
@@ -63,8 +64,7 @@ __decorate([
     (0, mongoose_1.Prop)({ default: '09:00' }),
     __metadata("design:type", String)
 ], User.prototype, "clientCutoffEnd", void 0);
-User = __decorate([
+exports.User = User = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true })
 ], User);
-exports.User = User;
 exports.UserSchema = mongoose_1.SchemaFactory.createForClass(User);
