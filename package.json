@@ -19,8 +19,8 @@
     "mongoose": "^8.15.1"
   },
   "peerDependencies": {
-    "@nestjs/mongoose": "^11.0.3",
-    "reflect-metadata": "^0.1.13"
+    "@nestjs/mongoose": "^11.0.0",
+    "reflect-metadata": "^0.2.0"
   },
   "devDependencies": {
     "@nestjs/mongoose": "^11.0.3",
