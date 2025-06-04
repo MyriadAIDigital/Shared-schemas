@@ -1,6 +1,7 @@
 import { Types } from 'mongoose';
 import { CallingModel, VoiceType, VoiceSource, VoiceGender } from '../enums/user-enums';
 export interface IClientVoiceGallery {
+    _id: Types.ObjectId;
     voiceGalleryId: Types.ObjectId;
     callingModel: CallingModel;
     userId: Types.ObjectId;
