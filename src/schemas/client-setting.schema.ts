@@ -129,8 +129,6 @@ export class ClientSetting {
         defaultProvider: 'plivo' | 'twilio' | 'none';
     };
 
-    @Prop({ required: false })
-    createdBy?: string;
 }
 
 // **Do NOT cast to MongooseSchema<…>. Let Nest infer it.**

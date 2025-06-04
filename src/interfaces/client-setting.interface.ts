@@ -53,7 +53,7 @@ export interface IClientSetting {
     perMinuteRate: number;
     whatsappSetting: WhatsappSetting;
     telephonySetting: TelephonySettingsResponse;
-    createdBy?: string;
+
     createdAt: Date;
     updatedAt: Date;
 }
