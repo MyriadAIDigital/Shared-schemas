@@ -118,10 +118,6 @@ __decorate([
     }),
     __metadata("design:type", Object)
 ], ClientSetting.prototype, "telephonySetting", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ required: false }),
-    __metadata("design:type", String)
-], ClientSetting.prototype, "createdBy", void 0);
 exports.ClientSetting = ClientSetting = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true })
 ], ClientSetting);

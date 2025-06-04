@@ -40,7 +40,6 @@ export declare class ClientSetting {
         };
         defaultProvider: 'plivo' | 'twilio' | 'none';
     };
-    createdBy?: string;
 }
 export declare const ClientSettingSchema: MongooseSchema<ClientSettingDocument, Model<ClientSettingDocument>>;
 export {};
