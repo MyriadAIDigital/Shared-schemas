@@ -1,7 +1,7 @@
 // src/schemas/call-transcript.schema.ts
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, Schema as MongooseSchema } from 'mongoose';
+import { Document, Model, Schema as MongooseSchema } from 'mongoose';
 
 export type CallTranscriptDocument = CallTranscript & Document;
 
@@ -51,4 +51,7 @@ export class CallTranscript {
     }>;
 }
 
-export const CallTranscriptSchema = SchemaFactory.createForClass(CallTranscript);
+export const CallTranscriptSchema = SchemaFactory.createForClass(CallTranscript) as unknown as MongooseSchema<
+    CallTranscriptDocument,
+    Model<CallTranscriptDocument>
+>;;
