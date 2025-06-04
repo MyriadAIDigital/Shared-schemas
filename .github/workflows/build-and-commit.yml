@@ -3,42 +3,43 @@ name: Build and Commit Dist
 on:
   push:
     branches:
-      - main  
+      - main  # replace with your default branch
+
+permissions:
+  contents: write    # grant write access for committing/pushing files
 
 jobs:
   build_and_commit:
     runs-on: ubuntu-latest
 
     steps:
-    
+      # 1) Check out the repo and persist GITHUB_TOKEN
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
           persist-credentials: true
 
-    
+      # 2) Set up Node.js (e.g. v18)
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      
+      # 3) Install dependencies
       - name: Install dependencies
         run: npm ci
 
-     
+      # 4) Run the build script (generates dist/)
       - name: Build shared-schemas
         run: npm run build
 
-     
+      # 5) If dist/ changed, commit + push it back to main
       - name: Commit built files
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-        
-          commit_message: "chore: auto-build dist on push"
           branch: main
           file_pattern: "dist/*"
-         
+          commit_message: "chore: auto-build dist on push"
           commit_user_name: "github-actions[bot]"
           commit_user_email: "41898282+github-actions[bot]@users.noreply.github.com"
