@@ -41,11 +41,11 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "tenantID", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ required: true, enum: user_enums_1.CallingModel, default: user_enums_1.CallingModel.DEFAULT }),
+    (0, mongoose_1.Prop)({ type: String, required: true, enum: user_enums_1.CallingModel, default: user_enums_1.CallingModel.DEFAULT }),
     __metadata("design:type", String)
 ], User.prototype, "defaultModel", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ default: null }),
+    (0, mongoose_1.Prop)({ type: String, default: null }),
     __metadata("design:type", Object)
 ], User.prototype, "refreshToken", void 0);
 __decorate([
