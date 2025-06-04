@@ -27,7 +27,7 @@ export interface ICampaign {
     enableReattempts: boolean; // Flag to enable reattempts
     reattemptGap?: number; // Gap between reattempts (default: 0)
     maxCallAttempts: number; // Maximum number of call attempts
-    contactListId: string; // Reference to ContactList
+    contactListId: Types.ObjectId; // Reference to ContactList
     promptId: number; // Reference to Prompt
     timezone: string; // Campaign timezone
     status: CampaignStatus; // Campaign status
