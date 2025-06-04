@@ -36,7 +36,7 @@ jobs:
           node-version: 18
       - name: Configure environment variables
         run: |
-          echo "SCHEMA_BRANCH=staging" >> .env
+          echo "SCHEMA_BRANCH=development" >> .env
           echo "GH_TOKEN=${{ secrets.GH_PAT_FOR_SHARED_SCHEMAS }}" >> .env
       - name: Install dependencies
         run: npm ci
