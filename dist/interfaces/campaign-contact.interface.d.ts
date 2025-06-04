@@ -1,6 +1,7 @@
 import { Types } from 'mongoose';
 import { CallStatus } from '../enums/user-enums';
 export interface ICampaignContact {
+    _id: Types.ObjectId;
     campaignId: Types.ObjectId;
     contactId: Types.ObjectId;
     contactListId: Types.ObjectId;
@@ -13,8 +14,8 @@ export interface ICampaignContact {
     companyName: string;
     connectedAttempt: number;
     callMade: number;
-    additionalInfo: Record<string, any> | string;
     lastCallStatus: string;
+    additionalInfo: Record<string, any> | string;
     createdAt: Date;
     updatedAt: Date;
 }
