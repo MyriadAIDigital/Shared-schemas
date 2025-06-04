@@ -1,4 +1,4 @@
-import { Document, Types } from 'mongoose';
+import { Document, Model, Schema as MongooseSchema, Types } from 'mongoose';
 export type MonthlyCallStatisticsDocument = MonthlyCallStatistics & Document;
 export declare class MonthlyCallStatistics {
     month: string;
@@ -25,13 +25,5 @@ export declare class MonthlyCallStatistics {
     totalCostWithServiceCharge: number;
     createdAt: Date;
 }
-export declare const MonthlyCallStatisticsSchema: import("mongoose").Schema<MonthlyCallStatistics, import("mongoose").Model<MonthlyCallStatistics, any, any, any, Document<unknown, any, MonthlyCallStatistics, any> & MonthlyCallStatistics & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, MonthlyCallStatistics, Document<unknown, {}, import("mongoose").FlatRecord<MonthlyCallStatistics>, {}> & import("mongoose").FlatRecord<MonthlyCallStatistics> & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}>;
+export declare const MonthlyCallStatisticsSchema: MongooseSchema<MonthlyCallStatisticsDocument, Model<MonthlyCallStatisticsDocument>>;
 //# sourceMappingURL=monthly-call-statistics.schema.d.ts.map

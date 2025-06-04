@@ -1,4 +1,4 @@
-import { Document } from 'mongoose';
+import { Document, Model, Schema as MongooseSchema } from 'mongoose';
 import { VoiceType, VoiceSource, VoiceGender, CallingModel } from '../enums/user-enums';
 export type VoiceGalleryDocument = VoiceGallery & Document;
 export declare class VoiceGallery {
@@ -19,13 +19,5 @@ export declare class VoiceGallery {
     isVoicePermanentlyDisabled: boolean;
     additionalMetadata?: Record<string, any>;
 }
-export declare const VoiceGallerySchema: import("mongoose").Schema<VoiceGallery, import("mongoose").Model<VoiceGallery, any, any, any, Document<unknown, any, VoiceGallery, any> & VoiceGallery & {
-    _id: import("mongoose").Types.ObjectId;
-} & {
-    __v: number;
-}, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, VoiceGallery, Document<unknown, {}, import("mongoose").FlatRecord<VoiceGallery>, {}> & import("mongoose").FlatRecord<VoiceGallery> & {
-    _id: import("mongoose").Types.ObjectId;
-} & {
-    __v: number;
-}>;
+export declare const VoiceGallerySchema: MongooseSchema<VoiceGalleryDocument, Model<VoiceGalleryDocument>>;
 //# sourceMappingURL=voice-gallery.schema.d.ts.map

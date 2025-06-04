@@ -1,4 +1,4 @@
-import { Document, Schema as MongooseSchema } from 'mongoose';
+import { Document, Model, Schema as MongooseSchema } from 'mongoose';
 import { StepTypeEnum, WorkflowStepStatus, CampaignType, WorkflowTypeEnum } from '../enums/user-enums';
 export type WorkflowDocument = Workflow & Document;
 export declare class WorkflowStep {
@@ -25,13 +25,5 @@ export declare class Workflow {
     workingHours?: string[];
     webhookUrl?: string;
 }
-export declare const WorkflowSchema: MongooseSchema<Workflow, import("mongoose").Model<Workflow, any, any, any, Document<unknown, any, Workflow, any> & Workflow & {
-    _id: import("mongoose").Types.ObjectId;
-} & {
-    __v: number;
-}, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, Workflow, Document<unknown, {}, import("mongoose").FlatRecord<Workflow>, {}> & import("mongoose").FlatRecord<Workflow> & {
-    _id: import("mongoose").Types.ObjectId;
-} & {
-    __v: number;
-}>;
+export declare const WorkflowSchema: MongooseSchema<WorkflowDocument, Model<WorkflowDocument>>;
 //# sourceMappingURL=workflow.schema.d.ts.map

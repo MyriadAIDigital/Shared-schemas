@@ -1,4 +1,4 @@
-import { Document, Types, Schema as MongooseSchema } from 'mongoose';
+import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 export type ContactDocument = Contact & Document;
 export declare class Contact {
     name: string;
@@ -25,13 +25,5 @@ export declare class Contact {
     createdAt: Date;
     updatedAt: Date;
 }
-export declare const ContactSchema: MongooseSchema<Contact, import("mongoose").Model<Contact, any, any, any, Document<unknown, any, Contact, any> & Contact & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, Contact, Document<unknown, {}, import("mongoose").FlatRecord<Contact>, {}> & import("mongoose").FlatRecord<Contact> & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}>;
+export declare const ContactSchema: MongooseSchema<ContactDocument, Model<ContactDocument>>;
 //# sourceMappingURL=contact.schema.d.ts.map
