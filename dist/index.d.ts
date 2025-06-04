@@ -1,4 +1,4 @@
 export * from './enums/user-enums';
-export * from './interfaces/user.interface';
-export * from './schemas/user.schema';
+export * from './interfaces';
+export * from './schemas';
 //# sourceMappingURL=index.d.ts.map

@@ -18,8 +18,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // 1) Export all enums
 __exportStar(require("./enums/user-enums"), exports);
 // 2) Export all interfaces
-__exportStar(require("./interfaces/user.interface"), exports);
+__exportStar(require("./interfaces"), exports);
 // 3) Export all schemas
-__exportStar(require("./schemas/user.schema"), exports);
+__exportStar(require("./schemas"), exports);
 // 4) (Optional) Export any DTOs, if you have them
 // export * from './dtos/create-user.dto';
