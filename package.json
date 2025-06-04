@@ -14,17 +14,18 @@
   "author": "Sateesh Yadav  <sateesh.bohra@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "mongoose": "^7.0.0",
-    "class-validator": "^0.14.0",
-    "class-transformer": "^0.5.1"
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
+    "mongoose": "^8.15.1"
   },
   "peerDependencies": {
     "@nestjs/mongoose": "^9.0.0",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
-    "typescript": "^4.8.4",
-    "@nestjs/mongoose": "^9.1.0",
-    "@types/mongoose": "^5.11.97"
+    "@nestjs/mongoose": "^11.0.3",
+    "@types/mongoose": "^5.11.97",
+    "npm-check-updates": "^18.0.1",
+    "typescript": "^5.8.3"
   }
 }
