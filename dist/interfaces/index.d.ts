@@ -15,4 +15,5 @@ export * from './voice-gallery.interface';
 export * from './workflow.interface';
 export * from './balance.interface';
 export * from './contact.interface';
+export * from './client-voice-gallery.interface';
 //# sourceMappingURL=index.d.ts.map

@@ -14,4 +14,5 @@ export * from './contact.schema';
 export * from './contact-list.schema';
 export * from './voice-gallery.schema';
 export * from './workflow.schema';
+export * from './client-voice-gallery.schema';
 //# sourceMappingURL=index.d.ts.map
