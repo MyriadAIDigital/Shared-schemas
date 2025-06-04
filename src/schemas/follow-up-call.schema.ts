@@ -44,7 +44,7 @@ export class FollowUpCall {
     })
     status!: FollowUpStatus;
 
-    @Prop({ default: null })
+    @Prop({ type: String, default: null })
     notes!: string | null;
 }
 
