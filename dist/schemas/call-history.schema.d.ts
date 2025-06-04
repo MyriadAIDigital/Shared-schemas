@@ -1,4 +1,4 @@
-import { Document, Types } from 'mongoose';
+import { Document, Model, Schema as MongooseSchema, Types } from 'mongoose';
 import { CallType, TelephonicProviders, VoiceSource, SttProvider } from '../enums/user-enums';
 export type CallHistoryDocument = CallHistory & Document;
 export declare class CallHistory {
@@ -80,13 +80,5 @@ export declare class CallHistory {
     totalCostWithoutServiceCharge: number;
     additionalMetadata: Record<string, any>;
 }
-export declare const CallHistorySchema: import("mongoose").Schema<CallHistory, import("mongoose").Model<CallHistory, any, any, any, Document<unknown, any, CallHistory, any> & CallHistory & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, CallHistory, Document<unknown, {}, import("mongoose").FlatRecord<CallHistory>, {}> & import("mongoose").FlatRecord<CallHistory> & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}>;
+export declare const CallHistorySchema: MongooseSchema<CallHistoryDocument, Model<CallHistoryDocument>>;
 //# sourceMappingURL=call-history.schema.d.ts.map
