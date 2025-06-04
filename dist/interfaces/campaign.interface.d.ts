@@ -26,7 +26,7 @@ export interface ICampaign {
     enableReattempts: boolean;
     reattemptGap?: number;
     maxCallAttempts: number;
-    contactListId: string;
+    contactListId: Types.ObjectId;
     promptId: number;
     timezone: string;
     status: CampaignStatus;
