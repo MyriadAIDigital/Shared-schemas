@@ -54,6 +54,4 @@ export interface IClientSetting {
     whatsappSetting: WhatsappSetting;
     telephonySetting: TelephonySettingsResponse;
 
-    createdAt: Date;
-    updatedAt: Date;
 }
