@@ -17,3 +17,4 @@ export * from './workflow.interface';
 export * from './balance.interface';
 export * from './contact.interface'
 export * from './client-voice-gallery.interface';
+export * from './tenant-outcome.interface'
