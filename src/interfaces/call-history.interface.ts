@@ -130,4 +130,6 @@ export interface ICallHistory {
 
     // If you want a free‐form place to stash extra bits of metadata:
     additionalMetadata?: Record<string, any>;
+    // Dynamic WhatsApp activity logs: an array of arbitrary key–value objects
+    whatsappMessages?: Array<Record<string, any>>;
 }

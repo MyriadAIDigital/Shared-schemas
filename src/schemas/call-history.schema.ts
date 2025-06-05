@@ -253,6 +253,12 @@ export class CallHistory {
 
     @Prop({ type: Object, default: {} })
     additionalMetadata!: Record<string, any>;
+
+    @Prop({
+        type: [MongooseSchema.Types.Mixed],
+        default: [],
+    })
+    whatsappMessages!: Array<Record<string, any>>;
 }
 
 export const CallHistorySchema = SchemaFactory.createForClass(CallHistory) as unknown as MongooseSchema<
