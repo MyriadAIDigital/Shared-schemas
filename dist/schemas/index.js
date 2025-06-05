@@ -31,3 +31,4 @@ __exportStar(require("./contact.schema"), exports);
 __exportStar(require("./contact-list.schema"), exports);
 __exportStar(require("./voice-gallery.schema"), exports);
 __exportStar(require("./workflow.schema"), exports);
+__exportStar(require("./client-voice-gallery.schema"), exports);

@@ -1,7 +1,7 @@
 // src/schemas/call-history.schema.ts
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, Types } from 'mongoose';
+import { Document, Model, Schema as MongooseSchema, Types } from 'mongoose';
 import { CallType, TelephonicProviders, VoiceSource, SttProvider } from '../enums/user-enums';
 
 
@@ -253,7 +253,16 @@ export class CallHistory {
 
     @Prop({ type: Object, default: {} })
     additionalMetadata!: Record<string, any>;
+
+    @Prop({
+        type: [MongooseSchema.Types.Mixed],
+        default: [],
+    })
+    whatsappMessages!: Array<Record<string, any>>;
 }
 
-export const CallHistorySchema = SchemaFactory.createForClass(CallHistory);
+export const CallHistorySchema = SchemaFactory.createForClass(CallHistory) as unknown as MongooseSchema<
+    CallHistoryDocument,
+    Model<CallHistoryDocument>
+>;
 CallHistorySchema.index({ contactListId: 1, contactId: 1 });

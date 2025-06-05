@@ -1,7 +1,7 @@
 // src/schemas/voice-gallery.schema.ts
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import { Document, Model, Schema as MongooseSchema, } from 'mongoose';
 import { VoiceType, VoiceSource, VoiceGender, CallingModel } from '../enums/user-enums';
 
 
@@ -58,4 +58,7 @@ export class VoiceGallery {
     additionalMetadata?: Record<string, any>;  // Optional metadata field to store any extra information
 }
 
-export const VoiceGallerySchema = SchemaFactory.createForClass(VoiceGallery);
+export const VoiceGallerySchema = SchemaFactory.createForClass(VoiceGallery) as unknown as MongooseSchema<
+    VoiceGalleryDocument,
+    Model<VoiceGalleryDocument>
+>;

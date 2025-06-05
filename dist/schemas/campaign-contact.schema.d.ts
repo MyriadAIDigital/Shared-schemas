@@ -1,4 +1,4 @@
-import { Document, Types, Schema as MongooseSchema } from 'mongoose';
+import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 import { CallStatus } from '../enums/user-enums';
 export type CampaignContactDocument = CampaignContact & Document;
 export declare class CampaignContact {
@@ -19,13 +19,5 @@ export declare class CampaignContact {
     createdAt: Date;
     updatedAt: Date;
 }
-export declare const CampaignContactSchema: MongooseSchema<CampaignContact, import("mongoose").Model<CampaignContact, any, any, any, Document<unknown, any, CampaignContact, any> & CampaignContact & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, CampaignContact, Document<unknown, {}, import("mongoose").FlatRecord<CampaignContact>, {}> & import("mongoose").FlatRecord<CampaignContact> & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}>;
+export declare const CampaignContactSchema: MongooseSchema<CampaignContactDocument, Model<CampaignContactDocument>>;
 //# sourceMappingURL=campaign-contact.schema.d.ts.map

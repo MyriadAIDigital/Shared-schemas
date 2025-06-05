@@ -7,6 +7,7 @@ import {
     Types,
     Schema as MongooseSchema,
     SchemaTypes,
+    Model,
 } from 'mongoose';
 
 export type ContactDocument = Contact & Document;
@@ -83,4 +84,7 @@ export class Contact {
     updatedAt!: Date;
 }
 
-export const ContactSchema = SchemaFactory.createForClass(Contact);
+export const ContactSchema = SchemaFactory.createForClass(Contact) as unknown as MongooseSchema<
+    ContactDocument,
+    Model<ContactDocument>
+>;

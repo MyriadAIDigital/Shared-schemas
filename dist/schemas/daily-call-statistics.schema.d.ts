@@ -1,4 +1,4 @@
-import { Document, Types, Schema as MongooseSchema } from 'mongoose';
+import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 export type DailyCallStatisticsDocument = DailyCallStatistics & Document;
 export declare class DailyCallStatistics {
     date: string;
@@ -25,13 +25,5 @@ export declare class DailyCallStatistics {
     totalCostWithServiceCharge: number;
     createdAt: Date;
 }
-export declare const DailyCallStatisticsSchema: MongooseSchema<DailyCallStatistics, import("mongoose").Model<DailyCallStatistics, any, any, any, Document<unknown, any, DailyCallStatistics, any> & DailyCallStatistics & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, DailyCallStatistics, Document<unknown, {}, import("mongoose").FlatRecord<DailyCallStatistics>, {}> & import("mongoose").FlatRecord<DailyCallStatistics> & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}>;
+export declare const DailyCallStatisticsSchema: MongooseSchema<DailyCallStatisticsDocument, Model<DailyCallStatisticsDocument>>;
 //# sourceMappingURL=daily-call-statistics.schema.d.ts.map

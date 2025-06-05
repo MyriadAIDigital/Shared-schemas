@@ -1,7 +1,7 @@
 // src/schemas/monthly-call-statistics.schema.ts
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, Types } from 'mongoose';
+import { Document, Model, Schema as MongooseSchema, Types } from 'mongoose';
 
 export type MonthlyCallStatisticsDocument = MonthlyCallStatistics & Document;
 
@@ -78,4 +78,7 @@ export class MonthlyCallStatistics {
 }
 
 export const MonthlyCallStatisticsSchema =
-    SchemaFactory.createForClass(MonthlyCallStatistics);
+    SchemaFactory.createForClass(MonthlyCallStatistics) as unknown as MongooseSchema<
+        MonthlyCallStatisticsDocument,
+        Model<MonthlyCallStatisticsDocument>
+    >;

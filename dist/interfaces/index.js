@@ -32,3 +32,5 @@ __exportStar(require("./voice-gallery.interface"), exports);
 __exportStar(require("./workflow.interface"), exports);
 __exportStar(require("./balance.interface"), exports);
 __exportStar(require("./contact.interface"), exports);
+__exportStar(require("./client-voice-gallery.interface"), exports);
+__exportStar(require("./tenant-outcome.interface"), exports);

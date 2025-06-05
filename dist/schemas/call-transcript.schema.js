@@ -56,3 +56,4 @@ exports.CallTranscript = CallTranscript = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, versionKey: false })
 ], CallTranscript);
 exports.CallTranscriptSchema = mongoose_1.SchemaFactory.createForClass(CallTranscript);
+;

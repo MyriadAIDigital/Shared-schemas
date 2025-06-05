@@ -1,4 +1,4 @@
-import { Document, Types, Schema as MongooseSchema } from 'mongoose';
+import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 import { listType, CountryCode } from '../enums/user-enums';
 export type ContactListDocument = ContactList & Document;
 export declare class ContactList {
@@ -13,13 +13,5 @@ export declare class ContactList {
     createdAt: Date;
     updatedAt: Date;
 }
-export declare const ContactListSchema: MongooseSchema<ContactList, import("mongoose").Model<ContactList, any, any, any, Document<unknown, any, ContactList, any> & ContactList & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, ContactList, Document<unknown, {}, import("mongoose").FlatRecord<ContactList>, {}> & import("mongoose").FlatRecord<ContactList> & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}>;
+export declare const ContactListSchema: MongooseSchema<ContactListDocument, Model<ContactListDocument>>;
 //# sourceMappingURL=contact-list.schema.d.ts.map

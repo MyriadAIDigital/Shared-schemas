@@ -1,7 +1,7 @@
 // src/schemas/call-metrics.schema.ts
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import { Document, Model, Schema as MongooseSchema, } from 'mongoose';
 
 export type CallMetricsDocument = CallMetrics & Document;
 
@@ -65,4 +65,7 @@ export class CallMetrics {
     lifetimeBillingAverageTalkTime!: number;
 }
 
-export const CallMetricsSchema = SchemaFactory.createForClass(CallMetrics);
+export const CallMetricsSchema = SchemaFactory.createForClass(CallMetrics) as unknown as MongooseSchema<
+    CallMetricsDocument,
+    Model<CallMetricsDocument>
+>;

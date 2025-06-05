@@ -1,7 +1,7 @@
 // src/schemas/settings.schema.ts
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, Types, Schema as MongooseSchema } from 'mongoose';
+import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 
 export type SettingsDocument = Settings & Document;
 
@@ -58,4 +58,7 @@ export class Settings {
     updatedAt!: Date;
 }
 
-export const SettingsSchema = SchemaFactory.createForClass(Settings);
+export const SettingsSchema = SchemaFactory.createForClass(Settings) as unknown as MongooseSchema<
+    SettingsDocument,
+    Model<SettingsDocument>
+>;

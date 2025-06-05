@@ -1,4 +1,4 @@
-import { Document, Types, Schema as MongooseSchema } from 'mongoose';
+import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 import { CallType, FollowUpStatus } from '../enums/user-enums';
 export type FollowUpCallDocument = FollowUpCall & Document;
 export declare class FollowUpCall {
@@ -12,13 +12,5 @@ export declare class FollowUpCall {
     status: FollowUpStatus;
     notes: string | null;
 }
-export declare const FollowUpCallSchema: MongooseSchema<FollowUpCall, import("mongoose").Model<FollowUpCall, any, any, any, Document<unknown, any, FollowUpCall, any> & FollowUpCall & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, FollowUpCall, Document<unknown, {}, import("mongoose").FlatRecord<FollowUpCall>, {}> & import("mongoose").FlatRecord<FollowUpCall> & {
-    _id: Types.ObjectId;
-} & {
-    __v: number;
-}>;
+export declare const FollowUpCallSchema: MongooseSchema<FollowUpCallDocument, Model<FollowUpCallDocument>>;
 //# sourceMappingURL=follow-up-call.schema.d.ts.map

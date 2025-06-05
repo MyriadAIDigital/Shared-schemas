@@ -2,7 +2,7 @@
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import moment from 'moment';
-import { Document, Types, Schema as MongooseSchema } from 'mongoose';
+import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 import { CallType, CampaignType, CallQueueStatus } from '../enums/user-enums';
 
 
@@ -62,4 +62,7 @@ export class CallQueueData {
 
 export type CallQueueDataDocument = CallQueueData & Document;
 
-export const CallQueueDataSchema = SchemaFactory.createForClass(CallQueueData);
+export const CallQueueDataSchema = SchemaFactory.createForClass(CallQueueData) as unknown as MongooseSchema<
+    CallQueueDataDocument,
+    Model<CallQueueDataDocument>
+>;
