@@ -81,5 +81,6 @@ export interface ICallHistory {
     totalCostWithoutServiceCharge?: number;
     providerCallId?: string;
     additionalMetadata?: Record<string, any>;
+    whatsappMessages?: Array<Record<string, any>>;
 }
 //# sourceMappingURL=call-history.interface.d.ts.map

@@ -79,6 +79,7 @@ export declare class CallHistory {
     totalCostWithService: number;
     totalCostWithoutServiceCharge: number;
     additionalMetadata: Record<string, any>;
+    whatsappMessages: Array<Record<string, any>>;
 }
 export declare const CallHistorySchema: MongooseSchema<CallHistoryDocument, Model<CallHistoryDocument>>;
 //# sourceMappingURL=call-history.schema.d.ts.map

@@ -313,6 +313,13 @@ __decorate([
     (0, mongoose_1.Prop)({ type: Object, default: {} }),
     __metadata("design:type", Object)
 ], CallHistory.prototype, "additionalMetadata", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({
+        type: [mongoose_2.Schema.Types.Mixed],
+        default: [],
+    }),
+    __metadata("design:type", Array)
+], CallHistory.prototype, "whatsappMessages", void 0);
 exports.CallHistory = CallHistory = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, versionKey: false })
 ], CallHistory);
