@@ -2,7 +2,7 @@
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Model, Schema as MongooseSchema, Types } from 'mongoose';
-import { CallType, TelephonicProviders, VoiceSource, SttProvider } from '../enums/user-enums';
+import { CallType, TelephonicProviders, VoiceSource, SttProvider, CreditDeductionStatus } from '../enums/user-enums';
 
 
 export type CallHistoryDocument = CallHistory & Document;
@@ -259,6 +259,20 @@ export class CallHistory {
         default: [],
     })
     whatsappMessages!: Array<Record<string, any>>;
+
+    @Prop({
+        type: String,
+        enum: Object.values(CreditDeductionStatus),
+        default: CreditDeductionStatus.Default,
+        required: true,
+    })
+    creditDeductionStatus!: CreditDeductionStatus;
+
+    @Prop({ type: MongooseSchema.Types.Mixed, default: {} })
+    creditDeductionSuccessResponse!: Record<string, any>;
+
+    @Prop({ type: MongooseSchema.Types.Mixed, default: {} })
+    creditDeductionErrorResponse!: Record<string, any>;
 }
 
 export const CallHistorySchema = SchemaFactory.createForClass(CallHistory) as unknown as MongooseSchema<

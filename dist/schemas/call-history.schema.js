@@ -320,6 +320,23 @@ __decorate([
     }),
     __metadata("design:type", Array)
 ], CallHistory.prototype, "whatsappMessages", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({
+        type: String,
+        enum: Object.values(user_enums_1.CreditDeductionStatus),
+        default: user_enums_1.CreditDeductionStatus.Default,
+        required: true,
+    }),
+    __metadata("design:type", String)
+], CallHistory.prototype, "creditDeductionStatus", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.Schema.Types.Mixed, default: {} }),
+    __metadata("design:type", Object)
+], CallHistory.prototype, "creditDeductionSuccessResponse", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.Schema.Types.Mixed, default: {} }),
+    __metadata("design:type", Object)
+], CallHistory.prototype, "creditDeductionErrorResponse", void 0);
 exports.CallHistory = CallHistory = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, versionKey: false })
 ], CallHistory);

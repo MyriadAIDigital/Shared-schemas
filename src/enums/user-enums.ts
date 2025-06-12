@@ -195,3 +195,9 @@ export enum CallStatus {
     NOT_PICKED_UP = 'Call Not Picked Up', // Call was not answered
     REATTEMPTED = 'Call Reattempted', // Call was reattempted
 }
+
+export enum CreditDeductionStatus {
+    Default = 'default',  // not yet attempted
+    Success = 'success',  // deduction succeeded
+    Failed = 'failed',    // deduction threw an error
+}

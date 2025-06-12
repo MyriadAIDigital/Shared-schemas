@@ -145,4 +145,9 @@ export declare enum CallStatus {
     NOT_PICKED_UP = "Call Not Picked Up",// Call was not answered
     REATTEMPTED = "Call Reattempted"
 }
+export declare enum CreditDeductionStatus {
+    Default = "default",// not yet attempted
+    Success = "success",// deduction succeeded
+    Failed = "failed"
+}
 //# sourceMappingURL=user-enums.d.ts.map
