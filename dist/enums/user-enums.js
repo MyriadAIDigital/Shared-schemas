@@ -1,7 +1,7 @@
 "use strict";
 // src/common/enum.ts
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CallStatus = exports.CallType = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.Role = exports.CompanyName = void 0;
+exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.Role = exports.CompanyName = void 0;
 var CompanyName;
 (function (CompanyName) {
     CompanyName["HAVISTO_TEA"] = "HAVISTO_TEA";
@@ -183,3 +183,9 @@ var CallStatus;
     CallStatus["NOT_PICKED_UP"] = "Call Not Picked Up";
     CallStatus["REATTEMPTED"] = "Call Reattempted";
 })(CallStatus || (exports.CallStatus = CallStatus = {}));
+var CreditDeductionStatus;
+(function (CreditDeductionStatus) {
+    CreditDeductionStatus["Default"] = "default";
+    CreditDeductionStatus["Success"] = "success";
+    CreditDeductionStatus["Failed"] = "failed";
+})(CreditDeductionStatus || (exports.CreditDeductionStatus = CreditDeductionStatus = {}));
