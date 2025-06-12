@@ -1,5 +1,5 @@
 import { Types } from 'mongoose';
-import { CallType, TelephonicProviders, VoiceSource, SttProvider } from '../enums/user-enums';
+import { CallType, TelephonicProviders, VoiceSource, SttProvider, CreditDeductionStatus } from '../enums/user-enums';
 
 export interface IAlternateContact {
     name?: string;
@@ -132,4 +132,15 @@ export interface ICallHistory {
     additionalMetadata?: Record<string, any>;
     // Dynamic WhatsApp activity logs: an array of arbitrary key–value objects
     whatsappMessages?: Array<Record<string, any>>;
+
+    /** Track credit deduction attempt/result */
+    creditDeductionStatus?: CreditDeductionStatus;
+
+    /** Raw response returned on success */
+    creditDeductionSuccessResponse?: Record<string, any>;
+
+    /** Raw error returned on failure */
+    creditDeductionErrorResponse?: Record<string, any> | string;
+
+
 }
