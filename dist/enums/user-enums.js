@@ -1,7 +1,7 @@
 "use strict";
 // src/common/enum.ts
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.Role = exports.CompanyName = void 0;
+exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.QueueStatus = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.Role = exports.CompanyName = void 0;
 var CompanyName;
 (function (CompanyName) {
     CompanyName["HAVISTO_TEA"] = "HAVISTO_TEA";
@@ -167,6 +167,12 @@ var CallQueueStatus;
     CallQueueStatus["FAILED"] = "FAILED";
     CallQueueStatus["STOPPED"] = "STOPPED";
 })(CallQueueStatus || (exports.CallQueueStatus = CallQueueStatus = {}));
+var QueueStatus;
+(function (QueueStatus) {
+    QueueStatus["NOT_STARTED"] = "NOT_STARTED";
+    QueueStatus["IN_PROGRESS"] = "IN_PROGRESS";
+    QueueStatus["DONE"] = "DONE";
+})(QueueStatus || (exports.QueueStatus = QueueStatus = {}));
 var CallType;
 (function (CallType) {
     CallType["INITIAL_CALL"] = "InitialCall";

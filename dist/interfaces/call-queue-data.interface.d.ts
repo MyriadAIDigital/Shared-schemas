@@ -1,5 +1,5 @@
 import { Types } from 'mongoose';
-import { CallType, CampaignType, CallQueueStatus } from '../enums/user-enums';
+import { CallType, CampaignType, CallQueueStatus, QueueStatus } from '../enums/user-enums';
 export interface ICallQueueData {
     tenantId: string;
     campaignId: Types.ObjectId;
@@ -14,6 +14,7 @@ export interface ICallQueueData {
     startTime?: string;
     endTime?: string;
     status: CallQueueStatus;
+    queueStatus: QueueStatus;
     startDateTime?: Date;
     endDateTime?: Date;
     createdAt: Date;

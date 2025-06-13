@@ -131,6 +131,11 @@ export declare enum CallQueueStatus {
     FAILED = "FAILED",
     STOPPED = "STOPPED"
 }
+export declare enum QueueStatus {
+    NOT_STARTED = "NOT_STARTED",
+    IN_PROGRESS = "IN_PROGRESS",
+    DONE = "DONE"
+}
 export declare enum CallType {
     INITIAL_CALL = "InitialCall",// Changed from CampaignCall
     CAMPAIGN_REATTEMPT_CALL = "CampaignReattemptCall",
