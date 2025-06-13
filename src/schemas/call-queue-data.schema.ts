@@ -3,7 +3,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import moment from 'moment';
 import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
-import { CallType, CampaignType, CallQueueStatus } from '../enums/user-enums';
+import { CallType, CampaignType, CallQueueStatus, QueueStatus } from '../enums/user-enums';
 
 
 @Schema({ timestamps: true })
@@ -46,6 +46,10 @@ export class CallQueueData {
 
     @Prop({ required: true, enum: CallQueueStatus, default: CallQueueStatus.NEW })
     status!: CallQueueStatus;
+
+    // New field: queueStatus indicates the processing stage of the queue
+    @Prop({ required: true, enum: QueueStatus, default: QueueStatus.NOT_STARTED })
+    queueStatus!: QueueStatus;
 
     @Prop({ type: Date, required: false })
     startDateTime?: Date;

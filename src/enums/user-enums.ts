@@ -178,6 +178,13 @@ export enum CallQueueStatus {
     STOPPED = 'STOPPED',
 }
 
+export enum QueueStatus {
+    NOT_STARTED = 'NOT_STARTED',
+    IN_PROGRESS = 'IN_PROGRESS',
+    DONE = 'DONE',
+}
+
+
 
 export enum CallType {
     INITIAL_CALL = 'InitialCall', // Changed from CampaignCall

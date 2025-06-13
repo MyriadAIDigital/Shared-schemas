@@ -1,7 +1,7 @@
 // src/interfaces/call-queue-data.interface.ts
 
 import { Document, Types } from 'mongoose';
-import { CallType, CampaignType, CallQueueStatus } from '../enums/user-enums';
+import { CallType, CampaignType, CallQueueStatus, QueueStatus } from '../enums/user-enums';
 
 
 export interface ICallQueueData {
@@ -18,6 +18,7 @@ export interface ICallQueueData {
     startTime?: string;
     endTime?: string;
     status: CallQueueStatus;
+    queueStatus: QueueStatus;
     startDateTime?: Date;
     endDateTime?: Date;
     createdAt: Date;
