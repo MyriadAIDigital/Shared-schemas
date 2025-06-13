@@ -1,6 +1,7 @@
 import { Types } from 'mongoose';
 import { CallType, CampaignType, CallQueueStatus, QueueStatus } from '../enums/user-enums';
 export interface ICallQueueData {
+    _id: Types.ObjectId;
     tenantId: string;
     campaignId: Types.ObjectId;
     contactId: Types.ObjectId;
