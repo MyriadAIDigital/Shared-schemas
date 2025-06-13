@@ -5,6 +5,7 @@ import { CallType, CampaignType, CallQueueStatus, QueueStatus } from '../enums/u
 
 
 export interface ICallQueueData {
+    _id: Types.ObjectId;
     tenantId: string;
     campaignId: Types.ObjectId;
     contactId: Types.ObjectId;
