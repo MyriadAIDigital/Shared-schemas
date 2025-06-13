@@ -74,6 +74,10 @@ __decorate([
     __metadata("design:type", String)
 ], CallQueueData.prototype, "status", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ required: true, enum: user_enums_1.QueueStatus, default: user_enums_1.QueueStatus.NOT_STARTED }),
+    __metadata("design:type", String)
+], CallQueueData.prototype, "queueStatus", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ type: Date, required: false }),
     __metadata("design:type", Date)
 ], CallQueueData.prototype, "startDateTime", void 0);

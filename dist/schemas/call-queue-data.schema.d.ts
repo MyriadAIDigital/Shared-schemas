@@ -1,5 +1,5 @@
 import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
-import { CallType, CampaignType, CallQueueStatus } from '../enums/user-enums';
+import { CallType, CampaignType, CallQueueStatus, QueueStatus } from '../enums/user-enums';
 export declare class CallQueueData {
     tenantId: string;
     campaignId: Types.ObjectId;
@@ -14,6 +14,7 @@ export declare class CallQueueData {
     startTime?: string;
     endTime?: string;
     status: CallQueueStatus;
+    queueStatus: QueueStatus;
     startDateTime?: Date;
     endDateTime?: Date;
     createdAt: Date;
