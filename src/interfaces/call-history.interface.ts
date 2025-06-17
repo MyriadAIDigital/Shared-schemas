@@ -91,6 +91,7 @@ export interface ICallHistory {
     followUpInfo?: IFollowUpInfo;
 
     callDuration: number;
+    perMinuteRate: number;
 
     // Billing fields: make them optional if Mongoose doesn’t always set them:
     telephonicServiceProviderCallBillingDuration?: number;

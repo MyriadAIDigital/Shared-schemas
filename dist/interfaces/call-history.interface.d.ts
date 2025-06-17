@@ -53,6 +53,7 @@ export interface ICallHistory {
     updatedAt?: Date;
     followUpInfo?: IFollowUpInfo;
     callDuration: number;
+    perMinuteRate: number;
     telephonicServiceProviderCallBillingDuration?: number;
     telephonicServiceProviderBillingRate?: number;
     telephonicServiceProviderTotalCost?: number;
