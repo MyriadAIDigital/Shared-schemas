@@ -208,3 +208,8 @@ export enum CreditDeductionStatus {
     Success = 'success',  // deduction succeeded
     Failed = 'failed',    // deduction threw an error
 }
+
+export enum AgentType {
+    ULTRAVOX = 'ULTRAVOX',
+    MYRIADAI = 'MYRIADAI'
+}
