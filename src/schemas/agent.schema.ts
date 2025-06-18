@@ -1,6 +1,7 @@
 // src/agent/entities/agent.entity.ts
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
+import { AgentType } from '../enums/user-enums';
 
 export type AgentDocument = Agent & Document;
 
@@ -14,6 +15,9 @@ export class Agent {
 
     @Prop({ required: true, default: '' })
     agentId!: string;
+
+    @Prop({ required: true, default: '' })
+    type!: AgentType;
 
     @Prop({ type:Types.ObjectId, required: true, default: '' })
     voiceDbId!: Types.ObjectId;
