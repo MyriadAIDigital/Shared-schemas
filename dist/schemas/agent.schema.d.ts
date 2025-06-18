@@ -1,9 +1,11 @@
 import { Document, Types } from 'mongoose';
+import { AgentType } from '../enums/user-enums';
 export type AgentDocument = Agent & Document;
 export declare class Agent {
     name: string;
     callTemplate: any;
     agentId: string;
+    type: AgentType;
     voiceDbId: Types.ObjectId;
     response: any;
 }

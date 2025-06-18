@@ -155,4 +155,8 @@ export declare enum CreditDeductionStatus {
     Success = "success",// deduction succeeded
     Failed = "failed"
 }
+export declare enum AgentType {
+    ULTRAVOX = "ULTRAVOX",
+    MYRIADAI = "MYRIADAI"
+}
 //# sourceMappingURL=user-enums.d.ts.map

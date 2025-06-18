@@ -13,6 +13,7 @@ exports.AgentSchema = exports.Agent = void 0;
 // src/agent/entities/agent.entity.ts
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
+const user_enums_1 = require("../enums/user-enums");
 let Agent = class Agent {
 };
 exports.Agent = Agent;
@@ -28,6 +29,10 @@ __decorate([
     (0, mongoose_1.Prop)({ required: true, default: '' }),
     __metadata("design:type", String)
 ], Agent.prototype, "agentId", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true, default: '' }),
+    __metadata("design:type", String)
+], Agent.prototype, "type", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, required: true, default: '' }),
     __metadata("design:type", mongoose_2.Types.ObjectId)
