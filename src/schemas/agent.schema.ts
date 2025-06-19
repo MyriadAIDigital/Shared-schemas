@@ -13,14 +13,17 @@ export class Agent {
     @Prop({ type: Object, required: true })
     callTemplate!: any;
 
-    @Prop({ required: true, default: '' })
+    @Prop({ required: true})
     agentId!: string;
 
-    @Prop({ required: true, default: '' })
+    @Prop({ required: true })
     type!: AgentType;
 
-    @Prop({ type:Types.ObjectId, required: true, default: '' })
+    @Prop({ type:Types.ObjectId, required: true })
     voiceDbId!: Types.ObjectId;
+
+    @Prop({required: true})
+    voiceName!: string;
 
     @Prop({ type: Object, required: true, default: {} })
     response!: any;
