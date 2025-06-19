@@ -22,6 +22,9 @@ export class Agent {
     @Prop({ type:Types.ObjectId, required: true, default: '' })
     voiceDbId!: Types.ObjectId;
 
+    @Prop({ type:Types.string, required: true, default: '' })
+    voiceName!: string;
+
     @Prop({ type: Object, required: true, default: {} })
     response!: any;
 }
