@@ -7,7 +7,8 @@ export interface IAgent {
         callTemplate: Record<string,any>;
         agentId: string;
         type: AgentType
-        voiceDbId: Types.ObjectId;    
+        voiceDbId: Types.ObjectId;  
+        voiceName: string,
         response: Record<string,any>;
 }
 
