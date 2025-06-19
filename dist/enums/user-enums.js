@@ -197,6 +197,8 @@ var CreditDeductionStatus;
 })(CreditDeductionStatus || (exports.CreditDeductionStatus = CreditDeductionStatus = {}));
 var AgentType;
 (function (AgentType) {
-    AgentType["ULTRAVOX"] = "ULTRAVOX";
-    AgentType["MYRIADAI"] = "MYRIADAI";
+    // TYPE_1 IS FOR MYRIAD SELF AGENTS ONLY
+    AgentType["MYRIADAI_AGENT_TYPE_1"] = "MYRIADAI_AGENT_TYPE_1";
+    //TYPE_2 IS FOR ULTRAVOX AGENT
+    AgentType["MYRIADAI_AGENT_TYPE_2"] = "MYRIADAI_AGENT_TYPE_2";
 })(AgentType || (exports.AgentType = AgentType = {}));

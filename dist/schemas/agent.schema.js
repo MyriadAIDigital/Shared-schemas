@@ -26,17 +26,21 @@ __decorate([
     __metadata("design:type", Object)
 ], Agent.prototype, "callTemplate", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ required: true, default: '' }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Agent.prototype, "agentId", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ required: true, default: '' }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Agent.prototype, "type", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, required: true, default: '' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, required: true }),
     __metadata("design:type", mongoose_2.Types.ObjectId)
 ], Agent.prototype, "voiceDbId", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true }),
+    __metadata("design:type", String)
+], Agent.prototype, "voiceName", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: Object, required: true, default: {} }),
     __metadata("design:type", Object)

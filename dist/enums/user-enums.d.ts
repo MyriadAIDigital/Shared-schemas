@@ -156,7 +156,7 @@ export declare enum CreditDeductionStatus {
     Failed = "failed"
 }
 export declare enum AgentType {
-    ULTRAVOX = "ULTRAVOX",
-    MYRIADAI = "MYRIADAI"
+    MYRIADAI_AGENT_TYPE_1 = "MYRIADAI_AGENT_TYPE_1",
+    MYRIADAI_AGENT_TYPE_2 = "MYRIADAI_AGENT_TYPE_2"
 }
 //# sourceMappingURL=user-enums.d.ts.map
