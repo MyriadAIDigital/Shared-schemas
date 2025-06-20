@@ -9,6 +9,7 @@ export declare class Agent {
     voiceDbId: Types.ObjectId;
     voiceName: string;
     response: any;
+    agentCreatedAt: Date;
 }
 export declare const AgentSchema: import("mongoose").Schema<Agent, import("mongoose").Model<Agent, any, any, any, Document<unknown, any, Agent, any> & Agent & {
     _id: Types.ObjectId;
