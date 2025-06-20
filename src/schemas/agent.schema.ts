@@ -27,6 +27,9 @@ export class Agent {
 
     @Prop({ type: Object, required: true, default: {} })
     response!: any;
+
+    @Prop({ type: Date, default: () => new Date(),index:true })
+    agentCreatedAt!: Date;
 }
 
 export const AgentSchema = SchemaFactory.createForClass(Agent);
