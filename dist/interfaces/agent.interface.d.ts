@@ -9,6 +9,7 @@ export interface IAgent {
     voiceDbId: Types.ObjectId;
     voiceName: string;
     response: Record<string, any>;
+    displayVoiceName: string;
 }
 export interface UltravoxResponse {
     agentId: string;
