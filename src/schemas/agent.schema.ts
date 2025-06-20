@@ -25,6 +25,9 @@ export class Agent {
     @Prop({required: true})
     voiceName!: string;
 
+    @Prop({required: true})
+    displayVoiceName!: string;
+
     @Prop({ type: Object, required: true, default: {} })
     response!: any;
 
