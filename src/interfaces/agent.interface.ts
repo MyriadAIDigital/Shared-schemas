@@ -8,10 +8,10 @@ export interface IAgent {
         agentId: string;
         type: AgentType
         voiceDbId: Types.ObjectId;  
-        voiceName: string,
+        voiceName: string;
         response: Record<string, any>;
         displayVoiceName: string;
-
+        callingModel: string;
 }
 
 export interface UltravoxResponse {
