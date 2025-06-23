@@ -8,6 +8,7 @@ export declare class Agent {
     type: AgentType;
     voiceDbId: Types.ObjectId;
     voiceName: string;
+    callingModel: string;
     displayVoiceName: string;
     response: any;
     agentCreatedAt: Date;

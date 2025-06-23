@@ -44,6 +44,10 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
+], Agent.prototype, "callingModel", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true }),
+    __metadata("design:type", String)
 ], Agent.prototype, "displayVoiceName", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: Object, required: true, default: {} }),

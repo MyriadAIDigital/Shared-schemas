@@ -10,6 +10,7 @@ export interface IAgent {
     voiceName: string;
     response: Record<string, any>;
     displayVoiceName: string;
+    callingModel: string;
 }
 export interface UltravoxResponse {
     agentId: string;
