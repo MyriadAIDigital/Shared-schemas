@@ -137,6 +137,9 @@ export class Campaign {
 
     @Prop({ type: String, default: '09:00' })
     clientCutoffEnd!: string;
+
+    @Prop({required:false, type: String,default: '' })
+    agentId!: string;
 }
 
 export const CampaignSchema = SchemaFactory.createForClass(Campaign) as unknown as MongooseSchema<
