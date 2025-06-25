@@ -190,8 +190,8 @@ __decorate([
     __metadata("design:type", String)
 ], Campaign.prototype, "clientCutoffEnd", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ required: false, type: String, default: '' }),
-    __metadata("design:type", String)
+    (0, mongoose_1.Prop)({ required: false, type: mongoose_2.Types.ObjectId, }),
+    __metadata("design:type", mongoose_2.Types.ObjectId)
 ], Campaign.prototype, "agentId", void 0);
 exports.Campaign = Campaign = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true })
