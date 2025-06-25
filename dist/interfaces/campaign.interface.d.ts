@@ -46,5 +46,6 @@ export interface ICampaign {
     isEmailSend: boolean;
     clientCutoffStart: string;
     clientCutoffEnd: string;
+    agentId: string;
 }
 //# sourceMappingURL=campaign.interface.d.ts.map

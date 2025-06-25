@@ -189,6 +189,10 @@ __decorate([
     (0, mongoose_1.Prop)({ type: String, default: '09:00' }),
     __metadata("design:type", String)
 ], Campaign.prototype, "clientCutoffEnd", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: false, type: String, default: '' }),
+    __metadata("design:type", String)
+], Campaign.prototype, "agentId", void 0);
 exports.Campaign = Campaign = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true })
 ], Campaign);

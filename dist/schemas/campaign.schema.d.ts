@@ -45,6 +45,7 @@ export declare class Campaign {
     isEmailSend: boolean;
     clientCutoffStart: string;
     clientCutoffEnd: string;
+    agentId: string;
 }
 export declare const CampaignSchema: MongooseSchema<CampaignDocument, Model<CampaignDocument>>;
 //# sourceMappingURL=campaign.schema.d.ts.map
