@@ -48,5 +48,5 @@ export interface ICampaign {
     isEmailSend: boolean;
     clientCutoffStart: string; // Format: 'HH:mm'
     clientCutoffEnd: string;// Format: 'HH:mm'
-    agentId: string;
+    agentId: Types.ObjectId;
 }
