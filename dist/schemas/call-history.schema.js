@@ -337,6 +337,10 @@ __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.Schema.Types.Mixed, default: {} }),
     __metadata("design:type", Object)
 ], CallHistory.prototype, "creditDeductionErrorResponse", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true, index: true }),
+    __metadata("design:type", Date)
+], CallHistory.prototype, "createdAt", void 0);
 exports.CallHistory = CallHistory = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, versionKey: false })
 ], CallHistory);
