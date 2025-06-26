@@ -10,6 +10,7 @@ var CompanyName;
     CompanyName["CLEARTAX"] = "CLEARTAX";
     CompanyName["GOVERNMENT_OF_KARNATAKA"] = "GOVERNMENT_OF_KARNATAKA";
     CompanyName["WEEKDAY"] = "WEEKDAY";
+    CompanyName["CASHBOOK"] = "CASHBOOK";
 })(CompanyName || (exports.CompanyName = CompanyName = {}));
 var Role;
 (function (Role) {
