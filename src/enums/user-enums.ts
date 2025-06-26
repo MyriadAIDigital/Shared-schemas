@@ -7,6 +7,8 @@ export enum CompanyName {
     CLEARTAX = 'CLEARTAX',
     GOVERNMENT_OF_KARNATAKA = 'GOVERNMENT_OF_KARNATAKA', // Descriptive key
     WEEKDAY = 'WEEKDAY',
+    CASHBOOK = 'CASHBOOK',
+
 }
 
 export enum Role {
