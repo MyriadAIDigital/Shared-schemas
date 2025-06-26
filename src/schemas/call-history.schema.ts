@@ -273,6 +273,9 @@ export class CallHistory {
 
     @Prop({ type: MongooseSchema.Types.Mixed, default: {} })
     creditDeductionErrorResponse!: Record<string, any>;
+
+    @Prop({ required: true, index: true })
+    createdAt!: Date; // ✅ Non-null assertion (you know Mongoose will populate it)
 }
 
 export const CallHistorySchema = SchemaFactory.createForClass(CallHistory) as unknown as MongooseSchema<
