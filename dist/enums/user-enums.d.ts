@@ -4,7 +4,8 @@ export declare enum CompanyName {
     MYRIADAI = "MYRIADAI",
     CLEARTAX = "CLEARTAX",
     GOVERNMENT_OF_KARNATAKA = "GOVERNMENT_OF_KARNATAKA",// Descriptive key
-    WEEKDAY = "WEEKDAY"
+    WEEKDAY = "WEEKDAY",
+    CASHBOOK = "CASHBOOK"
 }
 export declare enum Role {
     SUPER_ADMIN = "SuperAdmin",
