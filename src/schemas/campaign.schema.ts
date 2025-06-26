@@ -138,8 +138,12 @@ export class Campaign {
     @Prop({ type: String, default: '09:00' })
     clientCutoffEnd!: string;
 
-    @Prop({required:false, type: Types.ObjectId ,})
+    @Prop({ required: false, type: Types.ObjectId, })
     agentId!: Types.ObjectId;
+
+    @Prop()
+    createdAt!: Date; // ✅ Non-null assertion (you know Mongoose will populate it)
+
 }
 
 export const CampaignSchema = SchemaFactory.createForClass(Campaign) as unknown as MongooseSchema<
