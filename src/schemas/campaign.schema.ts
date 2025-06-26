@@ -141,7 +141,7 @@ export class Campaign {
     @Prop({ required: false, type: Types.ObjectId, })
     agentId!: Types.ObjectId;
 
-    @Prop()
+    @Prop({ required: true, index: true })
     createdAt!: Date; // ✅ Non-null assertion (you know Mongoose will populate it)
 
 }
