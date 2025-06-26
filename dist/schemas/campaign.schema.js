@@ -194,7 +194,7 @@ __decorate([
     __metadata("design:type", mongoose_2.Types.ObjectId)
 ], Campaign.prototype, "agentId", void 0);
 __decorate([
-    (0, mongoose_1.Prop)(),
+    (0, mongoose_1.Prop)({ required: true, index: true }),
     __metadata("design:type", Date)
 ], Campaign.prototype, "createdAt", void 0);
 exports.Campaign = Campaign = __decorate([
