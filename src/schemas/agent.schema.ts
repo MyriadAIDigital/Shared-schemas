@@ -16,6 +16,9 @@ export class Agent {
     @Prop({ required: true})
     agentId!: string;
 
+    @Prop({ default: ''})
+    description!: string;
+
     @Prop({ required: true })
     type!: AgentType;
 
