@@ -5,6 +5,7 @@ export declare class Agent {
     name: string;
     callTemplate: any;
     agentId: string;
+    description: string;
     type: AgentType;
     voiceDbId: Types.ObjectId;
     voiceName: string;

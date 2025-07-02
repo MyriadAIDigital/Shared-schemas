@@ -30,6 +30,10 @@ __decorate([
     __metadata("design:type", String)
 ], Agent.prototype, "agentId", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ default: '' }),
+    __metadata("design:type", String)
+], Agent.prototype, "description", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Agent.prototype, "type", void 0);
