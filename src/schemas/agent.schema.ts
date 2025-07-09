@@ -7,7 +7,8 @@ export type AgentDocument = Agent & Document;
 
 @Schema({
     timestamps: true,
-    autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    autoCreate: false,
+    autoIndex: false,
 })
 export class Agent {
     @Prop({ required: true })

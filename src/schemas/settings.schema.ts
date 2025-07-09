@@ -7,7 +7,8 @@ export type SettingsDocument = Settings & Document;
 
 @Schema({
     timestamps: true,
-    autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    autoCreate: false,
+    autoIndex: false,
 })
 export class Settings {
     @Prop({

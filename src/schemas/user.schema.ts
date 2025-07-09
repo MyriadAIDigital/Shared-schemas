@@ -8,7 +8,8 @@ export type UserDocument = User & Document;
 
 @Schema({
     timestamps: true,
-    autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    autoCreate: false,
+    autoIndex: false,
 })
 export class User {
     @Prop({ required: true })

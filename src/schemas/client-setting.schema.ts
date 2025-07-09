@@ -16,7 +16,8 @@ export type ClientSettingDocument = ClientSetting & Document;
 
 @Schema({
     timestamps: true,
-    autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    autoCreate: false,
+    autoIndex: false,
 })
 export class ClientSetting {
     @Prop({ type: [PromptSetting], default: [] })

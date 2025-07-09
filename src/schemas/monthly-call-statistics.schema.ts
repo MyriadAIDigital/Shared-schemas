@@ -6,7 +6,10 @@ import { Document, Model, Schema as MongooseSchema, Types } from 'mongoose';
 export type MonthlyCallStatisticsDocument = MonthlyCallStatistics & Document;
 
 @Schema({
-    timestamps: true, versionKey: false, autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    timestamps: true,
+    versionKey: false,
+    autoCreate: false,
+    autoIndex: false,
 })
 export class MonthlyCallStatistics {
     @Prop({ required: true, index: true })

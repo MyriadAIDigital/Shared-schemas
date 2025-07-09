@@ -9,7 +9,8 @@ export type WorkflowDocument = Workflow & Document;
 
 @Schema({
     timestamps: true,
-    autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    autoCreate: false,
+    autoIndex: false,
 })
 export class WorkflowStep {
     @Prop({ required: true, enum: StepTypeEnum })

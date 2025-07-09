@@ -8,7 +8,10 @@ import { VoiceType, VoiceSource, VoiceGender, CallingModel } from '../enums/user
 export type VoiceGalleryDocument = VoiceGallery & Document;
 
 @Schema({
-    timestamps: true, versionKey: false, autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    timestamps: true,
+    versionKey: false,
+    autoCreate: false,
+    autoIndex: false,
 })
 export class VoiceGallery {
     @Prop({ required: true, enum: VoiceType })

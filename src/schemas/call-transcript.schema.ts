@@ -6,7 +6,10 @@ import { Document, Model, Schema as MongooseSchema } from 'mongoose';
 export type CallTranscriptDocument = CallTranscript & Document;
 
 @Schema({
-    timestamps: true, versionKey: false, autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    timestamps: true,
+    versionKey: false,
+    autoCreate: false,
+    autoIndex: false,
 })
 export class CallTranscript {
     @Prop({ required: true })

@@ -8,7 +8,8 @@ import { CallType, CampaignType, CallQueueStatus, QueueStatus } from '../enums/u
 
 @Schema({
     timestamps: true,
-    autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    autoCreate: false,
+    autoIndex: false,
 })
 export class CallQueueData {
     @Prop({ required: true })
