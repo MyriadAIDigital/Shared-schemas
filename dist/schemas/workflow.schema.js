@@ -65,7 +65,10 @@ __decorate([
     __metadata("design:type", String)
 ], WorkflowStep.prototype, "stepStatus", void 0);
 exports.WorkflowStep = WorkflowStep = __decorate([
-    (0, mongoose_1.Schema)({ _id: false })
+    (0, mongoose_1.Schema)({
+        timestamps: true,
+        autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    })
 ], WorkflowStep);
 let Workflow = class Workflow {
 };

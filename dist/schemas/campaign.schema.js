@@ -198,6 +198,9 @@ __decorate([
     __metadata("design:type", Date)
 ], Campaign.prototype, "createdAt", void 0);
 exports.Campaign = Campaign = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true })
+    (0, mongoose_1.Schema)({
+        timestamps: true,
+        autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    })
 ], Campaign);
 exports.CampaignSchema = mongoose_1.SchemaFactory.createForClass(Campaign);

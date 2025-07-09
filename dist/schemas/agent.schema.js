@@ -62,6 +62,9 @@ __decorate([
     __metadata("design:type", Date)
 ], Agent.prototype, "agentCreatedAt", void 0);
 exports.Agent = Agent = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true })
+    (0, mongoose_1.Schema)({
+        timestamps: true,
+        autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    })
 ], Agent);
 exports.AgentSchema = mongoose_1.SchemaFactory.createForClass(Agent);

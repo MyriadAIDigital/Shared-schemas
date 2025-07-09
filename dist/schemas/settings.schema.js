@@ -74,6 +74,9 @@ __decorate([
     __metadata("design:type", Date)
 ], Settings.prototype, "updatedAt", void 0);
 exports.Settings = Settings = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true })
+    (0, mongoose_1.Schema)({
+        timestamps: true,
+        autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    })
 ], Settings);
 exports.SettingsSchema = mongoose_1.SchemaFactory.createForClass(Settings);

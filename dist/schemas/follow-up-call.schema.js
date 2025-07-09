@@ -65,7 +65,9 @@ __decorate([
     __metadata("design:type", Object)
 ], FollowUpCall.prototype, "notes", void 0);
 exports.FollowUpCall = FollowUpCall = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true, versionKey: false })
+    (0, mongoose_1.Schema)({
+        timestamps: true, versionKey: false, autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    })
 ], FollowUpCall);
 exports.FollowUpCallSchema = mongoose_1.SchemaFactory.createForClass(FollowUpCall);
 // Indexes for efficient querying

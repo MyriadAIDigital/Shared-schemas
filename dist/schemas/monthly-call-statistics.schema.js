@@ -109,6 +109,8 @@ __decorate([
     __metadata("design:type", Date)
 ], MonthlyCallStatistics.prototype, "createdAt", void 0);
 exports.MonthlyCallStatistics = MonthlyCallStatistics = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true, versionKey: false })
+    (0, mongoose_1.Schema)({
+        timestamps: true, versionKey: false, autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    })
 ], MonthlyCallStatistics);
 exports.MonthlyCallStatisticsSchema = mongoose_1.SchemaFactory.createForClass(MonthlyCallStatistics);

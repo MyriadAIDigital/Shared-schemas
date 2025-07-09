@@ -92,6 +92,9 @@ __decorate([
     __metadata("design:type", Number)
 ], CallMetrics.prototype, "lifetimeBillingAverageTalkTime", void 0);
 exports.CallMetrics = CallMetrics = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true })
+    (0, mongoose_1.Schema)({
+        timestamps: true,
+        autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    })
 ], CallMetrics);
 exports.CallMetricsSchema = mongoose_1.SchemaFactory.createForClass(CallMetrics);

@@ -54,6 +54,8 @@ __decorate([
     __metadata("design:type", Date)
 ], ContactList.prototype, "createdAt", void 0);
 exports.ContactList = ContactList = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true, versionKey: false })
+    (0, mongoose_1.Schema)({
+        timestamps: true, versionKey: false, autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    })
 ], ContactList);
 exports.ContactListSchema = mongoose_1.SchemaFactory.createForClass(ContactList);
