@@ -100,6 +100,4 @@ exports.CallQueueData = CallQueueData = __decorate([
     })
 ], CallQueueData);
 // ✅ Let Mongoose infer the correct Schema type — no manual typing needed
-exports.CallQueueDataSchema = mongoose_1.SchemaFactory.createForClass(CallQueueData)
-    .set('autoCreate', false)
-    .set('collection', 'dynamic_per_tenant'); // Will be overridden dynamically per tenant
+exports.CallQueueDataSchema = mongoose_1.SchemaFactory.createForClass(CallQueueData);
