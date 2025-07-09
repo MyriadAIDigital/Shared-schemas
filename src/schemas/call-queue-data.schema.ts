@@ -6,7 +6,10 @@ import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 import { CallType, CampaignType, CallQueueStatus, QueueStatus } from '../enums/user-enums';
 
 
-@Schema({ timestamps: true })
+@Schema({
+    timestamps: true,
+    autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+})
 export class CallQueueData {
     @Prop({ required: true })
     tenantId!: string;
@@ -66,7 +69,7 @@ export class CallQueueData {
 
 export type CallQueueDataDocument = CallQueueData & Document;
 
-export const CallQueueDataSchema = SchemaFactory.createForClass(CallQueueData) as unknown as MongooseSchema<
-    CallQueueDataDocument,
-    Model<CallQueueDataDocument>
->;
+// ✅ Let Mongoose infer the correct Schema type — no manual typing needed
+export const CallQueueDataSchema = SchemaFactory.createForClass(CallQueueData)
+    .set('autoCreate', false)
+    .set('collection', 'dynamic_per_tenant'); // Will be overridden dynamically per tenant
