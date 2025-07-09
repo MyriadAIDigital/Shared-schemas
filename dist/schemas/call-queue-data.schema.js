@@ -94,6 +94,12 @@ __decorate([
     __metadata("design:type", Date)
 ], CallQueueData.prototype, "updatedAt", void 0);
 exports.CallQueueData = CallQueueData = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true })
+    (0, mongoose_1.Schema)({
+        timestamps: true,
+        autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+    })
 ], CallQueueData);
-exports.CallQueueDataSchema = mongoose_1.SchemaFactory.createForClass(CallQueueData);
+// ✅ Let Mongoose infer the correct Schema type — no manual typing needed
+exports.CallQueueDataSchema = mongoose_1.SchemaFactory.createForClass(CallQueueData)
+    .set('autoCreate', false)
+    .set('collection', 'dynamic_per_tenant'); // Will be overridden dynamically per tenant
