@@ -121,7 +121,8 @@ __decorate([
 exports.ClientSetting = ClientSetting = __decorate([
     (0, mongoose_1.Schema)({
         timestamps: true,
-        autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+        autoCreate: false,
+        autoIndex: false,
     })
 ], ClientSetting);
 // **Do NOT cast to MongooseSchema<…>. Let Nest infer it.**

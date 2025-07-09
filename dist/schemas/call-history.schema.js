@@ -343,7 +343,10 @@ __decorate([
 ], CallHistory.prototype, "createdAt", void 0);
 exports.CallHistory = CallHistory = __decorate([
     (0, mongoose_1.Schema)({
-        timestamps: true, versionKey: false, autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+        timestamps: true,
+        versionKey: false,
+        autoCreate: false,
+        autoIndex: false,
     })
 ], CallHistory);
 exports.CallHistorySchema = mongoose_1.SchemaFactory.createForClass(CallHistory);

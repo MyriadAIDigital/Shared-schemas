@@ -54,7 +54,10 @@ __decorate([
 ], CallTranscript.prototype, "conversation", void 0);
 exports.CallTranscript = CallTranscript = __decorate([
     (0, mongoose_1.Schema)({
-        timestamps: true, versionKey: false, autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+        timestamps: true,
+        versionKey: false,
+        autoCreate: false,
+        autoIndex: false,
     })
 ], CallTranscript);
 exports.CallTranscriptSchema = mongoose_1.SchemaFactory.createForClass(CallTranscript);

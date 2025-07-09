@@ -200,7 +200,8 @@ __decorate([
 exports.Campaign = Campaign = __decorate([
     (0, mongoose_1.Schema)({
         timestamps: true,
-        autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+        autoCreate: false,
+        autoIndex: false,
     })
 ], Campaign);
 exports.CampaignSchema = mongoose_1.SchemaFactory.createForClass(Campaign);
