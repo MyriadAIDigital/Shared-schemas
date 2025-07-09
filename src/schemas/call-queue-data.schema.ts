@@ -70,6 +70,7 @@ export class CallQueueData {
 export type CallQueueDataDocument = CallQueueData & Document;
 
 // ✅ Let Mongoose infer the correct Schema type — no manual typing needed
-export const CallQueueDataSchema = SchemaFactory.createForClass(CallQueueData)
-    .set('autoCreate', false)
-    .set('collection', 'dynamic_per_tenant'); // Will be overridden dynamically per tenant
+export const CallQueueDataSchema = SchemaFactory.createForClass(CallQueueData) as unknown as MongooseSchema<
+    CallQueueDataDocument,
+    Model<CallQueueDataDocument>
+>;
