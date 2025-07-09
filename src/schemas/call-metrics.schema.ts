@@ -5,7 +5,10 @@ import { Document, Model, Schema as MongooseSchema, } from 'mongoose';
 
 export type CallMetricsDocument = CallMetrics & Document;
 
-@Schema({ timestamps: true })
+@Schema({
+    timestamps: true,
+    autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+})
 export class CallMetrics {
     @Prop({ required: true, index: true })
     tenantID!: string;

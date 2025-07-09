@@ -7,7 +7,9 @@ import { CallType, TelephonicProviders, VoiceSource, SttProvider, CreditDeductio
 
 export type CallHistoryDocument = CallHistory & Document;
 
-@Schema({ timestamps: true, versionKey: false })
+@Schema({
+    timestamps: true, versionKey: false, autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+})
 export class CallHistory {
     @Prop({ type: Types.ObjectId, ref: 'ContactList', required: true, index: true })
     contactListId!: Types.ObjectId;

@@ -7,7 +7,10 @@ import { VoiceType, VoiceSource, CallingModel, CampaignType, TelephonicProviders
 
 export type CampaignDocument = Campaign & Document;
 
-@Schema({ timestamps: true })
+@Schema({
+    timestamps: true,
+    autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+})
 export class Campaign {
     @Prop({ required: true, type: Types.ObjectId, ref: 'VoiceGallery' })
     voiceGalleryId!: Types.ObjectId;

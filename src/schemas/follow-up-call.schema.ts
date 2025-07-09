@@ -8,7 +8,9 @@ import { CallType, FollowUpStatus } from '../enums/user-enums';
 
 export type FollowUpCallDocument = FollowUpCall & Document;
 
-@Schema({ timestamps: true, versionKey: false })
+@Schema({
+    timestamps: true, versionKey: false, autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+})
 export class FollowUpCall {
     @Prop({ type: Types.ObjectId, ref: 'Campaign', required: true, index: true })
     campaignId!: Types.ObjectId;

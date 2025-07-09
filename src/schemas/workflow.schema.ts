@@ -7,7 +7,10 @@ import { StepTypeEnum, WorkflowStepStatus, CampaignType, WorkflowTypeEnum } from
 
 export type WorkflowDocument = Workflow & Document;
 
-@Schema({ _id: false })
+@Schema({
+    timestamps: true,
+    autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+})
 export class WorkflowStep {
     @Prop({ required: true, enum: StepTypeEnum })
     type!: StepTypeEnum;

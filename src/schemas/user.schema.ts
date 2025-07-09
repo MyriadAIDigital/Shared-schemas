@@ -6,7 +6,10 @@ import { CompanyName, Role, CallingModel } from '../enums/user-enums';
 
 export type UserDocument = User & Document;
 
-@Schema({ timestamps: true })
+@Schema({
+    timestamps: true,
+    autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+})
 export class User {
     @Prop({ required: true })
     name!: string;                // <-- ‘!’ added

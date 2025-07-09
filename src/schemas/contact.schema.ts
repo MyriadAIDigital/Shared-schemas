@@ -12,7 +12,9 @@ import {
 
 export type ContactDocument = Contact & Document;
 
-@Schema({ timestamps: true })
+@Schema({
+    timestamps: true, autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+})
 export class Contact {
     @Prop({ required: true })
     name!: string;
