@@ -67,7 +67,8 @@ __decorate([
 exports.User = User = __decorate([
     (0, mongoose_1.Schema)({
         timestamps: true,
-        autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+        autoCreate: false,
+        autoIndex: false,
     })
 ], User);
 exports.UserSchema = mongoose_1.SchemaFactory.createForClass(User);

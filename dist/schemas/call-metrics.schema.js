@@ -94,7 +94,8 @@ __decorate([
 exports.CallMetrics = CallMetrics = __decorate([
     (0, mongoose_1.Schema)({
         timestamps: true,
-        autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+        autoCreate: false,
+        autoIndex: false,
     })
 ], CallMetrics);
 exports.CallMetricsSchema = mongoose_1.SchemaFactory.createForClass(CallMetrics);

@@ -76,7 +76,8 @@ __decorate([
 exports.Settings = Settings = __decorate([
     (0, mongoose_1.Schema)({
         timestamps: true,
-        autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+        autoCreate: false,
+        autoIndex: false,
     })
 ], Settings);
 exports.SettingsSchema = mongoose_1.SchemaFactory.createForClass(Settings);

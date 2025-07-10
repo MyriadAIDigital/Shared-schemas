@@ -96,7 +96,8 @@ __decorate([
 exports.CallQueueData = CallQueueData = __decorate([
     (0, mongoose_1.Schema)({
         timestamps: true,
-        autoCreate: false, // ✅ Prevents "NamespaceExists" error in Azure Cosmos DB
+        autoCreate: false,
+        autoIndex: false,
     })
 ], CallQueueData);
 // ✅ Let Mongoose infer the correct Schema type — no manual typing needed
