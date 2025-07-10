@@ -65,11 +65,7 @@ __decorate([
     __metadata("design:type", String)
 ], WorkflowStep.prototype, "stepStatus", void 0);
 exports.WorkflowStep = WorkflowStep = __decorate([
-    (0, mongoose_1.Schema)({
-        timestamps: true,
-        autoCreate: false,
-        autoIndex: false,
-    })
+    (0, mongoose_1.Schema)({ _id: false })
 ], WorkflowStep);
 let Workflow = class Workflow {
 };
@@ -107,7 +103,11 @@ __decorate([
     __metadata("design:type", String)
 ], Workflow.prototype, "webhookUrl", void 0);
 exports.Workflow = Workflow = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true })
+    (0, mongoose_1.Schema)({
+        timestamps: true,
+        autoCreate: false,
+        autoIndex: false,
+    })
 ], Workflow);
 exports.WorkflowSchema = mongoose_1.SchemaFactory.createForClass(Workflow);
 exports.WorkflowSchema.index({ name: 1 }, { unique: true });
