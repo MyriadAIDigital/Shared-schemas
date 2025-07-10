@@ -7,11 +7,7 @@ import { StepTypeEnum, WorkflowStepStatus, CampaignType, WorkflowTypeEnum } from
 
 export type WorkflowDocument = Workflow & Document;
 
-@Schema({
-    timestamps: true,
-    autoCreate: false,
-    autoIndex: false,
-})
+@Schema({ _id: false })
 export class WorkflowStep {
     @Prop({ required: true, enum: StepTypeEnum })
     type!: StepTypeEnum;
@@ -50,7 +46,11 @@ export class WorkflowStep {
     stepStatus?: WorkflowStepStatus;
 }
 
-@Schema({ timestamps: true })
+@Schema({
+    timestamps: true,
+    autoCreate: false,
+    autoIndex: false,
+})
 export class Workflow {
     @Prop({ required: true })
     name!: string;
