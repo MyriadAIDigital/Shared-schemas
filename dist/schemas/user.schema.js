@@ -65,6 +65,10 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "clientCutoffEnd", void 0);
 exports.User = User = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true })
+    (0, mongoose_1.Schema)({
+        timestamps: true,
+        autoCreate: false,
+        autoIndex: false,
+    })
 ], User);
 exports.UserSchema = mongoose_1.SchemaFactory.createForClass(User);

@@ -6,7 +6,11 @@ import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 import { CallType, CampaignType, CallQueueStatus, QueueStatus } from '../enums/user-enums';
 
 
-@Schema({ timestamps: true })
+@Schema({
+    timestamps: true,
+    autoCreate: false,
+    autoIndex: false,
+})
 export class CallQueueData {
     @Prop({ required: true })
     tenantId!: string;
@@ -66,6 +70,7 @@ export class CallQueueData {
 
 export type CallQueueDataDocument = CallQueueData & Document;
 
+// ✅ Let Mongoose infer the correct Schema type — no manual typing needed
 export const CallQueueDataSchema = SchemaFactory.createForClass(CallQueueData) as unknown as MongooseSchema<
     CallQueueDataDocument,
     Model<CallQueueDataDocument>

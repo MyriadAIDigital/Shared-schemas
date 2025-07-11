@@ -101,6 +101,8 @@ __decorate([
     __metadata("design:type", Date)
 ], Contact.prototype, "createdAt", void 0);
 exports.Contact = Contact = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true })
+    (0, mongoose_1.Schema)({
+        timestamps: true, autoCreate: false, autoIndex: false,
+    })
 ], Contact);
 exports.ContactSchema = mongoose_1.SchemaFactory.createForClass(Contact);

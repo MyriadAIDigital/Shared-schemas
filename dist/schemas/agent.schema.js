@@ -1,5 +1,4 @@
 "use strict";
-// src/schemas/contact-list.schema.ts
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,55 +9,63 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ContactListSchema = exports.ContactList = void 0;
+exports.AgentSchema = exports.Agent = void 0;
+// src/agent/entities/agent.entity.ts
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
 const user_enums_1 = require("../enums/user-enums");
-let ContactList = class ContactList {
+let Agent = class Agent {
 };
-exports.ContactList = ContactList;
-__decorate([
-    (0, mongoose_1.Prop)({ required: true, enum: user_enums_1.listType, default: user_enums_1.listType.DEFAULT }),
-    __metadata("design:type", String)
-], ContactList.prototype, "listType", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ required: true, unique: true, index: true }),
-    __metadata("design:type", String)
-], ContactList.prototype, "name", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ required: true, enum: user_enums_1.CountryCode, default: user_enums_1.CountryCode.INDIA }),
-    __metadata("design:type", String)
-], ContactList.prototype, "countryCode", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ default: 0 }),
-    __metadata("design:type", Number)
-], ContactList.prototype, "totalCustomers", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ default: true }),
-    __metadata("design:type", Boolean)
-], ContactList.prototype, "isLiveMode", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ default: false }),
-    __metadata("design:type", Boolean)
-], ContactList.prototype, "contactListIsBusy", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ required: true, type: mongoose_2.Types.ObjectId, ref: 'User' }),
-    __metadata("design:type", mongoose_2.Types.ObjectId)
-], ContactList.prototype, "userId", void 0);
+exports.Agent = Agent;
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
-], ContactList.prototype, "tenantID", void 0);
+], Agent.prototype, "name", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Object, required: true }),
+    __metadata("design:type", Object)
+], Agent.prototype, "callTemplate", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true }),
+    __metadata("design:type", String)
+], Agent.prototype, "agentId", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: '' }),
+    __metadata("design:type", String)
+], Agent.prototype, "description", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true }),
+    __metadata("design:type", String)
+], Agent.prototype, "type", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, required: true }),
+    __metadata("design:type", mongoose_2.Types.ObjectId)
+], Agent.prototype, "voiceDbId", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true }),
+    __metadata("design:type", String)
+], Agent.prototype, "voiceName", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true }),
+    __metadata("design:type", String)
+], Agent.prototype, "callingModel", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true }),
+    __metadata("design:type", String)
+], Agent.prototype, "displayVoiceName", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Object, required: true, default: {} }),
+    __metadata("design:type", Object)
+], Agent.prototype, "response", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: Date, default: () => new Date(), index: true }),
     __metadata("design:type", Date)
-], ContactList.prototype, "createdAt", void 0);
-exports.ContactList = ContactList = __decorate([
+], Agent.prototype, "agentCreatedAt", void 0);
+exports.Agent = Agent = __decorate([
     (0, mongoose_1.Schema)({
         timestamps: true,
-        versionKey: false,
         autoCreate: false,
         autoIndex: false,
     })
-], ContactList);
-exports.ContactListSchema = mongoose_1.SchemaFactory.createForClass(ContactList);
+], Agent);
+exports.AgentSchema = mongoose_1.SchemaFactory.createForClass(Agent);

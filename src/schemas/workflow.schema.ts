@@ -46,7 +46,11 @@ export class WorkflowStep {
     stepStatus?: WorkflowStepStatus;
 }
 
-@Schema({ timestamps: true })
+@Schema({
+    timestamps: true,
+    autoCreate: false,
+    autoIndex: false,
+})
 export class Workflow {
     @Prop({ required: true })
     name!: string;

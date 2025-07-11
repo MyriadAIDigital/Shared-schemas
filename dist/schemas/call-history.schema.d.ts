@@ -83,6 +83,7 @@ export declare class CallHistory {
     creditDeductionStatus: CreditDeductionStatus;
     creditDeductionSuccessResponse: Record<string, any>;
     creditDeductionErrorResponse: Record<string, any>;
+    createdAt: Date;
 }
 export declare const CallHistorySchema: MongooseSchema<CallHistoryDocument, Model<CallHistoryDocument>>;
 //# sourceMappingURL=call-history.schema.d.ts.map

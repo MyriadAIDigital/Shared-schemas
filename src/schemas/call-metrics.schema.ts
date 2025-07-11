@@ -5,7 +5,11 @@ import { Document, Model, Schema as MongooseSchema, } from 'mongoose';
 
 export type CallMetricsDocument = CallMetrics & Document;
 
-@Schema({ timestamps: true })
+@Schema({
+    timestamps: true,
+    autoCreate: false,
+    autoIndex: false,
+})
 export class CallMetrics {
     @Prop({ required: true, index: true })
     tenantID!: string;

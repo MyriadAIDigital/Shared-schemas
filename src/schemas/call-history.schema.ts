@@ -7,7 +7,12 @@ import { CallType, TelephonicProviders, VoiceSource, SttProvider, CreditDeductio
 
 export type CallHistoryDocument = CallHistory & Document;
 
-@Schema({ timestamps: true, versionKey: false })
+@Schema({
+    timestamps: true,
+    versionKey: false,
+    autoCreate: false,
+    autoIndex: false,
+})
 export class CallHistory {
     @Prop({ type: Types.ObjectId, ref: 'ContactList', required: true, index: true })
     contactListId!: Types.ObjectId;
@@ -273,6 +278,9 @@ export class CallHistory {
 
     @Prop({ type: MongooseSchema.Types.Mixed, default: {} })
     creditDeductionErrorResponse!: Record<string, any>;
+
+    @Prop({ required: true, index: true })
+    createdAt!: Date; // ✅ Non-null assertion (you know Mongoose will populate it)
 }
 
 export const CallHistorySchema = SchemaFactory.createForClass(CallHistory) as unknown as MongooseSchema<

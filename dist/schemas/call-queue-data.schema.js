@@ -94,6 +94,11 @@ __decorate([
     __metadata("design:type", Date)
 ], CallQueueData.prototype, "updatedAt", void 0);
 exports.CallQueueData = CallQueueData = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true })
+    (0, mongoose_1.Schema)({
+        timestamps: true,
+        autoCreate: false,
+        autoIndex: false,
+    })
 ], CallQueueData);
+// ✅ Let Mongoose infer the correct Schema type — no manual typing needed
 exports.CallQueueDataSchema = mongoose_1.SchemaFactory.createForClass(CallQueueData);

@@ -47,5 +47,6 @@ export interface ICampaign {
     allowLateNightCalls: boolean;
     isEmailSend: boolean;
     clientCutoffStart: string; // Format: 'HH:mm'
-    clientCutoffEnd: string;   // Format: 'HH:mm'
+    clientCutoffEnd: string;// Format: 'HH:mm'
+    agentId: Types.ObjectId;
 }

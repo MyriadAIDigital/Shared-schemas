@@ -81,6 +81,11 @@ __decorate([
     __metadata("design:type", Object)
 ], VoiceGallery.prototype, "additionalMetadata", void 0);
 exports.VoiceGallery = VoiceGallery = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true, versionKey: false })
+    (0, mongoose_1.Schema)({
+        timestamps: true,
+        versionKey: false,
+        autoCreate: false,
+        autoIndex: false,
+    })
 ], VoiceGallery);
 exports.VoiceGallerySchema = mongoose_1.SchemaFactory.createForClass(VoiceGallery);

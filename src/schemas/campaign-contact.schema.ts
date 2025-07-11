@@ -8,7 +8,11 @@ import { CallStatus } from '../enums/user-enums';
 
 export type CampaignContactDocument = CampaignContact & Document;
 
-@Schema({ timestamps: true })
+@Schema({
+    timestamps: true,
+    autoCreate: false,
+    autoIndex: false,
+})
 export class CampaignContact {
     @Prop({ required: true, type: Types.ObjectId, ref: 'Campaign' })
     campaignId!: Types.ObjectId;

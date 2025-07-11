@@ -14,7 +14,11 @@ class PromptSetting {
 
 export type ClientSettingDocument = ClientSetting & Document;
 
-@Schema({ timestamps: true })
+@Schema({
+    timestamps: true,
+    autoCreate: false,
+    autoIndex: false,
+})
 export class ClientSetting {
     @Prop({ type: [PromptSetting], default: [] })
     promptSettings!: PromptSetting[];

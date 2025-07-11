@@ -5,7 +5,11 @@ import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 
 export type SettingsDocument = Settings & Document;
 
-@Schema({ timestamps: true })
+@Schema({
+    timestamps: true,
+    autoCreate: false,
+    autoIndex: false,
+})
 export class Settings {
     @Prop({
         type: [

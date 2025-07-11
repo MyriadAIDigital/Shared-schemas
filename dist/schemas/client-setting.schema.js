@@ -119,7 +119,11 @@ __decorate([
     __metadata("design:type", Object)
 ], ClientSetting.prototype, "telephonySetting", void 0);
 exports.ClientSetting = ClientSetting = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true })
+    (0, mongoose_1.Schema)({
+        timestamps: true,
+        autoCreate: false,
+        autoIndex: false,
+    })
 ], ClientSetting);
 // **Do NOT cast to MongooseSchema<…>. Let Nest infer it.**
 exports.ClientSettingSchema = mongoose_1.SchemaFactory.createForClass(ClientSetting);

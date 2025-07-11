@@ -5,7 +5,12 @@ import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 
 export type DailyCallStatisticsDocument = DailyCallStatistics & Document;
 
-@Schema({ timestamps: true, versionKey: false })
+@Schema({
+    timestamps: true,
+    versionKey: false,
+    autoCreate: false,
+    autoIndex: false,
+})
 export class DailyCallStatistics {
     @Prop({ required: true, index: true })
     date!: string;

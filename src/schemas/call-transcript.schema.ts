@@ -5,7 +5,12 @@ import { Document, Model, Schema as MongooseSchema } from 'mongoose';
 
 export type CallTranscriptDocument = CallTranscript & Document;
 
-@Schema({ timestamps: true, versionKey: false })
+@Schema({
+    timestamps: true,
+    versionKey: false,
+    autoCreate: false,
+    autoIndex: false,
+})
 export class CallTranscript {
     @Prop({ required: true })
     phoneNumber!: string;

@@ -86,6 +86,10 @@ __decorate([
     __metadata("design:type", Date)
 ], CampaignContact.prototype, "updatedAt", void 0);
 exports.CampaignContact = CampaignContact = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true })
+    (0, mongoose_1.Schema)({
+        timestamps: true,
+        autoCreate: false,
+        autoIndex: false,
+    })
 ], CampaignContact);
 exports.CampaignContactSchema = mongoose_1.SchemaFactory.createForClass(CampaignContact);

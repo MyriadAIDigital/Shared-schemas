@@ -7,7 +7,12 @@ import { listType, CountryCode } from '../enums/user-enums';
 
 export type ContactListDocument = ContactList & Document;
 
-@Schema({ timestamps: true, versionKey: false })
+@Schema({
+    timestamps: true,
+    versionKey: false,
+    autoCreate: false,
+    autoIndex: false,
+})
 export class ContactList {
     @Prop({ required: true, enum: listType, default: listType.DEFAULT })
     listType!: listType;

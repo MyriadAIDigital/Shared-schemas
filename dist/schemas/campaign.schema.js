@@ -189,7 +189,19 @@ __decorate([
     (0, mongoose_1.Prop)({ type: String, default: '09:00' }),
     __metadata("design:type", String)
 ], Campaign.prototype, "clientCutoffEnd", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: false, type: mongoose_2.Types.ObjectId, }),
+    __metadata("design:type", mongoose_2.Types.ObjectId)
+], Campaign.prototype, "agentId", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true, index: true }),
+    __metadata("design:type", Date)
+], Campaign.prototype, "createdAt", void 0);
 exports.Campaign = Campaign = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true })
+    (0, mongoose_1.Schema)({
+        timestamps: true,
+        autoCreate: false,
+        autoIndex: false,
+    })
 ], Campaign);
 exports.CampaignSchema = mongoose_1.SchemaFactory.createForClass(Campaign);

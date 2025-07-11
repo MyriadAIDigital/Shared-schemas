@@ -12,7 +12,9 @@ import {
 
 export type ContactDocument = Contact & Document;
 
-@Schema({ timestamps: true })
+@Schema({
+    timestamps: true, autoCreate: false, autoIndex: false,
+})
 export class Contact {
     @Prop({ required: true })
     name!: string;

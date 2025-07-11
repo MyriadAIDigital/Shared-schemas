@@ -1,7 +1,7 @@
 "use strict";
 // src/common/enum.ts
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.QueueStatus = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.Role = exports.CompanyName = void 0;
+exports.AgentType = exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.QueueStatus = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.Role = exports.CompanyName = void 0;
 var CompanyName;
 (function (CompanyName) {
     CompanyName["HAVISTO_TEA"] = "HAVISTO_TEA";
@@ -10,6 +10,7 @@ var CompanyName;
     CompanyName["CLEARTAX"] = "CLEARTAX";
     CompanyName["GOVERNMENT_OF_KARNATAKA"] = "GOVERNMENT_OF_KARNATAKA";
     CompanyName["WEEKDAY"] = "WEEKDAY";
+    CompanyName["CASHBOOK"] = "CASHBOOK";
 })(CompanyName || (exports.CompanyName = CompanyName = {}));
 var Role;
 (function (Role) {
@@ -195,3 +196,10 @@ var CreditDeductionStatus;
     CreditDeductionStatus["Success"] = "success";
     CreditDeductionStatus["Failed"] = "failed";
 })(CreditDeductionStatus || (exports.CreditDeductionStatus = CreditDeductionStatus = {}));
+var AgentType;
+(function (AgentType) {
+    // TYPE_1 IS FOR MYRIAD SELF AGENTS ONLY
+    AgentType["MYRIADAI_AGENT_TYPE_1"] = "MYRIADAI_AGENT_TYPE_1";
+    //TYPE_2 IS FOR ULTRAVOX AGENT
+    AgentType["MYRIADAI_AGENT_TYPE_2"] = "MYRIADAI_AGENT_TYPE_2";
+})(AgentType || (exports.AgentType = AgentType = {}));

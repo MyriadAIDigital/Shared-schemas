@@ -7,7 +7,11 @@ import { VoiceType, VoiceSource, CallingModel, CampaignType, TelephonicProviders
 
 export type CampaignDocument = Campaign & Document;
 
-@Schema({ timestamps: true })
+@Schema({
+    timestamps: true,
+    autoCreate: false,
+    autoIndex: false,
+})
 export class Campaign {
     @Prop({ required: true, type: Types.ObjectId, ref: 'VoiceGallery' })
     voiceGalleryId!: Types.ObjectId;
@@ -137,6 +141,13 @@ export class Campaign {
 
     @Prop({ type: String, default: '09:00' })
     clientCutoffEnd!: string;
+
+    @Prop({ required: false, type: Types.ObjectId, })
+    agentId!: Types.ObjectId;
+
+    @Prop({ required: true, index: true })
+    createdAt!: Date; // ✅ Non-null assertion (you know Mongoose will populate it)
+
 }
 
 export const CampaignSchema = SchemaFactory.createForClass(Campaign) as unknown as MongooseSchema<

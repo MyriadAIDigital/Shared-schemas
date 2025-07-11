@@ -7,6 +7,8 @@ export enum CompanyName {
     CLEARTAX = 'CLEARTAX',
     GOVERNMENT_OF_KARNATAKA = 'GOVERNMENT_OF_KARNATAKA', // Descriptive key
     WEEKDAY = 'WEEKDAY',
+    CASHBOOK = 'CASHBOOK',
+
 }
 
 export enum Role {
@@ -207,4 +209,12 @@ export enum CreditDeductionStatus {
     Default = 'default',  // not yet attempted
     Success = 'success',  // deduction succeeded
     Failed = 'failed',    // deduction threw an error
+}
+
+export enum AgentType {
+    // TYPE_1 IS FOR MYRIAD SELF AGENTS ONLY
+    MYRIADAI_AGENT_TYPE_1 = 'MYRIADAI_AGENT_TYPE_1',
+
+    //TYPE_2 IS FOR ULTRAVOX AGENT
+    MYRIADAI_AGENT_TYPE_2 = 'MYRIADAI_AGENT_TYPE_2',
 }

@@ -8,7 +8,12 @@ import { CallType, FollowUpStatus } from '../enums/user-enums';
 
 export type FollowUpCallDocument = FollowUpCall & Document;
 
-@Schema({ timestamps: true, versionKey: false })
+@Schema({
+    timestamps: true,
+    versionKey: false,
+    autoCreate: false,
+    autoIndex: false,
+})
 export class FollowUpCall {
     @Prop({ type: Types.ObjectId, ref: 'Campaign', required: true, index: true })
     campaignId!: Types.ObjectId;

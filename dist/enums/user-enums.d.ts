@@ -4,7 +4,8 @@ export declare enum CompanyName {
     MYRIADAI = "MYRIADAI",
     CLEARTAX = "CLEARTAX",
     GOVERNMENT_OF_KARNATAKA = "GOVERNMENT_OF_KARNATAKA",// Descriptive key
-    WEEKDAY = "WEEKDAY"
+    WEEKDAY = "WEEKDAY",
+    CASHBOOK = "CASHBOOK"
 }
 export declare enum Role {
     SUPER_ADMIN = "SuperAdmin",
@@ -154,5 +155,9 @@ export declare enum CreditDeductionStatus {
     Default = "default",// not yet attempted
     Success = "success",// deduction succeeded
     Failed = "failed"
+}
+export declare enum AgentType {
+    MYRIADAI_AGENT_TYPE_1 = "MYRIADAI_AGENT_TYPE_1",
+    MYRIADAI_AGENT_TYPE_2 = "MYRIADAI_AGENT_TYPE_2"
 }
 //# sourceMappingURL=user-enums.d.ts.map

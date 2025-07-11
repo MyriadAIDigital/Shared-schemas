@@ -5,7 +5,12 @@ import { Document, Model, Schema as MongooseSchema, Types } from 'mongoose';
 
 export type MonthlyCallStatisticsDocument = MonthlyCallStatistics & Document;
 
-@Schema({ timestamps: true, versionKey: false })
+@Schema({
+    timestamps: true,
+    versionKey: false,
+    autoCreate: false,
+    autoIndex: false,
+})
 export class MonthlyCallStatistics {
     @Prop({ required: true, index: true })
     month!: string; // Format: YYYY-MM

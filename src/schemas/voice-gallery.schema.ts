@@ -7,7 +7,12 @@ import { VoiceType, VoiceSource, VoiceGender, CallingModel } from '../enums/user
 
 export type VoiceGalleryDocument = VoiceGallery & Document;
 
-@Schema({ timestamps: true, versionKey: false })
+@Schema({
+    timestamps: true,
+    versionKey: false,
+    autoCreate: false,
+    autoIndex: false,
+})
 export class VoiceGallery {
     @Prop({ required: true, enum: VoiceType })
     type!: VoiceType;  // Premium or Standard
