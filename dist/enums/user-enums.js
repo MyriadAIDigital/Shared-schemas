@@ -108,6 +108,7 @@ var StepTypeEnum;
     StepTypeEnum["EMAIL"] = "EMAIL";
     StepTypeEnum["MESSAGE"] = "MESSAGE";
     StepTypeEnum["WHATSAPP"] = "WHATSAPP";
+    StepTypeEnum["WEBHOOK"] = "WEBHOOK";
 })(StepTypeEnum || (exports.StepTypeEnum = StepTypeEnum = {}));
 var WorkflowStepStatus;
 (function (WorkflowStepStatus) {

@@ -79,7 +79,8 @@ export declare enum StepTypeEnum {
     CALL = "CALL",
     EMAIL = "EMAIL",
     MESSAGE = "MESSAGE",
-    WHATSAPP = "WHATSAPP"
+    WHATSAPP = "WHATSAPP",
+    WEBHOOK = "WEBHOOK"
 }
 export declare enum WorkflowStepStatus {
     PENDING = "pending",
