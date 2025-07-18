@@ -1,7 +1,7 @@
 "use strict";
 // src/common/enum.ts
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AgentType = exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.QueueStatus = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.Role = exports.CompanyName = void 0;
+exports.HttpMethod = exports.InitialOutputMedium = exports.ModelType = exports.EndBehavior = exports.AgentToolsType = exports.AgentType = exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.QueueStatus = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.Role = exports.CompanyName = void 0;
 var CompanyName;
 (function (CompanyName) {
     CompanyName["HAVISTO_TEA"] = "HAVISTO_TEA";
@@ -203,3 +203,50 @@ var AgentType;
     //TYPE_2 IS FOR ULTRAVOX AGENT
     AgentType["MYRIADAI_AGENT_TYPE_2"] = "MYRIADAI_AGENT_TYPE_2";
 })(AgentType || (exports.AgentType = AgentType = {}));
+var AgentToolsType;
+(function (AgentToolsType) {
+    //ultravox
+    AgentToolsType["AGENT_TOOLS_TYPE_1"] = "AGENT_TOOLS_TYPE_1";
+    //custom
+    AgentToolsType["AGENT_TOOLS_TYPE_2"] = "AGENT_TOOLS_TYPE_2";
+})(AgentToolsType || (exports.AgentToolsType = AgentToolsType = {}));
+//TODO: Add THIS ENUM TO THE SHARED SCHEMAS
+var EndBehavior;
+(function (EndBehavior) {
+    EndBehavior["END_BEHAVIOR_UNSPECIFIED"] = "END_BEHAVIOR_UNSPECIFIED";
+    EndBehavior["END_BEHAVIOR_HANG_UP_SOFT"] = "END_BEHAVIOR_HANG_UP_SOFT";
+    EndBehavior["END_BEHAVIOR_HANG_UP_STRICT"] = "END_BEHAVIOR_HANG_UP_STRICT";
+})(EndBehavior || (exports.EndBehavior = EndBehavior = {}));
+var ModelType;
+(function (ModelType) {
+    ModelType["MODEL_1"] = "fixie-ai/ultravox";
+})(ModelType || (exports.ModelType = ModelType = {}));
+var InitialOutputMedium;
+(function (InitialOutputMedium) {
+    InitialOutputMedium["MESSAGE_MEDIUM_UNSPECIFIED"] = "MESSAGE_MEDIUM_UNSPECIFIED";
+    InitialOutputMedium["MESSAGE_MEDIUM_VOICE"] = "MESSAGE_MEDIUM_VOICE";
+    InitialOutputMedium["MESSAGE_MEDIUM_TEXT"] = "MESSAGE_MEDIUM_TEXT";
+})(InitialOutputMedium || (exports.InitialOutputMedium = InitialOutputMedium = {}));
+var ParameterLocation;
+(function (ParameterLocation) {
+    ParameterLocation["PARAMETER_LOCATION_UNSPECIFIED"] = "PARAMETER_LOCATION_UNSPECIFIED";
+    ParameterLocation["PARAMETER_LOCATION_QUERY"] = "PARAMETER_LOCATION_QUERY";
+    ParameterLocation["PARAMETER_LOCATION_PATH"] = "PARAMETER_LOCATION_PATH";
+    ParameterLocation["PARAMETER_LOCATION_HEADER"] = "PARAMETER_LOCATION_HEADER";
+    ParameterLocation["PARAMETER_LOCATION_BODY"] = "PARAMETER_LOCATION_BODY";
+})(ParameterLocation || (ParameterLocation = {}));
+var KnownValue;
+(function (KnownValue) {
+    KnownValue["KNOWN_PARAM_UNSPECIFIED"] = "KNOWN_PARAM_UNSPECIFIED";
+    KnownValue["KNOWN_PARAM_CALL_ID"] = "KNOWN_PARAM_CALL_ID";
+    KnownValue["KNOWN_PARAM_CONVERSATION_HISTORY"] = "KNOWN_PARAM_CONVERSATION_HISTORY";
+    KnownValue["KNOWN_PARAM_OUTPUT_SAMPLE_RATE"] = "KNOWN_PARAM_OUTPUT_SAMPLE_RATE";
+    KnownValue["KNOWN_PARAM_CALL_STATE"] = "KNOWN_PARAM_CALL_STATE";
+})(KnownValue || (KnownValue = {}));
+var HttpMethod;
+(function (HttpMethod) {
+    HttpMethod["GET"] = "GET";
+    HttpMethod["POST"] = "POST";
+    HttpMethod["PUT"] = "PUT";
+    HttpMethod["DELETE"] = "DELETE";
+})(HttpMethod || (exports.HttpMethod = HttpMethod = {}));

@@ -160,4 +160,27 @@ export declare enum AgentType {
     MYRIADAI_AGENT_TYPE_1 = "MYRIADAI_AGENT_TYPE_1",
     MYRIADAI_AGENT_TYPE_2 = "MYRIADAI_AGENT_TYPE_2"
 }
+export declare enum AgentToolsType {
+    AGENT_TOOLS_TYPE_1 = "AGENT_TOOLS_TYPE_1",
+    AGENT_TOOLS_TYPE_2 = "AGENT_TOOLS_TYPE_2"
+}
+export declare enum EndBehavior {
+    END_BEHAVIOR_UNSPECIFIED = "END_BEHAVIOR_UNSPECIFIED",
+    END_BEHAVIOR_HANG_UP_SOFT = "END_BEHAVIOR_HANG_UP_SOFT",
+    END_BEHAVIOR_HANG_UP_STRICT = "END_BEHAVIOR_HANG_UP_STRICT"
+}
+export declare enum ModelType {
+    MODEL_1 = "fixie-ai/ultravox"
+}
+export declare enum InitialOutputMedium {
+    MESSAGE_MEDIUM_UNSPECIFIED = "MESSAGE_MEDIUM_UNSPECIFIED",
+    MESSAGE_MEDIUM_VOICE = "MESSAGE_MEDIUM_VOICE",
+    MESSAGE_MEDIUM_TEXT = "MESSAGE_MEDIUM_TEXT"
+}
+export declare enum HttpMethod {
+    GET = "GET",
+    POST = "POST",
+    PUT = "PUT",
+    DELETE = "DELETE"
+}
 //# sourceMappingURL=user-enums.d.ts.map
