@@ -1,4 +1,5 @@
 "use strict";
+// src/agent/entities/corpus-source.schema.ts
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -9,21 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CorpusSourceSchema = exports.CorpusSource = exports.CorpusDocument = void 0;
-// src/agent/entities/agent.entity.ts
+exports.CorpusSourceSchema = exports.CorpusSource = exports.CorpusSubDocument = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-class CorpusDocument {
+class CorpusSubDocument {
 }
-exports.CorpusDocument = CorpusDocument;
+exports.CorpusSubDocument = CorpusSubDocument;
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
-], CorpusDocument.prototype, "externalDocumentId", void 0);
+], CorpusSubDocument.prototype, "externalDocumentId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
-], CorpusDocument.prototype, "internalDocumentUrl", void 0);
+], CorpusSubDocument.prototype, "internalDocumentUrl", void 0);
 let CorpusSource = class CorpusSource {
 };
 exports.CorpusSource = CorpusSource;
@@ -56,7 +56,7 @@ __decorate([
     __metadata("design:type", Array)
 ], CorpusSource.prototype, "webUrls", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: [CorpusDocument], required: true }),
+    (0, mongoose_1.Prop)({ type: [CorpusSubDocument], required: true }),
     __metadata("design:type", Array)
 ], CorpusSource.prototype, "documents", void 0);
 __decorate([
@@ -64,6 +64,6 @@ __decorate([
     __metadata("design:type", Date)
 ], CorpusSource.prototype, "createdAt", void 0);
 exports.CorpusSource = CorpusSource = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true, autoIndex: false, autoCreate: false, strict: true })
+    (0, mongoose_1.Schema)({ timestamps: true, autoCreate: false, autoIndex: false, strict: true })
 ], CorpusSource);
 exports.CorpusSourceSchema = mongoose_1.SchemaFactory.createForClass(CorpusSource);

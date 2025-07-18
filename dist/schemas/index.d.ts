@@ -17,4 +17,6 @@ export * from './workflow.schema';
 export * from './client-voice-gallery.schema';
 export * from './agent.schema';
 export * from './agent-tools.schema';
+export * from './corpus-source.schema';
+export * from './corpus.schema';
 //# sourceMappingURL=index.d.ts.map

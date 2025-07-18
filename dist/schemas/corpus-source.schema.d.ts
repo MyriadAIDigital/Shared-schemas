@@ -1,6 +1,6 @@
 import { Document, Types } from 'mongoose';
 export type CorpusSourceDocument = CorpusSource & Document;
-export declare class CorpusDocument {
+export declare class CorpusSubDocument {
     externalDocumentId: string;
     internalDocumentUrl: string;
 }
@@ -12,7 +12,7 @@ export declare class CorpusSource {
     corpusId: Types.ObjectId;
     crawlDepth: number;
     webUrls: string[];
-    documents: CorpusDocument[];
+    documents: CorpusSubDocument[];
     createdAt: Date;
 }
 export declare const CorpusSourceSchema: import("mongoose").Schema<CorpusSource, import("mongoose").Model<CorpusSource, any, any, any, Document<unknown, any, CorpusSource, any> & CorpusSource & {
