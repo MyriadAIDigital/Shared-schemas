@@ -1,5 +1,5 @@
 import { Types } from "mongoose";
-import { CorpusDocument } from "../schemas/corpus.schema";
+import { CorpusSubDocument } from "../schemas";
 export interface ICorpusSource {
     name: string;
     description: string;
@@ -8,6 +8,6 @@ export interface ICorpusSource {
     corpusId: Types.ObjectId;
     crawlDepth: number;
     webUrls: string[];
-    documents: CorpusDocument[];
+    documents: CorpusSubDocument[];
 }
 //# sourceMappingURL=corpus-source.interface.d.ts.map
