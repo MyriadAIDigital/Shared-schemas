@@ -111,6 +111,7 @@ export enum StepTypeEnum {
     EMAIL = 'EMAIL',
     MESSAGE = 'MESSAGE',
     WHATSAPP = 'WHATSAPP',
+    WEBHOOK = 'WEBHOOK',
 }
 
 export enum WorkflowStepStatus {
