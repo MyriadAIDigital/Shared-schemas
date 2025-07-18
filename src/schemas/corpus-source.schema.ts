@@ -1,11 +1,11 @@
-// src/agent/entities/agent.entity.ts
+// src/agent/entities/corpus-source.schema.ts
+
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
 
 export type CorpusSourceDocument = CorpusSource & Document;
 
-
-export class CorpusDocument {
+export class CorpusSubDocument {
     @Prop({ required: true })
     externalDocumentId!: string;
 
@@ -13,22 +13,22 @@ export class CorpusDocument {
     internalDocumentUrl!: string;
 }
 
-@Schema({ timestamps: true, autoIndex: false, autoCreate:false, strict: true })
+@Schema({ timestamps: true, autoCreate: false, autoIndex: false, strict: true })
 export class CorpusSource {
     @Prop({ required: true })
     name!: string;
 
-    @Prop({ required: true})
+    @Prop({ required: true })
     description!: string;
 
-    @Prop({ required: true})
+    @Prop({ required: true })
     externalSourceId!: string;
 
-    @Prop({ required: true})
+    @Prop({ required: true })
     externalCorpusId!: string;
 
-    @Prop({ required: true})
-    corpusId!: Types.ObjectId;
+    @Prop({ required: true })
+    corpusId!: Types.ObjectId; // reference to Corpus
 
     @Prop({ required: true })
     crawlDepth!: number;
@@ -36,12 +36,11 @@ export class CorpusSource {
     @Prop({ required: true })
     webUrls!: string[];
 
-    @Prop({ type: [CorpusDocument], required: true })
-    documents!: CorpusDocument[];
+    @Prop({ type: [CorpusSubDocument], required: true })
+    documents!: CorpusSubDocument[];
 
-    @Prop({ type: Date, default: () => new Date(),index:true })
+    @Prop({ type: Date, default: () => new Date(), index: true })
     createdAt!: Date;
-    
 }
 
 export const CorpusSourceSchema = SchemaFactory.createForClass(CorpusSource);
