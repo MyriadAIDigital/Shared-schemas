@@ -18,4 +18,5 @@ export * from './contact.interface';
 export * from './client-voice-gallery.interface';
 export * from './tenant-outcome.interface';
 export * from './agent.interface';
+export * from './agent-tools.interface';
 //# sourceMappingURL=index.d.ts.map

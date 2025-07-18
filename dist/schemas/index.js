@@ -33,3 +33,4 @@ __exportStar(require("./voice-gallery.schema"), exports);
 __exportStar(require("./workflow.schema"), exports);
 __exportStar(require("./client-voice-gallery.schema"), exports);
 __exportStar(require("./agent.schema"), exports);
+__exportStar(require("./agent-tools.schema"), exports);
