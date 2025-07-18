@@ -1,7 +1,7 @@
 "use strict";
 // src/common/enum.ts
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.HttpMethod = exports.InitialOutputMedium = exports.ModelType = exports.EndBehavior = exports.AgentToolsType = exports.AgentType = exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.QueueStatus = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.Role = exports.CompanyName = void 0;
+exports.HttpMethod = exports.KnownValue = exports.ParameterLocation = exports.InitialOutputMedium = exports.ModelType = exports.EndBehavior = exports.AgentToolsType = exports.AgentType = exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.QueueStatus = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.Role = exports.CompanyName = void 0;
 var CompanyName;
 (function (CompanyName) {
     CompanyName["HAVISTO_TEA"] = "HAVISTO_TEA";
@@ -234,7 +234,7 @@ var ParameterLocation;
     ParameterLocation["PARAMETER_LOCATION_PATH"] = "PARAMETER_LOCATION_PATH";
     ParameterLocation["PARAMETER_LOCATION_HEADER"] = "PARAMETER_LOCATION_HEADER";
     ParameterLocation["PARAMETER_LOCATION_BODY"] = "PARAMETER_LOCATION_BODY";
-})(ParameterLocation || (ParameterLocation = {}));
+})(ParameterLocation || (exports.ParameterLocation = ParameterLocation = {}));
 var KnownValue;
 (function (KnownValue) {
     KnownValue["KNOWN_PARAM_UNSPECIFIED"] = "KNOWN_PARAM_UNSPECIFIED";
@@ -242,7 +242,7 @@ var KnownValue;
     KnownValue["KNOWN_PARAM_CONVERSATION_HISTORY"] = "KNOWN_PARAM_CONVERSATION_HISTORY";
     KnownValue["KNOWN_PARAM_OUTPUT_SAMPLE_RATE"] = "KNOWN_PARAM_OUTPUT_SAMPLE_RATE";
     KnownValue["KNOWN_PARAM_CALL_STATE"] = "KNOWN_PARAM_CALL_STATE";
-})(KnownValue || (KnownValue = {}));
+})(KnownValue || (exports.KnownValue = KnownValue = {}));
 var HttpMethod;
 (function (HttpMethod) {
     HttpMethod["GET"] = "GET";
