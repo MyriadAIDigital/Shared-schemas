@@ -322,6 +322,13 @@ __decorate([
 ], CallHistory.prototype, "whatsappMessages", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
+        type: [mongoose_2.Schema.Types.Mixed],
+        default: [],
+    }),
+    __metadata("design:type", Array)
+], CallHistory.prototype, "webhookDetails", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({
         type: String,
         enum: Object.values(user_enums_1.CreditDeductionStatus),
         default: user_enums_1.CreditDeductionStatus.Default,
