@@ -266,6 +266,12 @@ export class CallHistory {
     whatsappMessages!: Array<Record<string, any>>;
 
     @Prop({
+        type: [MongooseSchema.Types.Mixed],
+        default: [],
+    })
+    webhookDetails!: Array<Record<string, any>>;
+
+    @Prop({
         type: String,
         enum: Object.values(CreditDeductionStatus),
         default: CreditDeductionStatus.Default,
