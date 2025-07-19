@@ -80,6 +80,7 @@ export declare class CallHistory {
     totalCostWithoutServiceCharge: number;
     additionalMetadata: Record<string, any>;
     whatsappMessages: Array<Record<string, any>>;
+    webhookDetails: Array<Record<string, any>>;
     creditDeductionStatus: CreditDeductionStatus;
     creditDeductionSuccessResponse: Record<string, any>;
     creditDeductionErrorResponse: Record<string, any>;

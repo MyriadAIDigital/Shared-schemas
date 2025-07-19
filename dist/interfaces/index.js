@@ -35,3 +35,6 @@ __exportStar(require("./contact.interface"), exports);
 __exportStar(require("./client-voice-gallery.interface"), exports);
 __exportStar(require("./tenant-outcome.interface"), exports);
 __exportStar(require("./agent.interface"), exports);
+__exportStar(require("./agent-tools.interface"), exports);
+__exportStar(require("./corpus-source.interface"), exports);
+__exportStar(require("./corpus.interface"), exports);
