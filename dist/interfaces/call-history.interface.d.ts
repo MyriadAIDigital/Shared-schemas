@@ -83,6 +83,7 @@ export interface ICallHistory {
     providerCallId?: string;
     additionalMetadata?: Record<string, any>;
     whatsappMessages?: Array<Record<string, any>>;
+    webhookDetails?: Array<Record<string, any>>;
     /** Track credit deduction attempt/result */
     creditDeductionStatus?: CreditDeductionStatus;
     /** Raw response returned on success */
