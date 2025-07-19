@@ -134,6 +134,8 @@ export interface ICallHistory {
     // Dynamic WhatsApp activity logs: an array of arbitrary key–value objects
     whatsappMessages?: Array<Record<string, any>>;
 
+    webhookDetails?: Array<Record<string, any>>;
+
     /** Track credit deduction attempt/result */
     creditDeductionStatus?: CreditDeductionStatus;
 
