@@ -34,6 +34,8 @@ export interface IWorkflow {
     tenantID: string;
     workingHours?: string[];
     webhookUrl?: string;
+    // ✅ Newly added property
+    allowWorkflowForTestMode?: boolean;
     createdAt: Date;
     updatedAt: Date;
 }

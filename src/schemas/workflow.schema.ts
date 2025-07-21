@@ -58,6 +58,7 @@ export class Workflow {
     @Prop()
     description?: string;
 
+
     @Prop({ required: true, enum: CampaignType, default: CampaignType.OUTBOUND })
     campaignType!: CampaignType;
 
@@ -75,6 +76,10 @@ export class Workflow {
 
     @Prop({ required: false })
     webhookUrl?: string;
+
+    // ✅ New Property
+    @Prop({ type: Boolean, default: false })
+    allowWorkflowForTestMode?: boolean;
 }
 
 export const WorkflowSchema = SchemaFactory.createForClass(Workflow) as unknown as MongooseSchema<
