@@ -102,6 +102,10 @@ __decorate([
     (0, mongoose_1.Prop)({ required: false }),
     __metadata("design:type", String)
 ], Workflow.prototype, "webhookUrl", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Boolean, default: false }),
+    __metadata("design:type", Boolean)
+], Workflow.prototype, "allowWorkflowForTestMode", void 0);
 exports.Workflow = Workflow = __decorate([
     (0, mongoose_1.Schema)({
         timestamps: true,

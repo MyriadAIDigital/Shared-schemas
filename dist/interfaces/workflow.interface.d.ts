@@ -28,6 +28,7 @@ export interface IWorkflow {
     tenantID: string;
     workingHours?: string[];
     webhookUrl?: string;
+    allowWorkflowForTestMode?: boolean;
     createdAt: Date;
     updatedAt: Date;
 }

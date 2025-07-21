@@ -24,6 +24,7 @@ export declare class Workflow {
     tenantID: string;
     workingHours?: string[];
     webhookUrl?: string;
+    allowWorkflowForTestMode?: boolean;
 }
 export declare const WorkflowSchema: MongooseSchema<WorkflowDocument, Model<WorkflowDocument>>;
 //# sourceMappingURL=workflow.schema.d.ts.map
