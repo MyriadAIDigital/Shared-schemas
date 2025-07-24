@@ -45,7 +45,7 @@ export class Corpus {
     stats!: CorpusStats;
 
     @Prop({ type: Boolean, default: false })
-    isCreatedByMyradai!: boolean;
+    isCreatedByMyriadai!: boolean;
 }
 
 export const CorpusSchema = SchemaFactory.createForClass(Corpus);

@@ -15,5 +15,5 @@ export interface ICorpus {
     externalCorpusId: string;        // updated from `externalCorpusId`
     created: Date;
     stats: ICorpusStats;
-    isCreatedByMyradai: boolean;
+    isCreatedByMyriadai: boolean;
 }
