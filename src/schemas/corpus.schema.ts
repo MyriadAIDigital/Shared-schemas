@@ -2,14 +2,13 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 import { CorpusStatus, CorpusType } from '../enums/user-enums';
 
-
 export type CorpusDocument = Corpus & Document;
 
 @Schema({ _id: false })
 class CorpusStats {
     @Prop({
         required: true,
-        enum: Object.values(CorpusStatus),
+        enum: CorpusStatus,
         default: CorpusStatus.CORPUS_STATUS_UNSPECIFIED,
     })
     status!: CorpusStatus;
@@ -27,12 +26,17 @@ class CorpusStats {
     numVectors?: number;
 }
 
-@Schema({ timestamps: true, autoCreate: false, autoIndex: false, strict: true })
+@Schema({
+    timestamps: true,
+    autoCreate: false,
+    autoIndex: false,
+    strict: true,
+})
 export class Corpus {
-    @Prop({ required: true })
+    @Prop({ required: true, trim: true })
     name!: string;
 
-    @Prop({ required: true })
+    @Prop({ required: true, trim: true })
     description!: string;
 
     @Prop({ required: true, unique: true, index: true })
@@ -41,17 +45,21 @@ export class Corpus {
     @Prop({ type: Date, default: () => new Date(), index: true })
     created!: Date;
 
-    @Prop({ type: CorpusStats, default: () => ({ status: CorpusStatus.CORPUS_STATUS_UNSPECIFIED }) })
+    @Prop({
+        type: CorpusStats,
+        default: () => ({ status: CorpusStatus.CORPUS_STATUS_UNSPECIFIED }),
+    })
     stats!: CorpusStats;
 
     @Prop({ type: Boolean, default: false })
     isCreatedByMyriadai!: boolean;
 
-
-    @Prop({ type: CorpusType, default: () => CorpusType.MyriadaiModel2 })
-    type!: CorpusType; // Added type field to specify corpus type
-
-
+    @Prop({
+        type: String,
+        enum: CorpusType,
+        default: CorpusType.MyriadaiModel2,
+    })
+    type!: CorpusType;
 }
 
 export const CorpusSchema = SchemaFactory.createForClass(Corpus);
