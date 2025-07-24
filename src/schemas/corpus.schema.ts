@@ -48,7 +48,7 @@ export class Corpus {
     isCreatedByMyriadai!: boolean;
 
 
-    @Prop({ type: CorpusType, default: () => ({ status: CorpusType.MyriadaiModel2 }) })
+    @Prop({ type: CorpusType, default: () => CorpusType.MyriadaiModel2 })
     type!: CorpusType; // Added type field to specify corpus type
 
 
