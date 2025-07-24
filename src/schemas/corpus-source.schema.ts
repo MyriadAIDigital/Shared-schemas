@@ -2,6 +2,7 @@
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
+import { CorpusSourceType } from '../enums/user-enums';
 
 export type CorpusSourceDocument = CorpusSource & Document;
 
@@ -41,6 +42,16 @@ export class CorpusSource {
 
     @Prop({ type: Date, default: () => new Date(), index: true })
     createdAt!: Date;
+
+    @Prop({ type: Boolean, default: false })
+    isCreatedByMyriadai!: boolean;
+
+    @Prop({
+        type: String,
+        enum: CorpusSourceType,
+        default: CorpusSourceType.WEB,
+    })
+    type!: CorpusSourceType;
 }
 
 export const CorpusSourceSchema = SchemaFactory.createForClass(CorpusSource);
