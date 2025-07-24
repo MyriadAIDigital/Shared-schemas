@@ -1,7 +1,7 @@
 "use strict";
 // src/common/enum.ts
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.HttpMethod = exports.KnownValue = exports.ParameterLocation = exports.InitialOutputMedium = exports.ModelType = exports.EndBehavior = exports.CorpusStatus = exports.AgentToolsType = exports.AgentType = exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.QueueStatus = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.CorpusType = exports.Role = exports.CompanyName = void 0;
+exports.HttpMethod = exports.KnownValue = exports.ParameterLocation = exports.InitialOutputMedium = exports.ModelType = exports.EndBehavior = exports.CorpusStatus = exports.AgentToolsType = exports.AgentType = exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.QueueStatus = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.CorpusSourceType = exports.CorpusType = exports.Role = exports.CompanyName = void 0;
 var CompanyName;
 (function (CompanyName) {
     CompanyName["HAVISTO_TEA"] = "HAVISTO_TEA";
@@ -26,6 +26,13 @@ var CorpusType;
     CorpusType["MyriadaiModel3"] = "MyriadaiModel3";
     CorpusType["MyriadaiModel4"] = "MyriadaiModel4";
 })(CorpusType || (exports.CorpusType = CorpusType = {}));
+var CorpusSourceType;
+(function (CorpusSourceType) {
+    CorpusSourceType["WEB"] = "WEB";
+    CorpusSourceType["FILE"] = "FILE";
+    CorpusSourceType["API"] = "API";
+    CorpusSourceType["DATABASE"] = "DATABASE";
+})(CorpusSourceType || (exports.CorpusSourceType = CorpusSourceType = {}));
 var TTSVOICE;
 (function (TTSVOICE) {
     TTSVOICE["ELEVENLABS"] = "ELEVENLABS";
