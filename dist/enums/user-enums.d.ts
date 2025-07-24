@@ -13,6 +13,12 @@ export declare enum Role {
     USER = "User",
     GUEST = "Guest"
 }
+export declare enum CorpusType {
+    MyriadaiModel1 = "MyriadaiModel1",// refer to myriadai.
+    MyriadaiModel2 = "MyriadaiModel2",// refer to ultravox.
+    MyriadaiModel3 = "MyriadaiModel3",
+    MyriadaiModel4 = "MyriadaiModel4"
+}
 export declare enum TTSVOICE {
     ELEVENLABS = "ELEVENLABS",
     AZURE = "AZURE"

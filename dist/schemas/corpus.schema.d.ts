@@ -1,5 +1,5 @@
 import { Document } from 'mongoose';
-import { CorpusStatus } from '../enums/user-enums';
+import { CorpusStatus, CorpusType } from '../enums/user-enums';
 export type CorpusDocument = Corpus & Document;
 declare class CorpusStats {
     status: CorpusStatus;
@@ -15,6 +15,7 @@ export declare class Corpus {
     created: Date;
     stats: CorpusStats;
     isCreatedByMyriadai: boolean;
+    type: CorpusType;
 }
 export declare const CorpusSchema: import("mongoose").Schema<Corpus, import("mongoose").Model<Corpus, any, any, any, Document<unknown, any, Corpus, any> & Corpus & {
     _id: import("mongoose").Types.ObjectId;

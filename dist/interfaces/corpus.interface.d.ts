@@ -1,4 +1,4 @@
-import { CorpusStatus } from "../enums/user-enums";
+import { CorpusStatus, CorpusType } from "../enums/user-enums";
 export interface ICorpusStats {
     status: CorpusStatus;
     lastUpdated?: Date;
@@ -13,5 +13,6 @@ export interface ICorpus {
     created: Date;
     stats: ICorpusStats;
     isCreatedByMyriadai: boolean;
+    type: CorpusType;
 }
 //# sourceMappingURL=corpus.interface.d.ts.map
