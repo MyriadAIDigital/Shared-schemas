@@ -64,6 +64,10 @@ __decorate([
     (0, mongoose_1.Prop)({ type: CorpusStats, default: () => ({ status: user_enums_1.CorpusStatus.CORPUS_STATUS_UNSPECIFIED }) }),
     __metadata("design:type", CorpusStats)
 ], Corpus.prototype, "stats", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Boolean, default: false }),
+    __metadata("design:type", Boolean)
+], Corpus.prototype, "isCreatedByMyriadai", void 0);
 exports.Corpus = Corpus = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, autoCreate: false, autoIndex: false, strict: true })
 ], Corpus);

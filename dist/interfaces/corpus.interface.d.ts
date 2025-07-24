@@ -12,5 +12,6 @@ export interface ICorpus {
     externalCorpusId: string;
     created: Date;
     stats: ICorpusStats;
+    isCreatedByMyriadai: boolean;
 }
 //# sourceMappingURL=corpus.interface.d.ts.map

@@ -14,6 +14,7 @@ export declare class Corpus {
     externalCorpusId: string;
     created: Date;
     stats: CorpusStats;
+    isCreatedByMyriadai: boolean;
 }
 export declare const CorpusSchema: import("mongoose").Schema<Corpus, import("mongoose").Model<Corpus, any, any, any, Document<unknown, any, Corpus, any> & Corpus & {
     _id: import("mongoose").Types.ObjectId;
