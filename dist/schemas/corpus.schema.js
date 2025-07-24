@@ -17,7 +17,7 @@ let CorpusStats = class CorpusStats {
 __decorate([
     (0, mongoose_1.Prop)({
         required: true,
-        enum: Object.values(user_enums_1.CorpusStatus),
+        enum: user_enums_1.CorpusStatus,
         default: user_enums_1.CorpusStatus.CORPUS_STATUS_UNSPECIFIED,
     }),
     __metadata("design:type", String)
@@ -45,11 +45,11 @@ let Corpus = class Corpus {
 };
 exports.Corpus = Corpus;
 __decorate([
-    (0, mongoose_1.Prop)({ required: true }),
+    (0, mongoose_1.Prop)({ required: true, trim: true }),
     __metadata("design:type", String)
 ], Corpus.prototype, "name", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ required: true }),
+    (0, mongoose_1.Prop)({ required: true, trim: true }),
     __metadata("design:type", String)
 ], Corpus.prototype, "description", void 0);
 __decorate([
@@ -61,7 +61,10 @@ __decorate([
     __metadata("design:type", Date)
 ], Corpus.prototype, "created", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: CorpusStats, default: () => ({ status: user_enums_1.CorpusStatus.CORPUS_STATUS_UNSPECIFIED }) }),
+    (0, mongoose_1.Prop)({
+        type: CorpusStats,
+        default: () => ({ status: user_enums_1.CorpusStatus.CORPUS_STATUS_UNSPECIFIED }),
+    }),
     __metadata("design:type", CorpusStats)
 ], Corpus.prototype, "stats", void 0);
 __decorate([
@@ -69,10 +72,19 @@ __decorate([
     __metadata("design:type", Boolean)
 ], Corpus.prototype, "isCreatedByMyriadai", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: user_enums_1.CorpusType, default: () => user_enums_1.CorpusType.MyriadaiModel2 }),
+    (0, mongoose_1.Prop)({
+        type: String,
+        enum: user_enums_1.CorpusType,
+        default: user_enums_1.CorpusType.MyriadaiModel2,
+    }),
     __metadata("design:type", String)
 ], Corpus.prototype, "type", void 0);
 exports.Corpus = Corpus = __decorate([
-    (0, mongoose_1.Schema)({ timestamps: true, autoCreate: false, autoIndex: false, strict: true })
+    (0, mongoose_1.Schema)({
+        timestamps: true,
+        autoCreate: false,
+        autoIndex: false,
+        strict: true,
+    })
 ], Corpus);
 exports.CorpusSchema = mongoose_1.SchemaFactory.createForClass(Corpus);
