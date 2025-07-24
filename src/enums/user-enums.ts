@@ -18,6 +18,13 @@ export enum Role {
     GUEST = 'Guest',
 }
 
+export enum CorpusType {
+    MyriadaiModel1 = 'MyriadaiModel1', // refer to myriadai.
+    MyriadaiModel2 = 'MyriadaiModel2',// refer to ultravox.
+    MyriadaiModel3 = 'MyriadaiModel3',
+    MyriadaiModel4 = 'MyriadaiModel4',
+}
+
 
 export enum TTSVOICE {
     ELEVENLABS = 'ELEVENLABS',

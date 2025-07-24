@@ -1,4 +1,4 @@
-import { CorpusStatus } from "../enums/user-enums";
+import { CorpusStatus, CorpusType } from "../enums/user-enums";
 
 
 export interface ICorpusStats {
@@ -16,4 +16,5 @@ export interface ICorpus {
     created: Date;
     stats: ICorpusStats;
     isCreatedByMyriadai: boolean;
+    type: CorpusType; // Added type field to distinguish from other schemas
 }

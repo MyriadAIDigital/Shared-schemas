@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-import { CorpusStatus } from '../enums/user-enums';
+import { CorpusStatus, CorpusType } from '../enums/user-enums';
 
 
 export type CorpusDocument = Corpus & Document;
@@ -46,6 +46,12 @@ export class Corpus {
 
     @Prop({ type: Boolean, default: false })
     isCreatedByMyriadai!: boolean;
+
+
+    @Prop({ type: CorpusType, default: () => ({ status: CorpusType.MyriadaiModel2 }) })
+    type!: CorpusType; // Added type field to specify corpus type
+
+
 }
 
 export const CorpusSchema = SchemaFactory.createForClass(Corpus);
