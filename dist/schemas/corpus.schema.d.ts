@@ -11,7 +11,7 @@ declare class CorpusStats {
 export declare class Corpus {
     name: string;
     description: string;
-    corpusId: string;
+    externalCorpusId: string;
     created: Date;
     stats: CorpusStats;
 }

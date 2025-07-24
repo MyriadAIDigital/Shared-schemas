@@ -55,7 +55,7 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)({ required: true, unique: true, index: true }),
     __metadata("design:type", String)
-], Corpus.prototype, "corpusId", void 0);
+], Corpus.prototype, "externalCorpusId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: Date, default: () => new Date(), index: true }),
     __metadata("design:type", Date)
