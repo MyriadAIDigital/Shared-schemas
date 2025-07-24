@@ -43,6 +43,9 @@ export class Corpus {
 
     @Prop({ type: CorpusStats, default: () => ({ status: CorpusStatus.CORPUS_STATUS_UNSPECIFIED }) })
     stats!: CorpusStats;
+
+    @Prop({ type: Boolean, default: false })
+    isCreatedByMyradai!: boolean;
 }
 
 export const CorpusSchema = SchemaFactory.createForClass(Corpus);
