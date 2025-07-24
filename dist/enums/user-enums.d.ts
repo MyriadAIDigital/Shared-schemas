@@ -19,6 +19,12 @@ export declare enum CorpusType {
     MyriadaiModel3 = "MyriadaiModel3",
     MyriadaiModel4 = "MyriadaiModel4"
 }
+export declare enum CorpusSourceType {
+    WEB = "WEB",
+    FILE = "FILE",
+    API = "API",
+    DATABASE = "DATABASE"
+}
 export declare enum TTSVOICE {
     ELEVENLABS = "ELEVENLABS",
     AZURE = "AZURE"
