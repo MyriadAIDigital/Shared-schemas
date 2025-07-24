@@ -13,6 +13,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CorpusSourceSchema = exports.CorpusSource = exports.CorpusSubDocument = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
+const user_enums_1 = require("../enums/user-enums");
 class CorpusSubDocument {
 }
 exports.CorpusSubDocument = CorpusSubDocument;
@@ -63,6 +64,18 @@ __decorate([
     (0, mongoose_1.Prop)({ type: Date, default: () => new Date(), index: true }),
     __metadata("design:type", Date)
 ], CorpusSource.prototype, "createdAt", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Boolean, default: false }),
+    __metadata("design:type", Boolean)
+], CorpusSource.prototype, "isCreatedByMyriadai", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({
+        type: String,
+        enum: user_enums_1.CorpusSourceType,
+        default: user_enums_1.CorpusSourceType.WEB,
+    }),
+    __metadata("design:type", String)
+], CorpusSource.prototype, "type", void 0);
 exports.CorpusSource = CorpusSource = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, autoCreate: false, autoIndex: false, strict: true })
 ], CorpusSource);
