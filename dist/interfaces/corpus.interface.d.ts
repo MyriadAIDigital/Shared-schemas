@@ -9,7 +9,7 @@ export interface ICorpusStats {
 export interface ICorpus {
     name: string;
     description: string;
-    corpusId: string;
+    externalCorpusId: string;
     created: Date;
     stats: ICorpusStats;
 }
