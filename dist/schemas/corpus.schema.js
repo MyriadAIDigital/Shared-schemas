@@ -10,8 +10,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CorpusSchema = exports.Corpus = void 0;
-// src/agent/entities/agent.entity.ts
 const mongoose_1 = require("@nestjs/mongoose");
+const user_enums_1 = require("../enums/user-enums");
+let CorpusStats = class CorpusStats {
+};
+__decorate([
+    (0, mongoose_1.Prop)({
+        required: true,
+        enum: Object.values(user_enums_1.CorpusStatus),
+        default: user_enums_1.CorpusStatus.CORPUS_STATUS_UNSPECIFIED,
+    }),
+    __metadata("design:type", String)
+], CorpusStats.prototype, "status", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Date }),
+    __metadata("design:type", Date)
+], CorpusStats.prototype, "lastUpdated", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Number, default: 0 }),
+    __metadata("design:type", Number)
+], CorpusStats.prototype, "numChunks", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Number, default: 0 }),
+    __metadata("design:type", Number)
+], CorpusStats.prototype, "numDocs", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Number, default: 0 }),
+    __metadata("design:type", Number)
+], CorpusStats.prototype, "numVectors", void 0);
+CorpusStats = __decorate([
+    (0, mongoose_1.Schema)({ _id: false })
+], CorpusStats);
 let Corpus = class Corpus {
 };
 exports.Corpus = Corpus;
@@ -24,13 +53,17 @@ __decorate([
     __metadata("design:type", String)
 ], Corpus.prototype, "description", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ required: true }),
+    (0, mongoose_1.Prop)({ required: true, unique: true, index: true }),
     __metadata("design:type", String)
-], Corpus.prototype, "externalCorpusId", void 0);
+], Corpus.prototype, "corpusId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: Date, default: () => new Date(), index: true }),
     __metadata("design:type", Date)
-], Corpus.prototype, "createdAt", void 0);
+], Corpus.prototype, "created", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: CorpusStats, default: () => ({ status: user_enums_1.CorpusStatus.CORPUS_STATUS_UNSPECIFIED }) }),
+    __metadata("design:type", CorpusStats)
+], Corpus.prototype, "stats", void 0);
 exports.Corpus = Corpus = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true, autoCreate: false, autoIndex: false, strict: true })
 ], Corpus);
