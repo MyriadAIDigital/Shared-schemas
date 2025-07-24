@@ -1,4 +1,5 @@
 import { Document, Types } from 'mongoose';
+import { CorpusSourceType } from '../enums/user-enums';
 export type CorpusSourceDocument = CorpusSource & Document;
 export declare class CorpusSubDocument {
     externalDocumentId: string;
@@ -14,6 +15,8 @@ export declare class CorpusSource {
     webUrls: string[];
     documents: CorpusSubDocument[];
     createdAt: Date;
+    isCreatedByMyriadai: boolean;
+    type: CorpusSourceType;
 }
 export declare const CorpusSourceSchema: import("mongoose").Schema<CorpusSource, import("mongoose").Model<CorpusSource, any, any, any, Document<unknown, any, CorpusSource, any> & CorpusSource & {
     _id: Types.ObjectId;
