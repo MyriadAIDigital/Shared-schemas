@@ -227,6 +227,24 @@ export enum AgentToolsType {
     AGENT_TOOLS_TYPE_2 = "AGENT_TOOLS_TYPE_2",
 }
 
+export enum CorpusStatus {
+    // Default/unknown state
+    CORPUS_STATUS_UNSPECIFIED = 'CORPUS_STATUS_UNSPECIFIED',
+
+    // Corpus has been created but has no data
+    CORPUS_STATUS_EMPTY = 'CORPUS_STATUS_EMPTY',
+
+    // Corpus is being processed or indexed
+    CORPUS_STATUS_INITIALIZING = 'CORPUS_STATUS_INITIALIZING',
+
+    // Corpus is ready for querying
+    CORPUS_STATUS_READY = 'CORPUS_STATUS_READY',
+
+    // Corpus is undergoing update operations
+    CORPUS_STATUS_UPDATING = 'CORPUS_STATUS_UPDATING',
+}
+
+
 //TODO: Add THIS ENUM TO THE SHARED SCHEMAS
 export enum EndBehavior {
     END_BEHAVIOR_UNSPECIFIED = "END_BEHAVIOR_UNSPECIFIED",
