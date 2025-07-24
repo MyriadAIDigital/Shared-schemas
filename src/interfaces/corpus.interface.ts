@@ -12,7 +12,7 @@ export interface ICorpusStats {
 export interface ICorpus {
     name: string;
     description: string;
-    corpusId: string;        // updated from `externalCorpusId`
+    externalCorpusId: string;        // updated from `externalCorpusId`
     created: Date;
     stats: ICorpusStats;
 }

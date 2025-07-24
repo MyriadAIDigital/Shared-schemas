@@ -36,7 +36,7 @@ export class Corpus {
     description!: string;
 
     @Prop({ required: true, unique: true, index: true })
-    corpusId!: string;
+    externalCorpusId!: string;
 
     @Prop({ type: Date, default: () => new Date(), index: true })
     created!: Date;
