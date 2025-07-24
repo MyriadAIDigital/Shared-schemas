@@ -21,7 +21,7 @@ export declare enum CorpusType {
 }
 export declare enum CorpusSourceType {
     WEB = "WEB",
-    FILE = "FILE",
+    DOCUMENT = "DOCUMENT",
     API = "API",
     DATABASE = "DATABASE"
 }

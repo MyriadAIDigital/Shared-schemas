@@ -29,7 +29,7 @@ var CorpusType;
 var CorpusSourceType;
 (function (CorpusSourceType) {
     CorpusSourceType["WEB"] = "WEB";
-    CorpusSourceType["FILE"] = "FILE";
+    CorpusSourceType["DOCUMENT"] = "DOCUMENT";
     CorpusSourceType["API"] = "API";
     CorpusSourceType["DATABASE"] = "DATABASE";
 })(CorpusSourceType || (exports.CorpusSourceType = CorpusSourceType = {}));
