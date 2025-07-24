@@ -25,6 +25,13 @@ export enum CorpusType {
     MyriadaiModel4 = 'MyriadaiModel4',
 }
 
+export enum CorpusSourceType {
+    WEB = 'WEB',
+    FILE = 'FILE',
+    API = 'API',
+    DATABASE = 'DATABASE',
+}
+
 
 export enum TTSVOICE {
     ELEVENLABS = 'ELEVENLABS',
