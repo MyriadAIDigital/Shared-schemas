@@ -39,7 +39,8 @@ export declare class AgentTools {
     definition: DefinitionSchema;
     description: string;
     type: AgentToolsType;
-    voiceDbId: Types.ObjectId;
+    voiceId: Types.ObjectId;
+    clientVoiceId: Types.ObjectId;
     voiceName: string;
     callingModel: CallingModel;
     displayVoiceName: string;

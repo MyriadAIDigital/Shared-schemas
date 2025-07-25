@@ -156,7 +156,11 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, required: true }),
     __metadata("design:type", mongoose_2.Types.ObjectId)
-], AgentTools.prototype, "voiceDbId", void 0);
+], AgentTools.prototype, "voiceId", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, required: true }),
+    __metadata("design:type", mongoose_2.Types.ObjectId)
+], AgentTools.prototype, "clientVoiceId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
