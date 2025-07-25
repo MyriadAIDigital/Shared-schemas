@@ -110,20 +110,11 @@ export class AgentTools {
     @Prop({ required: true })
     type!: AgentToolsType;
 
-    @Prop({ type: Types.ObjectId, required: true })
-    voiceId!: Types.ObjectId;
-
-    @Prop({ type: Types.ObjectId, required: true })
-    clientVoiceId!: Types.ObjectId;
-
-    @Prop({ required: true })
-    voiceName!: string;
 
     @Prop({ required: true })
     callingModel!: CallingModel;
 
-    @Prop({ required: true })
-    displayVoiceName!: string;
+
 
     @Prop({ type: Object, default: {} })
     response!: any;
