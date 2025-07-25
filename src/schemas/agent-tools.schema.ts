@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
-import { AgentType, CallingModel } from '../enums/user-enums';
+import { AgentToolsType, AgentType, CallingModel } from '../enums/user-enums';
 
 export type AgentToolsDocument = AgentTools & Document;
 
@@ -108,7 +108,7 @@ export class AgentTools {
     description!: string;
 
     @Prop({ required: true })
-    type!: AgentType;
+    type!: AgentToolsType;
 
     @Prop({ type: Types.ObjectId, required: true })
     voiceDbId!: Types.ObjectId;
