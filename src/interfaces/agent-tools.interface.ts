@@ -53,6 +53,7 @@ export interface IAgentTools {
   displayVoiceName: string;
   response?: any;
   createdAt?: Date;
+  isCreatedByMyriadai: boolean;
   externalToolId: string;
   created?: Date;
   ownership?: string;

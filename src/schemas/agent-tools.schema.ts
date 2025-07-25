@@ -134,6 +134,9 @@ export class AgentTools {
     @Prop({ required: true })
     externalToolId!: string;
 
+    @Prop({ type: Boolean, default: false })
+    isCreatedByMyriadai!: boolean;
+
     @Prop()
     created?: Date;
 
