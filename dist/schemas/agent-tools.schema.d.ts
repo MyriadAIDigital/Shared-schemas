@@ -46,7 +46,7 @@ export declare class AgentTools {
     displayVoiceName: string;
     response: any;
     createdAt: Date;
-    toolId: string;
+    externalToolId: string;
     created?: Date;
     ownership: string;
 }
