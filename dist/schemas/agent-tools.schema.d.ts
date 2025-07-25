@@ -1,4 +1,4 @@
-import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
+import { Document, Schema as MongooseSchema, Model } from 'mongoose';
 import { AgentToolsType, CallingModel } from '../enums/user-enums';
 export type AgentToolsDocument = AgentTools & Document;
 declare class ParameterSchema {
@@ -39,11 +39,7 @@ export declare class AgentTools {
     definition: DefinitionSchema;
     description: string;
     type: AgentToolsType;
-    voiceId: Types.ObjectId;
-    clientVoiceId: Types.ObjectId;
-    voiceName: string;
     callingModel: CallingModel;
-    displayVoiceName: string;
     response: any;
     createdAt: Date;
     externalToolId: string;

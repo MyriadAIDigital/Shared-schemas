@@ -39,11 +39,7 @@ export interface IAgentTools {
     definition: IDefinitionSchema;
     description?: string;
     type: AgentToolsType;
-    voiceId: Types.ObjectId;
-    clientVoiceId: Types.ObjectId;
-    voiceName: string;
     callingModel: CallingModel;
-    displayVoiceName: string;
     response?: any;
     createdAt?: Date;
     isCreatedByMyriadai: boolean;
