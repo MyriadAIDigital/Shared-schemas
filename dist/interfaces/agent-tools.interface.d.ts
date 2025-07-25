@@ -1,5 +1,5 @@
 import { Types } from 'mongoose';
-import { AgentType, CallingModel } from '../enums/user-enums';
+import { AgentToolsType, CallingModel } from '../enums/user-enums';
 export interface IParameterSchema {
     description?: string;
     type?: string;
@@ -38,7 +38,7 @@ export interface IAgentTools {
     name: string;
     definition: IDefinitionSchema;
     description?: string;
-    type: AgentType;
+    type: AgentToolsType;
     voiceDbId: Types.ObjectId;
     voiceName: string;
     callingModel: CallingModel;

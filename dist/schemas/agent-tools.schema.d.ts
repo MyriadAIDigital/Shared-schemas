@@ -1,5 +1,5 @@
 import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
-import { AgentType, CallingModel } from '../enums/user-enums';
+import { AgentToolsType, CallingModel } from '../enums/user-enums';
 export type AgentToolsDocument = AgentTools & Document;
 declare class ParameterSchema {
     description?: string;
@@ -38,7 +38,7 @@ export declare class AgentTools {
     name: string;
     definition: DefinitionSchema;
     description: string;
-    type: AgentType;
+    type: AgentToolsType;
     voiceDbId: Types.ObjectId;
     voiceName: string;
     callingModel: CallingModel;
