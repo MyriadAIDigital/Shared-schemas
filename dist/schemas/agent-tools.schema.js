@@ -186,6 +186,10 @@ __decorate([
     __metadata("design:type", String)
 ], AgentTools.prototype, "externalToolId", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: Boolean, default: false }),
+    __metadata("design:type", Boolean)
+], AgentTools.prototype, "isCreatedByMyriadai", void 0);
+__decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Date)
 ], AgentTools.prototype, "created", void 0);

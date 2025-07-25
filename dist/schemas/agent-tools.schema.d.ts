@@ -47,6 +47,7 @@ export declare class AgentTools {
     response: any;
     createdAt: Date;
     externalToolId: string;
+    isCreatedByMyriadai: boolean;
     created?: Date;
     ownership: string;
 }
