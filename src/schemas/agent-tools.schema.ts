@@ -111,7 +111,10 @@ export class AgentTools {
     type!: AgentToolsType;
 
     @Prop({ type: Types.ObjectId, required: true })
-    voiceDbId!: Types.ObjectId;
+    voiceId!: Types.ObjectId;
+
+    @Prop({ type: Types.ObjectId, required: true })
+    clientVoiceId!: Types.ObjectId;
 
     @Prop({ required: true })
     voiceName!: string;
