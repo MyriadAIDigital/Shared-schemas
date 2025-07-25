@@ -1,17 +1,16 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, Types } from 'mongoose';
+import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
 import { AgentType, CallingModel } from '../enums/user-enums';
-import moment from 'moment';
 
-export type AgentDocument = Agent & Document;
+export type AgentToolsDocument = AgentTools & Document;
 
-// Schema for schema inside dynamicParameters
+// Parameter schema used inside dynamic parameters
 @Schema({ _id: false })
 class ParameterSchema {
-    @Prop({ required: false })
+    @Prop()
     description?: string;
 
-    @Prop({ required: false })
+    @Prop()
     type?: string;
 }
 
@@ -27,7 +26,7 @@ class DynamicParameter {
     @Prop({ type: ParameterSchema, default: {} })
     schema!: ParameterSchema;
 
-    @Prop({ type: Boolean, default: false })
+    @Prop({ default: false })
     required!: boolean;
 }
 
@@ -40,7 +39,7 @@ class StaticParameter {
     @Prop({ required: true })
     location!: string;
 
-    @Prop({ required: false })
+    @Prop()
     value?: string;
 }
 
@@ -53,7 +52,7 @@ class AutomaticParameter {
     @Prop({ required: true })
     location!: string;
 
-    @Prop({ required: false })
+    @Prop()
     knownValue?: string;
 }
 
@@ -67,7 +66,7 @@ class HttpSchema {
     httpMethod!: string;
 }
 
-// Full definition
+// Full Definition schema
 @Schema({ _id: false })
 class DefinitionSchema {
     @Prop({ required: true })
@@ -76,8 +75,8 @@ class DefinitionSchema {
     @Prop({ required: true })
     description!: string;
 
-    @Prop({ required: false })
-    timeout!: string;
+    @Prop()
+    timeout?: string;
 
     @Prop({ type: [StaticParameter], default: [] })
     staticParameters!: StaticParameter[];
@@ -92,20 +91,18 @@ class DefinitionSchema {
     http!: HttpSchema;
 }
 
+// Main AgentTools schema
 @Schema({
     timestamps: true,
     autoCreate: false,
     autoIndex: false,
 })
-export class Agent {
+export class AgentTools {
     @Prop({ required: true })
     name!: string;
 
     @Prop({ type: DefinitionSchema, required: true })
     definition!: DefinitionSchema;
-
-    @Prop({ required: true })
-    agentId!: string;
 
     @Prop({ default: '' })
     description!: string;
@@ -125,20 +122,22 @@ export class Agent {
     @Prop({ required: true })
     displayVoiceName!: string;
 
-    @Prop({ type: Object, required: true, default: {} })
+    @Prop({ type: Object, default: {} })
     response!: any;
 
-    @Prop({ type: Date, default: () => moment().utc().toDate(), index: true })
+    @Prop({ type: Date, default: () => new Date(), index: true })
     createdAt!: Date;
-    // 🔽 Newly added fields per updated response
+
     @Prop({ required: true })
     toolId!: string;
 
-    @Prop({ type: Date })
-    created!: Date;
+    @Prop()
+    created?: Date;
 
     @Prop({ default: 'private' })
     ownership!: string;
 }
 
-export const AgentSchema = SchemaFactory.createForClass(Agent);
+export const AgentToolsSchema = SchemaFactory.createForClass(AgentTools) as unknown as MongooseSchema<
+    AgentToolsDocument,
+    Model<AgentToolsDocument>>;
