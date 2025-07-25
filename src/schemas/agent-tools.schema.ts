@@ -132,7 +132,7 @@ export class AgentTools {
     createdAt!: Date;
 
     @Prop({ required: true })
-    toolId!: string;
+    externalToolId!: string;
 
     @Prop()
     created?: Date;

@@ -53,7 +53,7 @@ export interface IAgentTools {
   displayVoiceName: string;
   response?: any;
   createdAt?: Date;
-  toolId: string;
+  externalToolId: string;
   created?: Date;
   ownership?: string;
 }
