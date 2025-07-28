@@ -1,9 +1,51 @@
 import { Document, Types } from 'mongoose';
-import { AgentType } from '../enums/user-enums';
+import { EndBehavior, ModelType, InitialOutputMedium, AgentType } from '../enums/user-enums';
 export type AgentDocument = Agent & Document;
+declare class InactivityMessage {
+    duration: number;
+    message: string;
+    endBehavior: EndBehavior;
+}
+declare class AgentSpeakerSettings {
+    uninterruptible: boolean;
+    text: string;
+    delay: number;
+}
+declare class UserSpeakerSettings {
+    text: string;
+    delay: number;
+    prompt?: string;
+}
+declare class FirstSpeakerSettings {
+    agent?: AgentSpeakerSettings;
+    user?: UserSpeakerSettings;
+}
+declare class VadSettings {
+    turnEndpointDelay: number;
+    minimumTurnDuration: number;
+    minimumInterruptionDuration: number;
+    frameActivationThreshold: number;
+}
+declare class CallTemplate {
+    systemPrompt: string;
+    voice: string;
+    selectedTools?: string[];
+    corpusId?: string;
+    model: ModelType;
+    temperature: string;
+    initialOutputMedium: InitialOutputMedium;
+    languageHint: string;
+    recordingEnabled: boolean;
+    timeExceededMessage: string;
+    joinTimeout: number;
+    maxDuration: number;
+    inactivityMessages: InactivityMessage[];
+    firstSpeakerSettings: FirstSpeakerSettings;
+    vadSettings: VadSettings;
+}
 export declare class Agent {
     name: string;
-    callTemplate: any;
+    callTemplate: CallTemplate;
     agentId: string;
     description: string;
     type: AgentType;
@@ -11,7 +53,6 @@ export declare class Agent {
     voiceName: string;
     callingModel: string;
     displayVoiceName: string;
-    response: any;
     agentCreatedAt: Date;
     isCreatedByMyriadai: boolean;
     isLiveMode: boolean;
@@ -25,4 +66,5 @@ export declare const AgentSchema: import("mongoose").Schema<Agent, import("mongo
 } & {
     __v: number;
 }>;
+export {};
 //# sourceMappingURL=agent.schema.d.ts.map
