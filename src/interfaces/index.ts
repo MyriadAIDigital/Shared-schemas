@@ -22,3 +22,4 @@ export * from './agent.interface';
 export * from './agent-tools.interface';
 export * from './corpus-source.interface';
 export * from './corpus.interface';
+export * from './ultravoxResponse.interface';

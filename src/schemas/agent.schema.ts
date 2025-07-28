@@ -43,6 +43,14 @@ export class Agent {
 
     @Prop({ type: Date, default: () => new Date(), index: true })
     agentCreatedAt!: Date;
+
+    @Prop({ type: Boolean, default: false })
+    isCreatedByMyriadai!: boolean;
+
+    @Prop({ type: Boolean, default: true })
+    isLiveMode!: boolean;
+
+
 }
 
 export const AgentSchema = SchemaFactory.createForClass(Agent);
