@@ -61,6 +61,14 @@ __decorate([
     (0, mongoose_1.Prop)({ type: Date, default: () => new Date(), index: true }),
     __metadata("design:type", Date)
 ], Agent.prototype, "agentCreatedAt", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Boolean, default: false }),
+    __metadata("design:type", Boolean)
+], Agent.prototype, "isCreatedByMyriadai", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Boolean, default: true }),
+    __metadata("design:type", Boolean)
+], Agent.prototype, "isLiveMode", void 0);
 exports.Agent = Agent = __decorate([
     (0, mongoose_1.Schema)({
         timestamps: true,

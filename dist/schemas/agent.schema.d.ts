@@ -13,6 +13,8 @@ export declare class Agent {
     displayVoiceName: string;
     response: any;
     agentCreatedAt: Date;
+    isCreatedByMyriadai: boolean;
+    isLiveMode: boolean;
 }
 export declare const AgentSchema: import("mongoose").Schema<Agent, import("mongoose").Model<Agent, any, any, any, Document<unknown, any, Agent, any> & Agent & {
     _id: Types.ObjectId;

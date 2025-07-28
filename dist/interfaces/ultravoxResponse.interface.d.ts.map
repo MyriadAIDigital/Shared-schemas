@@ -1,0 +1,1 @@
+{"version":3,"file":"ultravoxResponse.interface.d.ts","sourceRoot":"","sources":["../../src/interfaces/ultravoxResponse.interface.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,gBAAgB;IAC7B,uCAAuC;IACvC,OAAO,EAAE,MAAM,CAAC;IAEhB,gCAAgC;IAChC,IAAI,EAAE,MAAM,CAAC;IAEb,sEAAsE;IACtE,OAAO,EAAE,MAAM,CAAC;CAGnB"}

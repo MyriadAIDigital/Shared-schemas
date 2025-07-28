@@ -38,3 +38,4 @@ __exportStar(require("./agent.interface"), exports);
 __exportStar(require("./agent-tools.interface"), exports);
 __exportStar(require("./corpus-source.interface"), exports);
 __exportStar(require("./corpus.interface"), exports);
+__exportStar(require("./ultravoxResponse.interface"), exports);
