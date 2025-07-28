@@ -26,10 +26,14 @@ declare class VadSettings {
     minimumInterruptionDuration: string;
     frameActivationThreshold: string;
 }
+declare class SelectedTool {
+    toolId: string;
+    name: string;
+}
 declare class CallTemplate {
     systemPrompt: string;
     voice: string;
-    selectedTools?: string[];
+    selectedTools?: SelectedTool[];
     corpusId?: string;
     model: ModelType;
     temperature: string;

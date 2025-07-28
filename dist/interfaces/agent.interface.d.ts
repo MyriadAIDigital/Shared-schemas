@@ -28,7 +28,7 @@ export interface IVadSettings {
 export interface ICallTemplate {
     systemPrompt: string;
     voice: string;
-    selectedTools?: string[];
+    selectedTools?: ISelectedTool[];
     corpusId?: string;
     model: ModelType;
     temperature: string;
@@ -41,6 +41,10 @@ export interface ICallTemplate {
     inactivityMessages: IInactivityMessage[];
     firstSpeakerSettings: IFirstSpeakerSettings;
     vadSettings: IVadSettings;
+}
+export interface ISelectedTool {
+    toolId: string;
+    name: string;
 }
 export interface IAgent {
     _id: Types.ObjectId;

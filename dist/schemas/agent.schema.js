@@ -99,6 +99,16 @@ __decorate([
 VadSettings = __decorate([
     (0, mongoose_1.Schema)({ _id: false })
 ], VadSettings);
+class SelectedTool {
+}
+__decorate([
+    (0, mongoose_1.Prop)({ required: true }),
+    __metadata("design:type", String)
+], SelectedTool.prototype, "toolId", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true }),
+    __metadata("design:type", String)
+], SelectedTool.prototype, "name", void 0);
 let CallTemplate = class CallTemplate {
 };
 __decorate([
@@ -110,7 +120,7 @@ __decorate([
     __metadata("design:type", String)
 ], CallTemplate.prototype, "voice", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: [String], default: [] }),
+    (0, mongoose_1.Prop)({ type: [SelectedTool], default: [] }),
     __metadata("design:type", Array)
 ], CallTemplate.prototype, "selectedTools", void 0);
 __decorate([
