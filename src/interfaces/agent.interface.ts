@@ -1,51 +1,69 @@
-// src/agent/interfaces/agent.interface.ts
 import { Types } from 'mongoose';
-import { AgentType } from '../enums/user-enums';
+import { EndBehavior, ModelType, InitialOutputMedium, AgentType } from '../enums/user-enums';
+
+
+export interface IInactivityMessage {
+        duration: number;
+        message: string;
+        endBehavior: EndBehavior;
+}
+
+export interface IAgentSpeakerSettings {
+        uninterruptible: boolean;
+        text: string;
+        delay: number;
+}
+
+export interface IUserSpeakerSettings {
+        text: string;
+        delay: number;
+        prompt?: string;
+}
+
+export interface IFirstSpeakerSettings {
+        agent?: IAgentSpeakerSettings;
+        user?: IUserSpeakerSettings;
+}
+
+export interface IVadSettings {
+        turnEndpointDelay: number;
+        minimumTurnDuration: number;
+        minimumInterruptionDuration: number;
+        frameActivationThreshold: number;
+}
+
+export interface ICallTemplate {
+        systemPrompt: string;
+        voice: string;
+        selectedTools?: string[];
+        corpusId?: string;
+        model: ModelType;
+        temperature: string;
+        initialOutputMedium: InitialOutputMedium;
+        languageHint: string;
+        recordingEnabled: boolean;
+        timeExceededMessage: string;
+        joinTimeout: number;
+        maxDuration: number;
+        inactivityMessages: IInactivityMessage[];
+        firstSpeakerSettings: IFirstSpeakerSettings;
+        vadSettings: IVadSettings;
+}
 
 export interface IAgent {
-        /** MongoDB ObjectId of the agent document */
-        _id: Types.ObjectId;
-
-        /** Unique identifier for the agent (UUID or similar) */
-        agentId: string;
-
-        /** Display name for the agent */
+        _id?: Types.ObjectId;
         name: string;
-
-        /** Structured template configuration for the agent’s call behavior */
-        callTemplate: Record<string, any>;
-
-        /** Type of agent, e.g., AGENT_TOOLS_TYPE_1, etc. */
-        type: AgentType;
-
-        /** Reference to the voice configuration DB entry */
-        voiceDbId: Types.ObjectId;
-
-        /** Internal voice name used by the system */
-        voiceName: string;
-
-        /** Human-friendly display name for the voice */
-        displayVoiceName: string;
-
-        /** Calling model name, e.g., "MyriadAI_V2" */
-        callingModel: string;
-
-        /** Optional description or notes about the agent */
+        callTemplate: ICallTemplate;
+        agentId: string;
         description?: string;
-
-        /** Response config or data returned by the assistant */
-        response: Record<string, any>;
-
-        /** Flag to indicate whether this agent was created by MyriadAI platform */
+        type: AgentType;
+        voiceDbId: Types.ObjectId;
+        voiceName: string;
+        callingModel: string;
+        displayVoiceName: string;
+        agentCreatedAt?: Date;
         isCreatedByMyriadai?: boolean;
-
-        /** Whether the agent is active/live for calling in production */
         isLiveMode?: boolean;
-
-        /** Timestamp when the agent was created */
-        agentCreatedAt: Date;
-
-        /** Timestamps injected by Mongoose (createdAt, updatedAt) */
         createdAt?: Date;
         updatedAt?: Date;
 }
