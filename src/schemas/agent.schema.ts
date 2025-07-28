@@ -99,10 +99,10 @@ class CallTemplate {
     timeExceededMessage!: string;
 
     @Prop({ required: true })
-    joinTimeout!: number;
+    joinTimeout!: string;
 
     @Prop({ required: true })
-    maxDuration!: number;
+    maxDuration!: string;
 
     @Prop({ type: [InactivityMessage], default: [] })
     inactivityMessages!: InactivityMessage[];
