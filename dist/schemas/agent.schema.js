@@ -143,11 +143,11 @@ __decorate([
 ], CallTemplate.prototype, "timeExceededMessage", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], CallTemplate.prototype, "joinTimeout", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], CallTemplate.prototype, "maxDuration", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: [InactivityMessage], default: [] }),

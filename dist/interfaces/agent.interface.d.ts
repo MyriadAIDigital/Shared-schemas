@@ -36,8 +36,8 @@ export interface ICallTemplate {
     languageHint: string;
     recordingEnabled: boolean;
     timeExceededMessage: string;
-    joinTimeout: number;
-    maxDuration: number;
+    joinTimeout: string;
+    maxDuration: string;
     inactivityMessages: IInactivityMessage[];
     firstSpeakerSettings: IFirstSpeakerSettings;
     vadSettings: IVadSettings;

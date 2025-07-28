@@ -37,8 +37,8 @@ declare class CallTemplate {
     languageHint: string;
     recordingEnabled: boolean;
     timeExceededMessage: string;
-    joinTimeout: number;
-    maxDuration: number;
+    joinTimeout: string;
+    maxDuration: string;
     inactivityMessages: InactivityMessage[];
     firstSpeakerSettings: FirstSpeakerSettings;
     vadSettings: VadSettings;
