@@ -1,9 +1,8 @@
+import { AgentType, EndBehavior, ModelType, InitialOutputMedium } from '../enums/user-enums';
 import { Types } from 'mongoose';
-import { EndBehavior, ModelType, InitialOutputMedium, AgentType } from '../enums/user-enums';
-
 
 export interface IInactivityMessage {
-        duration: number;
+        duration: string;
         message: string;
         endBehavior: EndBehavior;
 }
@@ -11,12 +10,12 @@ export interface IInactivityMessage {
 export interface IAgentSpeakerSettings {
         uninterruptible: boolean;
         text: string;
-        delay: number;
+        delay: string;
 }
 
 export interface IUserSpeakerSettings {
         text: string;
-        delay: number;
+        delay: string;
         prompt?: string;
 }
 
@@ -26,10 +25,10 @@ export interface IFirstSpeakerSettings {
 }
 
 export interface IVadSettings {
-        turnEndpointDelay: number;
-        minimumTurnDuration: number;
-        minimumInterruptionDuration: number;
-        frameActivationThreshold: number;
+        turnEndpointDelay: string;
+        minimumTurnDuration: string;
+        minimumInterruptionDuration: string;
+        frameActivationThreshold: string;
 }
 
 export interface ICallTemplate {
@@ -51,7 +50,6 @@ export interface ICallTemplate {
 }
 
 export interface IAgent {
-        _id?: Types.ObjectId;
         name: string;
         callTemplate: ICallTemplate;
         agentId: string;
@@ -64,6 +62,4 @@ export interface IAgent {
         agentCreatedAt?: Date;
         isCreatedByMyriadai?: boolean;
         isLiveMode?: boolean;
-        createdAt?: Date;
-        updatedAt?: Date;
 }

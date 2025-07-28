@@ -2,17 +2,14 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
 import { EndBehavior, ModelType, InitialOutputMedium, AgentType } from '../enums/user-enums';
 
-
 export type AgentDocument = Agent & Document;
 
-// ───────────────────────
-// Nested Schemas
-// ───────────────────────
+// ──────── Nested Schemas ────────
 
 @Schema({ _id: false })
 class InactivityMessage {
     @Prop({ required: true })
-    duration!: number;
+    duration!: string; // fixed
 
     @Prop({ required: true })
     message!: string;
@@ -30,7 +27,7 @@ class AgentSpeakerSettings {
     text!: string;
 
     @Prop({ required: true })
-    delay!: number;
+    delay!: string; // fixed
 }
 
 @Schema({ _id: false })
@@ -39,7 +36,7 @@ class UserSpeakerSettings {
     text!: string;
 
     @Prop({ required: true })
-    delay!: number;
+    delay!: string; // fixed
 
     @Prop()
     prompt?: string;
@@ -57,16 +54,16 @@ class FirstSpeakerSettings {
 @Schema({ _id: false })
 class VadSettings {
     @Prop({ required: true })
-    turnEndpointDelay!: number;
+    turnEndpointDelay!: string; // fixed
 
     @Prop({ required: true })
-    minimumTurnDuration!: number;
+    minimumTurnDuration!: string; // fixed
 
     @Prop({ required: true })
-    minimumInterruptionDuration!: number;
+    minimumInterruptionDuration!: string; // fixed
 
     @Prop({ required: true })
-    frameActivationThreshold!: number;
+    frameActivationThreshold!: string; // fixed
 }
 
 @Schema({ _id: false })
@@ -87,7 +84,7 @@ class CallTemplate {
     model!: ModelType;
 
     @Prop({ required: true })
-    temperature!: string;
+    temperature!: string; // fixed
 
     @Prop({ required: true, enum: Object.values(InitialOutputMedium) })
     initialOutputMedium!: InitialOutputMedium;
@@ -117,9 +114,7 @@ class CallTemplate {
     vadSettings!: VadSettings;
 }
 
-// ───────────────────────
-// Main Agent Schema
-// ───────────────────────
+// ──────── Main Agent Schema ────────
 
 @Schema({
     timestamps: true,
