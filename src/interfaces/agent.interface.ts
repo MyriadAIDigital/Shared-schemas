@@ -50,6 +50,7 @@ export interface ICallTemplate {
 }
 
 export interface IAgent {
+        _id: Types.ObjectId;
         name: string;
         callTemplate: ICallTemplate;
         agentId: string;
