@@ -66,6 +66,14 @@ class VadSettings {
     frameActivationThreshold!: string; // fixed
 }
 
+
+class SelectedTool {
+    @Prop({ required: true })
+    toolId!: string;
+
+    @Prop({ required: true })
+    name!: string;
+}
 @Schema({ _id: false })
 class CallTemplate {
     @Prop({ required: true })
@@ -74,8 +82,8 @@ class CallTemplate {
     @Prop({ required: true })
     voice!: string;
 
-    @Prop({ type: [String], default: [] })
-    selectedTools?: string[];
+    @Prop({ type: [SelectedTool], default: [] })
+    selectedTools?: SelectedTool[];
 
     @Prop()
     corpusId?: string;
