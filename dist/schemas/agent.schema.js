@@ -13,14 +13,12 @@ exports.AgentSchema = exports.Agent = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
 const user_enums_1 = require("../enums/user-enums");
-// ───────────────────────
-// Nested Schemas
-// ───────────────────────
+// ──────── Nested Schemas ────────
 let InactivityMessage = class InactivityMessage {
 };
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], InactivityMessage.prototype, "duration", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
@@ -45,7 +43,7 @@ __decorate([
 ], AgentSpeakerSettings.prototype, "text", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], AgentSpeakerSettings.prototype, "delay", void 0);
 AgentSpeakerSettings = __decorate([
     (0, mongoose_1.Schema)({ _id: false })
@@ -58,7 +56,7 @@ __decorate([
 ], UserSpeakerSettings.prototype, "text", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], UserSpeakerSettings.prototype, "delay", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
@@ -84,19 +82,19 @@ let VadSettings = class VadSettings {
 };
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], VadSettings.prototype, "turnEndpointDelay", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], VadSettings.prototype, "minimumTurnDuration", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], VadSettings.prototype, "minimumInterruptionDuration", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], VadSettings.prototype, "frameActivationThreshold", void 0);
 VadSettings = __decorate([
     (0, mongoose_1.Schema)({ _id: false })
@@ -166,9 +164,7 @@ __decorate([
 CallTemplate = __decorate([
     (0, mongoose_1.Schema)({ _id: false })
 ], CallTemplate);
-// ───────────────────────
-// Main Agent Schema
-// ───────────────────────
+// ──────── Main Agent Schema ────────
 let Agent = class Agent {
 };
 exports.Agent = Agent;

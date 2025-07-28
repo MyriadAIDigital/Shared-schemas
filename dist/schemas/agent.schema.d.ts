@@ -2,18 +2,18 @@ import { Document, Types } from 'mongoose';
 import { EndBehavior, ModelType, InitialOutputMedium, AgentType } from '../enums/user-enums';
 export type AgentDocument = Agent & Document;
 declare class InactivityMessage {
-    duration: number;
+    duration: string;
     message: string;
     endBehavior: EndBehavior;
 }
 declare class AgentSpeakerSettings {
     uninterruptible: boolean;
     text: string;
-    delay: number;
+    delay: string;
 }
 declare class UserSpeakerSettings {
     text: string;
-    delay: number;
+    delay: string;
     prompt?: string;
 }
 declare class FirstSpeakerSettings {
@@ -21,10 +21,10 @@ declare class FirstSpeakerSettings {
     user?: UserSpeakerSettings;
 }
 declare class VadSettings {
-    turnEndpointDelay: number;
-    minimumTurnDuration: number;
-    minimumInterruptionDuration: number;
-    frameActivationThreshold: number;
+    turnEndpointDelay: string;
+    minimumTurnDuration: string;
+    minimumInterruptionDuration: string;
+    frameActivationThreshold: string;
 }
 declare class CallTemplate {
     systemPrompt: string;
