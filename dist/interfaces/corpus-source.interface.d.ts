@@ -1,5 +1,6 @@
 import { Types } from "mongoose";
 import { CorpusSubDocument } from "../schemas";
+import { CorpusSourceType } from "../enums/user-enums";
 export interface ICorpusSource {
     name: string;
     description: string;
@@ -9,5 +10,7 @@ export interface ICorpusSource {
     crawlDepth: number;
     webUrls: string[];
     documents: CorpusSubDocument[];
+    isCreatedByMyriadai: boolean;
+    type: CorpusSourceType;
 }
 //# sourceMappingURL=corpus-source.interface.d.ts.map

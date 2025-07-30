@@ -1,7 +1,7 @@
 "use strict";
 // src/common/enum.ts
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.HttpMethod = exports.KnownValue = exports.ParameterLocation = exports.InitialOutputMedium = exports.ModelType = exports.EndBehavior = exports.AgentToolsType = exports.AgentType = exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.QueueStatus = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.Role = exports.CompanyName = void 0;
+exports.HttpMethod = exports.KnownValue = exports.ParameterLocation = exports.InitialOutputMedium = exports.ModelType = exports.EndBehavior = exports.CorpusStatus = exports.AgentToolsType = exports.AgentType = exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.QueueStatus = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.CorpusSourceType = exports.CorpusType = exports.Role = exports.CompanyName = void 0;
 var CompanyName;
 (function (CompanyName) {
     CompanyName["HAVISTO_TEA"] = "HAVISTO_TEA";
@@ -19,6 +19,20 @@ var Role;
     Role["USER"] = "User";
     Role["GUEST"] = "Guest";
 })(Role || (exports.Role = Role = {}));
+var CorpusType;
+(function (CorpusType) {
+    CorpusType["MyriadaiModel1"] = "MyriadaiModel1";
+    CorpusType["MyriadaiModel2"] = "MyriadaiModel2";
+    CorpusType["MyriadaiModel3"] = "MyriadaiModel3";
+    CorpusType["MyriadaiModel4"] = "MyriadaiModel4";
+})(CorpusType || (exports.CorpusType = CorpusType = {}));
+var CorpusSourceType;
+(function (CorpusSourceType) {
+    CorpusSourceType["WEB"] = "WEB";
+    CorpusSourceType["DOCUMENT"] = "DOCUMENT";
+    CorpusSourceType["API"] = "API";
+    CorpusSourceType["DATABASE"] = "DATABASE";
+})(CorpusSourceType || (exports.CorpusSourceType = CorpusSourceType = {}));
 var TTSVOICE;
 (function (TTSVOICE) {
     TTSVOICE["ELEVENLABS"] = "ELEVENLABS";
@@ -211,6 +225,19 @@ var AgentToolsType;
     //custom
     AgentToolsType["AGENT_TOOLS_TYPE_2"] = "AGENT_TOOLS_TYPE_2";
 })(AgentToolsType || (exports.AgentToolsType = AgentToolsType = {}));
+var CorpusStatus;
+(function (CorpusStatus) {
+    // Default/unknown state
+    CorpusStatus["CORPUS_STATUS_UNSPECIFIED"] = "CORPUS_STATUS_UNSPECIFIED";
+    // Corpus has been created but has no data
+    CorpusStatus["CORPUS_STATUS_EMPTY"] = "CORPUS_STATUS_EMPTY";
+    // Corpus is being processed or indexed
+    CorpusStatus["CORPUS_STATUS_INITIALIZING"] = "CORPUS_STATUS_INITIALIZING";
+    // Corpus is ready for querying
+    CorpusStatus["CORPUS_STATUS_READY"] = "CORPUS_STATUS_READY";
+    // Corpus is undergoing update operations
+    CorpusStatus["CORPUS_STATUS_UPDATING"] = "CORPUS_STATUS_UPDATING";
+})(CorpusStatus || (exports.CorpusStatus = CorpusStatus = {}));
 //TODO: Add THIS ENUM TO THE SHARED SCHEMAS
 var EndBehavior;
 (function (EndBehavior) {

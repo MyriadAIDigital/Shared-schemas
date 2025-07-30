@@ -13,6 +13,18 @@ export declare enum Role {
     USER = "User",
     GUEST = "Guest"
 }
+export declare enum CorpusType {
+    MyriadaiModel1 = "MyriadaiModel1",// refer to myriadai.
+    MyriadaiModel2 = "MyriadaiModel2",// refer to ultravox.
+    MyriadaiModel3 = "MyriadaiModel3",
+    MyriadaiModel4 = "MyriadaiModel4"
+}
+export declare enum CorpusSourceType {
+    WEB = "WEB",
+    DOCUMENT = "DOCUMENT",
+    API = "API",
+    DATABASE = "DATABASE"
+}
 export declare enum TTSVOICE {
     ELEVENLABS = "ELEVENLABS",
     AZURE = "AZURE"
@@ -164,6 +176,13 @@ export declare enum AgentType {
 export declare enum AgentToolsType {
     AGENT_TOOLS_TYPE_1 = "AGENT_TOOLS_TYPE_1",
     AGENT_TOOLS_TYPE_2 = "AGENT_TOOLS_TYPE_2"
+}
+export declare enum CorpusStatus {
+    CORPUS_STATUS_UNSPECIFIED = "CORPUS_STATUS_UNSPECIFIED",
+    CORPUS_STATUS_EMPTY = "CORPUS_STATUS_EMPTY",
+    CORPUS_STATUS_INITIALIZING = "CORPUS_STATUS_INITIALIZING",
+    CORPUS_STATUS_READY = "CORPUS_STATUS_READY",
+    CORPUS_STATUS_UPDATING = "CORPUS_STATUS_UPDATING"
 }
 export declare enum EndBehavior {
     END_BEHAVIOR_UNSPECIFIED = "END_BEHAVIOR_UNSPECIFIED",

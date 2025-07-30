@@ -18,6 +18,20 @@ export enum Role {
     GUEST = 'Guest',
 }
 
+export enum CorpusType {
+    MyriadaiModel1 = 'MyriadaiModel1', // refer to myriadai.
+    MyriadaiModel2 = 'MyriadaiModel2',// refer to ultravox.
+    MyriadaiModel3 = 'MyriadaiModel3',
+    MyriadaiModel4 = 'MyriadaiModel4',
+}
+
+export enum CorpusSourceType {
+    WEB = 'WEB',
+    DOCUMENT = 'DOCUMENT',
+    API = 'API',
+    DATABASE = 'DATABASE',
+}
+
 
 export enum TTSVOICE {
     ELEVENLABS = 'ELEVENLABS',
@@ -226,6 +240,24 @@ export enum AgentToolsType {
     //custom
     AGENT_TOOLS_TYPE_2 = "AGENT_TOOLS_TYPE_2",
 }
+
+export enum CorpusStatus {
+    // Default/unknown state
+    CORPUS_STATUS_UNSPECIFIED = 'CORPUS_STATUS_UNSPECIFIED',
+
+    // Corpus has been created but has no data
+    CORPUS_STATUS_EMPTY = 'CORPUS_STATUS_EMPTY',
+
+    // Corpus is being processed or indexed
+    CORPUS_STATUS_INITIALIZING = 'CORPUS_STATUS_INITIALIZING',
+
+    // Corpus is ready for querying
+    CORPUS_STATUS_READY = 'CORPUS_STATUS_READY',
+
+    // Corpus is undergoing update operations
+    CORPUS_STATUS_UPDATING = 'CORPUS_STATUS_UPDATING',
+}
+
 
 //TODO: Add THIS ENUM TO THE SHARED SCHEMAS
 export enum EndBehavior {
