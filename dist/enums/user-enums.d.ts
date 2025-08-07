@@ -77,6 +77,10 @@ export declare enum CampaignType {
     INBOUND = "Inbound",
     ONDEMAND = "OnDemand"
 }
+export declare enum CampaignMode {
+    AGENT_IN = "AgentIn",
+    NORMAL = "Normal"
+}
 export declare enum ContactSourceType {
     FILE = "File",
     CONTACT_LIST_ID = "ContactListId",
