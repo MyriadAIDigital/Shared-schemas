@@ -104,6 +104,11 @@ export enum CampaignType {
     ONDEMAND = 'OnDemand',
 }
 
+export enum CampaignMode {
+    AGENT_IN = 'AgentIn',
+    NORMAL = 'Normal',
+}
+
 
 // contact-source-type.enum.ts
 export enum ContactSourceType {
@@ -157,7 +162,6 @@ export enum CallingModel {
     DEFAULT = 'MyriadAI_V1',
     MyriadAI_V1 = "MyriadAI_V1",
     MyriadAI_V2 = 'MyriadAI_V2',
-
 }
 
 
