@@ -19,7 +19,7 @@ export interface ICallHistory {
     contactListId: Types.ObjectId;
     contactListName: string;
     contactId: Types.ObjectId;
-    agentId: Types.ObjectId;
+    agentId?: Types.ObjectId;
     campaignId: Types.ObjectId;
     campaignName?: string;
     workflowId?: Types.ObjectId;
