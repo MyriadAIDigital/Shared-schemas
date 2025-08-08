@@ -78,7 +78,7 @@ export class CallHistory {
     @Prop({ default: 'Unknown' })
     callStatus!: string;
 
-    @Prop({ type: Types.ObjectId, ref: 'Agent' })
+    @Prop({ required: true, default: null, type: Types.ObjectId, ref: 'Agent' })
     agentId!: Types.ObjectId;
 
     @Prop({ default: '' })

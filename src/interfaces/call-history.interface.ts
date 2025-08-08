@@ -25,7 +25,7 @@ export interface ICallHistory {
     contactListId: Types.ObjectId;
     contactListName: string;
     contactId: Types.ObjectId;
-    agentId: Types.ObjectId;
+    agentId?: Types.ObjectId;
 
     // Keep campaignId if you need to link back to the campaign document:
     campaignId: Types.ObjectId;
