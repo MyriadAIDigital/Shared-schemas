@@ -116,7 +116,7 @@ __decorate([
     __metadata("design:type", String)
 ], CallTemplate.prototype, "systemPrompt", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ required: false }),
+    (0, mongoose_1.Prop)({ required: false, default: '' }),
     __metadata("design:type", String)
 ], CallTemplate.prototype, "summarizePrompt", void 0);
 __decorate([
