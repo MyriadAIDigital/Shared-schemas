@@ -102,7 +102,7 @@ __decorate([
     __metadata("design:type", String)
 ], CallHistory.prototype, "callStatus", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, ref: 'Agent' }),
+    (0, mongoose_1.Prop)({ required: true, default: null, type: mongoose_2.Types.ObjectId, ref: 'Agent' }),
     __metadata("design:type", mongoose_2.Types.ObjectId)
 ], CallHistory.prototype, "agentId", void 0);
 __decorate([
