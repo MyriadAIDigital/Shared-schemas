@@ -79,7 +79,7 @@ class CallTemplate {
     @Prop({ required: true })
     systemPrompt!: string;
 
-    @Prop({ required: false })
+    @Prop({ required: false, default: '' })
     summarizePrompt!: string;
 
     @Prop({ required: true })
