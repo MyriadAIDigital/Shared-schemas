@@ -32,6 +32,7 @@ declare class SelectedTool {
 }
 declare class CallTemplate {
     systemPrompt: string;
+    summarizePrompt: string;
     voice: string;
     selectedTools?: SelectedTool[];
     corpusId?: string;
