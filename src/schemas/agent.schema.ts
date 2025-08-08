@@ -79,6 +79,9 @@ class CallTemplate {
     @Prop({ required: true })
     systemPrompt!: string;
 
+    @Prop({ required: false })
+    summarizePrompt!: string;
+
     @Prop({ required: true })
     voice!: string;
 
