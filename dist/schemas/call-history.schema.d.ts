@@ -22,6 +22,7 @@ export declare class CallHistory {
     UtcTime: Date;
     convertedTime: Date;
     callStatus: string;
+    agentId: Types.ObjectId;
     ultravoxJoinUrl: string;
     hangupCause: string;
     isLive: boolean;
