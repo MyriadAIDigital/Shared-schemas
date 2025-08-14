@@ -1,4 +1,4 @@
-import { StepTypeEnum, WorkflowStepStatus, CampaignType, WorkflowTypeEnum } from '../enums/user-enums';
+import { StepTypeEnum, WorkflowStepStatus, CampaignType, WorkflowTypeEnum, IconType } from '../enums/user-enums';
 /**
  * Interface for a single step within a workflow.
  */
@@ -29,6 +29,11 @@ export interface IWorkflow {
     workingHours?: string[];
     webhookUrl?: string;
     allowWorkflowForTestMode?: boolean;
+    isPremium: boolean;
+    title: string;
+    bulletPoints: string[];
+    icon: IconType;
+    isDisabled: boolean;
     createdAt: Date;
     updatedAt: Date;
 }

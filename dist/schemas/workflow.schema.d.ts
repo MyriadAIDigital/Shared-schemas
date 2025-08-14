@@ -1,5 +1,5 @@
 import { Document, Model, Schema as MongooseSchema } from 'mongoose';
-import { StepTypeEnum, WorkflowStepStatus, CampaignType, WorkflowTypeEnum } from '../enums/user-enums';
+import { StepTypeEnum, WorkflowStepStatus, CampaignType, WorkflowTypeEnum, IconType } from '../enums/user-enums';
 export type WorkflowDocument = Workflow & Document;
 export declare class WorkflowStep {
     type: StepTypeEnum;
@@ -25,6 +25,11 @@ export declare class Workflow {
     workingHours?: string[];
     webhookUrl?: string;
     allowWorkflowForTestMode?: boolean;
+    isPremium: boolean;
+    title: string;
+    bulletPoints: string[];
+    icon: IconType;
+    isDisabled: boolean;
 }
 export declare const WorkflowSchema: MongooseSchema<WorkflowDocument, Model<WorkflowDocument>>;
 //# sourceMappingURL=workflow.schema.d.ts.map

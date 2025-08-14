@@ -193,6 +193,14 @@ export declare enum EndBehavior {
     END_BEHAVIOR_HANG_UP_SOFT = "END_BEHAVIOR_HANG_UP_SOFT",
     END_BEHAVIOR_HANG_UP_STRICT = "END_BEHAVIOR_HANG_UP_STRICT"
 }
+export declare enum IconType {
+    OUTBOUND = "outbound",// keeps backward compatibility with your current default
+    CALL = "call",
+    WHATSAPP = "whatsapp",
+    SMS = "sms",
+    EMAIL = "email",
+    SOCIAL = "social"
+}
 export declare enum ModelType {
     MODEL_1 = "fixie-ai/ultravox"
 }

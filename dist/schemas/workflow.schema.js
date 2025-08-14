@@ -106,6 +106,26 @@ __decorate([
     (0, mongoose_1.Prop)({ type: Boolean, default: false }),
     __metadata("design:type", Boolean)
 ], Workflow.prototype, "allowWorkflowForTestMode", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true, default: false }),
+    __metadata("design:type", Boolean)
+], Workflow.prototype, "isPremium", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true }),
+    __metadata("design:type", String)
+], Workflow.prototype, "title", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: [String], default: [] }),
+    __metadata("design:type", Array)
+], Workflow.prototype, "bulletPoints", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ enum: user_enums_1.IconType, default: user_enums_1.IconType.OUTBOUND }),
+    __metadata("design:type", String)
+], Workflow.prototype, "icon", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true, default: false }),
+    __metadata("design:type", Boolean)
+], Workflow.prototype, "isDisabled", void 0);
 exports.Workflow = Workflow = __decorate([
     (0, mongoose_1.Schema)({
         timestamps: true,
