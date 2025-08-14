@@ -270,6 +270,19 @@ export enum EndBehavior {
     END_BEHAVIOR_HANG_UP_STRICT = "END_BEHAVIOR_HANG_UP_STRICT"
 }
 
+// src/enums/user-enums.ts
+
+export enum IconType {
+    OUTBOUND = 'outbound',   // keeps backward compatibility with your current default
+    CALL = 'call',
+    WHATSAPP = 'whatsapp',
+    SMS = 'sms',
+    EMAIL = 'email',
+    SOCIAL = 'social',       // generic social; specialize later if needed (e.g., 'linkedin', 'x')
+}
+
+// ...existing enums (StepTypeEnum, WorkflowStepStatus, CampaignType, WorkflowTypeEnum, etc.)
+
 export enum ModelType {
     MODEL_1 = "fixie-ai/ultravox",
 }

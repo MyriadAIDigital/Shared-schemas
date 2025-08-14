@@ -2,7 +2,7 @@
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Model, Schema as MongooseSchema } from 'mongoose';
-import { StepTypeEnum, WorkflowStepStatus, CampaignType, WorkflowTypeEnum } from '../enums/user-enums';
+import { StepTypeEnum, WorkflowStepStatus, CampaignType, WorkflowTypeEnum, IconType } from '../enums/user-enums';
 
 
 export type WorkflowDocument = Workflow & Document;
@@ -80,6 +80,27 @@ export class Workflow {
     // ✅ New Property
     @Prop({ type: Boolean, default: false })
     allowWorkflowForTestMode?: boolean;
+
+    // --- New Plan/UI fields ---
+    @Prop({ required: true, default: false })
+    isPremium!: boolean;
+
+    // Display title for the workflow card (e.g., "Voice Call Only")
+    @Prop({ required: true })
+    title!: string;
+
+    // Bullet points shown in the UI
+    @Prop({ type: [String], default: [] })
+    bulletPoints!: string[];
+
+    // Icon key from your mapping (e.g., "outbound")
+    @Prop({ enum: IconType, default: IconType.OUTBOUND })
+    icon!: IconType;
+
+
+    @Prop({ required: true, default: false })
+    isDisabled!: boolean;
+
 }
 
 export const WorkflowSchema = SchemaFactory.createForClass(Workflow) as unknown as MongooseSchema<
