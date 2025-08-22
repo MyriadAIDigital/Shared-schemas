@@ -104,6 +104,11 @@ export enum CampaignType {
     ONDEMAND = 'OnDemand',
 }
 
+export enum CampaignMode {
+    AGENT_IN = 'AgentIn',
+    NORMAL = 'Normal',
+}
+
 
 // contact-source-type.enum.ts
 export enum ContactSourceType {
@@ -157,7 +162,6 @@ export enum CallingModel {
     DEFAULT = 'MyriadAI_V1',
     MyriadAI_V1 = "MyriadAI_V1",
     MyriadAI_V2 = 'MyriadAI_V2',
-
 }
 
 
@@ -265,6 +269,19 @@ export enum EndBehavior {
     END_BEHAVIOR_HANG_UP_SOFT = "END_BEHAVIOR_HANG_UP_SOFT",
     END_BEHAVIOR_HANG_UP_STRICT = "END_BEHAVIOR_HANG_UP_STRICT"
 }
+
+// src/enums/user-enums.ts
+
+export enum IconType {
+    OUTBOUND = 'outbound',   // keeps backward compatibility with your current default
+    CALL = 'call',
+    WHATSAPP = 'whatsapp',
+    SMS = 'sms',
+    EMAIL = 'email',
+    SOCIAL = 'social',       // generic social; specialize later if needed (e.g., 'linkedin', 'x')
+}
+
+// ...existing enums (StepTypeEnum, WorkflowStepStatus, CampaignType, WorkflowTypeEnum, etc.)
 
 export enum ModelType {
     MODEL_1 = "fixie-ai/ultravox",

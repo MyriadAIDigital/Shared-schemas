@@ -33,6 +33,7 @@ export interface IVadSettings {
 
 export interface ICallTemplate {
         systemPrompt: string;
+        summarizePrompt: string;
         voice: string;
         selectedTools?: ISelectedTool[];
         corpusId?: string;

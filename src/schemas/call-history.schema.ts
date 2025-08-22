@@ -78,6 +78,9 @@ export class CallHistory {
     @Prop({ default: 'Unknown' })
     callStatus!: string;
 
+    @Prop({ required: true, default: null, type: Types.ObjectId, ref: 'Agent' })
+    agentId!: Types.ObjectId;
+
     @Prop({ default: '' })
     ultravoxJoinUrl!: string;
 

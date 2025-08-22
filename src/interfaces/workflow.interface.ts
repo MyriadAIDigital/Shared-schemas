@@ -1,7 +1,7 @@
 // src/interfaces/workflow.interface.ts
 
 import { Document } from 'mongoose';
-import { StepTypeEnum, WorkflowStepStatus, CampaignType, WorkflowTypeEnum } from '../enums/user-enums';
+import { StepTypeEnum, WorkflowStepStatus, CampaignType, WorkflowTypeEnum, IconType } from '../enums/user-enums';
 
 
 /**
@@ -36,6 +36,12 @@ export interface IWorkflow {
     webhookUrl?: string;
     // ✅ Newly added property
     allowWorkflowForTestMode?: boolean;
+    // --- Plan/UI fields (added in schema) ---
+    isPremium: boolean;                  // required in schema (default false)
+    title: string;                       // required in schema
+    bulletPoints: string[];             // default [] in schema
+    icon: IconType;               // default 'outbound' in schema
+    isDisabled: boolean;                 // required in schema (default false)
     createdAt: Date;
     updatedAt: Date;
 }

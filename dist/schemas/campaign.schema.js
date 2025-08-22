@@ -46,6 +46,10 @@ __decorate([
     __metadata("design:type", String)
 ], Campaign.prototype, "callingModel", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ required: true, enum: user_enums_1.CampaignMode, default: user_enums_1.CampaignMode.NORMAL }),
+    __metadata("design:type", String)
+], Campaign.prototype, "campaignMode", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ required: true, type: mongoose_2.Types.ObjectId, ref: 'User' }),
     __metadata("design:type", mongoose_2.Types.ObjectId)
 ], Campaign.prototype, "userId", void 0);

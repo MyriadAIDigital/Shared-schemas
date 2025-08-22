@@ -1,7 +1,7 @@
 "use strict";
 // src/common/enum.ts
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.HttpMethod = exports.KnownValue = exports.ParameterLocation = exports.InitialOutputMedium = exports.ModelType = exports.EndBehavior = exports.CorpusStatus = exports.AgentToolsType = exports.AgentType = exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.QueueStatus = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.CorpusSourceType = exports.CorpusType = exports.Role = exports.CompanyName = void 0;
+exports.HttpMethod = exports.KnownValue = exports.ParameterLocation = exports.InitialOutputMedium = exports.ModelType = exports.IconType = exports.EndBehavior = exports.CorpusStatus = exports.AgentToolsType = exports.AgentType = exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.QueueStatus = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignMode = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.CorpusSourceType = exports.CorpusType = exports.Role = exports.CompanyName = void 0;
 var CompanyName;
 (function (CompanyName) {
     CompanyName["HAVISTO_TEA"] = "HAVISTO_TEA";
@@ -103,6 +103,11 @@ var CampaignType;
     CampaignType["INBOUND"] = "Inbound";
     CampaignType["ONDEMAND"] = "OnDemand";
 })(CampaignType || (exports.CampaignType = CampaignType = {}));
+var CampaignMode;
+(function (CampaignMode) {
+    CampaignMode["AGENT_IN"] = "AgentIn";
+    CampaignMode["NORMAL"] = "Normal";
+})(CampaignMode || (exports.CampaignMode = CampaignMode = {}));
 // contact-source-type.enum.ts
 var ContactSourceType;
 (function (ContactSourceType) {
@@ -245,6 +250,17 @@ var EndBehavior;
     EndBehavior["END_BEHAVIOR_HANG_UP_SOFT"] = "END_BEHAVIOR_HANG_UP_SOFT";
     EndBehavior["END_BEHAVIOR_HANG_UP_STRICT"] = "END_BEHAVIOR_HANG_UP_STRICT";
 })(EndBehavior || (exports.EndBehavior = EndBehavior = {}));
+// src/enums/user-enums.ts
+var IconType;
+(function (IconType) {
+    IconType["OUTBOUND"] = "outbound";
+    IconType["CALL"] = "call";
+    IconType["WHATSAPP"] = "whatsapp";
+    IconType["SMS"] = "sms";
+    IconType["EMAIL"] = "email";
+    IconType["SOCIAL"] = "social";
+})(IconType || (exports.IconType = IconType = {}));
+// ...existing enums (StepTypeEnum, WorkflowStepStatus, CampaignType, WorkflowTypeEnum, etc.)
 var ModelType;
 (function (ModelType) {
     ModelType["MODEL_1"] = "fixie-ai/ultravox";

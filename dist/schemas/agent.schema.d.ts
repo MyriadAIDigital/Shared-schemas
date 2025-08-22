@@ -46,6 +46,7 @@ declare class CallTemplate {
     inactivityMessages: InactivityMessage[];
     firstSpeakerSettings: FirstSpeakerSettings;
     vadSettings: VadSettings;
+    summarizePrompt: string;
 }
 export declare class Agent {
     name: string;
