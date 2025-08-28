@@ -74,6 +74,12 @@ class SelectedTool {
   @Prop({ required: true })
   name!: string;
 }
+
+class BuiltInTool {
+
+  @Prop({ required: true })
+  toolName!: string;
+}
 @Schema({ _id: false })
 class CallTemplate {
   @Prop({ required: true })
@@ -86,6 +92,9 @@ class CallTemplate {
 
   @Prop({ type: [SelectedTool], default: [] })
   selectedTools?: SelectedTool[];
+
+  @Prop({ type: [BuiltInTool], default: [] })
+  builtInTools?: BuiltInTool[];
 
   @Prop()
   corpusId?: string;
