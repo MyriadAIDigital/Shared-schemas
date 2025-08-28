@@ -30,10 +30,14 @@ declare class SelectedTool {
     toolId: string;
     name: string;
 }
+declare class BuiltInTool {
+    toolName: string;
+}
 declare class CallTemplate {
     systemPrompt: string;
     voice: string;
     selectedTools?: SelectedTool[];
+    builtInTools?: BuiltInTool[];
     corpusId?: string;
     model: ModelType;
     temperature: string;
