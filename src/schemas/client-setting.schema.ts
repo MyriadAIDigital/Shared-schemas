@@ -41,6 +41,9 @@ export class ClientSetting {
     @Prop({ type: Number, required: true, default: 9.15 })
     perMinuteRate!: number;
 
+    @Prop({ type: Number, required: true, default: 8.15 })
+    sandboxAgentRatePerMinute!: number;
+
     @Prop({
         type: {
             netcore: {
