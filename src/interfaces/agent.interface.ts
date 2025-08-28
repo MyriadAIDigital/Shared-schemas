@@ -56,7 +56,7 @@ export interface ISelectedTool {
         name: string;
 }
 export interface IBuiltInTool {
-        name: string;
+        toolName: string;
 }
 export interface IAgent {
         _id: Types.ObjectId;
