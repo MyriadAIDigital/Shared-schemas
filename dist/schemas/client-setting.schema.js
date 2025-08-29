@@ -51,7 +51,7 @@ __decorate([
     __metadata("design:type", Number)
 ], ClientSetting.prototype, "perMinuteRate", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: Number, required: true, default: 8.15 }),
+    (0, mongoose_1.Prop)({ type: Number, required: true, default: 9.15 }),
     __metadata("design:type", Number)
 ], ClientSetting.prototype, "sandboxAgentRatePerMinute", void 0);
 __decorate([
