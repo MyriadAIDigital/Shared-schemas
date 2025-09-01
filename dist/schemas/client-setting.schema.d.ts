@@ -12,6 +12,7 @@ export declare class ClientSetting {
     };
     maxConcurrency: number;
     perMinuteRate: number;
+    sandboxAgentRatePerMinute: number;
     whatsappSetting: {
         netcore: {
             enabled: boolean;

@@ -109,6 +109,12 @@ __decorate([
     (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], SelectedTool.prototype, "name", void 0);
+class BuiltInTool {
+}
+__decorate([
+    (0, mongoose_1.Prop)({ required: true }),
+    __metadata("design:type", String)
+], BuiltInTool.prototype, "toolName", void 0);
 let CallTemplate = class CallTemplate {
 };
 __decorate([
@@ -123,6 +129,10 @@ __decorate([
     (0, mongoose_1.Prop)({ type: [SelectedTool], default: [] }),
     __metadata("design:type", Array)
 ], CallTemplate.prototype, "selectedTools", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: [BuiltInTool], default: [] }),
+    __metadata("design:type", Array)
+], CallTemplate.prototype, "builtInTools", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)

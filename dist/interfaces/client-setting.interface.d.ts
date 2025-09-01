@@ -42,6 +42,7 @@ export interface IClientSetting {
     dndHours: DndHours;
     maxConcurrency: number;
     perMinuteRate: number;
+    sandboxAgentRatePerMinute: number;
     whatsappSetting: WhatsappSetting;
     telephonySetting: TelephonySettingsResponse;
 }

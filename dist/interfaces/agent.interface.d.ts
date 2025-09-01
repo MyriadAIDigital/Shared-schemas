@@ -30,6 +30,7 @@ export interface ICallTemplate {
     summarizePrompt: string;
     voice: string;
     selectedTools?: ISelectedTool[];
+    builtInTools?: IBuiltInTool[];
     corpusId?: string;
     model: ModelType;
     temperature: string;
@@ -46,6 +47,9 @@ export interface ICallTemplate {
 export interface ISelectedTool {
     toolId: string;
     name: string;
+}
+export interface IBuiltInTool {
+    toolName: string;
 }
 export interface IAgent {
     _id: Types.ObjectId;
