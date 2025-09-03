@@ -1,4 +1,4 @@
-import { AgentType, EndBehavior, ModelType, InitialOutputMedium } from '../enums/user-enums';
+import { AgentType, EndBehavior, ModelType, InitialOutputMedium, RegionCode } from '../enums/user-enums';
 import { Types } from 'mongoose';
 
 export interface IInactivityMessage {
@@ -69,6 +69,7 @@ export interface IAgent {
         voiceName: string;
         callingModel: string;
         displayVoiceName: string;
+        regionCode: RegionCode;
         agentCreatedAt?: Date;
         isCreatedByMyriadai?: boolean;
         isLiveMode?: boolean;
