@@ -1,5 +1,5 @@
 import { Document, Types } from 'mongoose';
-import { EndBehavior, ModelType, InitialOutputMedium, AgentType } from '../enums/user-enums';
+import { EndBehavior, ModelType, InitialOutputMedium, AgentType, RegionCode } from '../enums/user-enums';
 export type AgentDocument = Agent & Document;
 declare class InactivityMessage {
     duration: string;
@@ -62,6 +62,7 @@ export declare class Agent {
     voiceName: string;
     callingModel: string;
     displayVoiceName: string;
+    regionCode: RegionCode;
     agentCreatedAt: Date;
     isCreatedByMyriadai: boolean;
     isLiveMode: boolean;

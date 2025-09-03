@@ -183,83 +183,12 @@ __decorate([
 ], CallTemplate.prototype, "vadSettings", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
-        required: true, default: `  <instruction>
-    Based on the full conversation, generate a structured JSON summary of the interaction between the AI agent and the customer. 
-    The call flow, outcome classification, follow-up details, and metadata should be inferred according to the rules below. 
-    The call flow varies per client and will be provided separately.
-  </instruction>
-
-  <rules>
-    <callFlow>
-      <note>
-        Each client may have their own defined call flow steps (e.g., Greeting → Qualification → Pitch → Objection Handling → Closing).
-        Use the client-provided call flow for determining progress in the conversation.
-      </note>
-    </callFlow>
-
-    <!-- 2. Outcome Classification -->
-    <outcomeClassification>   
-      <conditions>
-        <noInteraction>
-         <rule>The conversation contains only agent turns; the user never speaks or inputs DTMF.</rule>
-         <rule>Ringing-only, unanswered, voicemail without any user utterance, or call drop before the first user turn.</rule>
-         <rule>Number unreachable/invalid or network gate prevents any user turn being captured.</rule>
-         <note>When any of the above occur, set outcome = "No Interaction".</note>
-      </noInteraction>
-
-        <interested>
-          <rule>User expresses clear intent to proceed (e.g., “Yes, let’s go ahead”, “Send me the details”).</rule>
-          <rule>No meeting or follow-up is required for initial qualification.</rule>
-        </interested>
-
-        <meetingScheduled>
-          <rule>User agrees to a specific date and time for a meeting, demo, or detailed discussion.</rule>
-          <rule>Meeting confirmation is explicitly acknowledged by both agent and user.</rule>
-        </meetingScheduled>
-
-        <followUpNeeded>
-          <rule>User shows interest but requests a callback or follow-up (e.g., “Call me later”, “Let’s talk next week”).</rule>
-          <rule>User drops off before final confirmation and agent schedules follow-up.</rule>
-        </followUpNeeded>
-
-        <notInterested>
-          <rule>User explicitly declines the product/service.</rule>
-          <rule>User refuses callbacks or future engagement.</rule>
-        </notInterested>
-
-        <wrongPOC>
-          <rule>User states they are not the right person to speak with.</rule>
-          <rule>Mentions alternative contact for the relevant discussion.</rule>
-        </wrongPOC>       
-  
-        <invalidNumber>
-          <rule>Number is unreachable, switched off, or marked invalid by telecom provider.</rule>
-        </invalidNumber>
-      </conditions>
-    </outcomeClassification>
-
- 
-    <followUpFieldLogic>
-      <rule>If outcome == "Follow-Up Needed":</rule>
-      <instructions>
-        <point>Set followUpPhoneCallDate and followUpPhoneCallTime using inferred or stated values.</point>
-        <point>Leave followUpMeetingDate and followUpMeetingTime as empty strings.</point>
-      </instructions>
-      <rule>If outcome == "Meeting Scheduled":</rule>
-      <instructions>
-        <point>Set followUpMeetingDate and followUpMeetingTime using inferred or stated values.</point>
-        <point>Leave followUpPhoneCallDate and followUpPhoneCallTime as empty strings.</point>
-      </instructions>
-    </followUpFieldLogic>
-
- <summaryWording>
-    <rule>Do not fabricate user responses. If only the agent spoke, explicitly state that the user did not respond.</rule>
-    <examples>
-      <example outcome="No Interaction">"Agent attempted the greeting and brief pitch; the user did not respond. Call ended without any user input."</example>
-      <example outcome="No Interaction (voicemail)">"Agent reached voicemail; no user response captured. No conversation took place."</example>
-    </examples>
-  </summaryWording>
-  </rules>
+        required: true, default: `
+   <summarize>
+     Based on the full conversation, generate a structured JSON summary of the interaction between the AI agent and the customer.
+     The call flow, outcome classification, follow-up details, and metadata should be inferred according to the rules below.
+     The call flow varies per client and will be provided separately.
+   </summarize>
 `
     }),
     __metadata("design:type", String)
@@ -312,6 +241,10 @@ __decorate([
     (0, mongoose_1.Prop)({ type: String, required: true }),
     __metadata("design:type", String)
 ], Agent.prototype, "displayVoiceName", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true, enum: user_enums_1.RegionCode, default: user_enums_1.RegionCode.IN }),
+    __metadata("design:type", String)
+], Agent.prototype, "regionCode", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: Date, default: () => new Date(), index: true }),
     __metadata("design:type", Date)
