@@ -1,4 +1,4 @@
-import { VoiceType, VoiceSource, VoiceGender, CallingModel } from '../enums/user-enums';
+import { VoiceType, VoiceSource, VoiceGender, CallingModel, RegionCode } from '../enums/user-enums';
 export interface IVoiceGallery {
     type: VoiceType;
     source: VoiceSource;
@@ -10,6 +10,7 @@ export interface IVoiceGallery {
     description: string;
     isEnabled: boolean;
     isDefault: boolean;
+    regionCode: RegionCode;
     isCreditSufficient: boolean;
     predefinedVoiceName: string;
     createdAt: Date;

@@ -201,6 +201,14 @@ export declare enum IconType {
     EMAIL = "email",
     SOCIAL = "social"
 }
+export declare enum RegionCode {
+    IN = "IN",
+    US = "US",
+    GB = "GB",
+    AU = "AU",
+    SG = "SG",
+    AE = "AE"
+}
 export declare enum ModelType {
     MODEL_1 = "fixie-ai/ultravox"
 }
