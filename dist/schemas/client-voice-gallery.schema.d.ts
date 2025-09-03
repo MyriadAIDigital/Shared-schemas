@@ -1,5 +1,5 @@
 import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
-import { CallingModel, VoiceType, VoiceSource, VoiceGender } from '../enums/user-enums';
+import { CallingModel, VoiceType, VoiceSource, VoiceGender, RegionCode } from '../enums/user-enums';
 export type ClientVoiceGalleryDocument = ClientVoiceGallery & Document;
 export declare class ClientVoiceGallery {
     voiceGalleryId: Types.ObjectId;
@@ -21,6 +21,7 @@ export declare class ClientVoiceGallery {
     createdAt: Date;
     maxVoicesAllowed: number;
     isVoicePermanentlyDisabled: boolean;
+    regionCode: RegionCode;
     additionalMetadata?: Record<string, any>;
 }
 export declare const ClientVoiceGallerySchema: MongooseSchema<ClientVoiceGalleryDocument, Model<ClientVoiceGalleryDocument>>;

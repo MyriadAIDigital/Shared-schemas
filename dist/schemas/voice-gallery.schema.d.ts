@@ -1,5 +1,5 @@
 import { Document, Model, Schema as MongooseSchema } from 'mongoose';
-import { VoiceType, VoiceSource, VoiceGender, CallingModel } from '../enums/user-enums';
+import { VoiceType, VoiceSource, VoiceGender, CallingModel, RegionCode } from '../enums/user-enums';
 export type VoiceGalleryDocument = VoiceGallery & Document;
 export declare class VoiceGallery {
     type: VoiceType;
@@ -18,6 +18,7 @@ export declare class VoiceGallery {
     maxVoicesAllowed: number;
     isVoicePermanentlyDisabled: boolean;
     additionalMetadata?: Record<string, any>;
+    regionCode: RegionCode;
 }
 export declare const VoiceGallerySchema: MongooseSchema<VoiceGalleryDocument, Model<VoiceGalleryDocument>>;
 //# sourceMappingURL=voice-gallery.schema.d.ts.map

@@ -1,5 +1,5 @@
 import { Types } from 'mongoose';
-import { CallingModel, VoiceType, VoiceSource, VoiceGender } from '../enums/user-enums';
+import { CallingModel, VoiceType, VoiceSource, VoiceGender, RegionCode } from '../enums/user-enums';
 export interface IClientVoiceGallery {
     _id: Types.ObjectId;
     voiceGalleryId: Types.ObjectId;
@@ -21,6 +21,7 @@ export interface IClientVoiceGallery {
     createdAt: Date;
     maxVoicesAllowed: number;
     isVoicePermanentlyDisabled: boolean;
+    regionCode: RegionCode;
     additionalMetadata?: Record<string, any>;
     updatedAt: Date;
 }

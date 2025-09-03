@@ -94,6 +94,10 @@ __decorate([
     __metadata("design:type", Boolean)
 ], ClientVoiceGallery.prototype, "isVoicePermanentlyDisabled", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ required: true, enum: user_enums_1.RegionCode, default: user_enums_1.RegionCode.IN }),
+    __metadata("design:type", String)
+], ClientVoiceGallery.prototype, "regionCode", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ type: Object }),
     __metadata("design:type", Object)
 ], ClientVoiceGallery.prototype, "additionalMetadata", void 0);

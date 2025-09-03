@@ -1,7 +1,7 @@
 "use strict";
 // src/common/enum.ts
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.HttpMethod = exports.KnownValue = exports.ParameterLocation = exports.InitialOutputMedium = exports.ModelType = exports.IconType = exports.EndBehavior = exports.CorpusStatus = exports.AgentToolsType = exports.AgentType = exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.QueueStatus = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignMode = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.CorpusSourceType = exports.CorpusType = exports.Role = exports.CompanyName = void 0;
+exports.HttpMethod = exports.KnownValue = exports.ParameterLocation = exports.InitialOutputMedium = exports.ModelType = exports.RegionCode = exports.IconType = exports.EndBehavior = exports.CorpusStatus = exports.AgentToolsType = exports.AgentType = exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.QueueStatus = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CampaignMode = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.CorpusSourceType = exports.CorpusType = exports.Role = exports.CompanyName = void 0;
 var CompanyName;
 (function (CompanyName) {
     CompanyName["HAVISTO_TEA"] = "HAVISTO_TEA";
@@ -260,6 +260,16 @@ var IconType;
     IconType["EMAIL"] = "email";
     IconType["SOCIAL"] = "social";
 })(IconType || (exports.IconType = IconType = {}));
+var RegionCode;
+(function (RegionCode) {
+    RegionCode["IN"] = "IN";
+    RegionCode["US"] = "US";
+    RegionCode["GB"] = "GB";
+    RegionCode["AU"] = "AU";
+    RegionCode["SG"] = "SG";
+    RegionCode["AE"] = "AE";
+    // add more as needed
+})(RegionCode || (exports.RegionCode = RegionCode = {}));
 // ...existing enums (StepTypeEnum, WorkflowStepStatus, CampaignType, WorkflowTypeEnum, etc.)
 var ModelType;
 (function (ModelType) {

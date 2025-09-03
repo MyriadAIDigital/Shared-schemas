@@ -80,6 +80,10 @@ __decorate([
     (0, mongoose_1.Prop)({ type: Object }),
     __metadata("design:type", Object)
 ], VoiceGallery.prototype, "additionalMetadata", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true, enum: user_enums_1.RegionCode, default: user_enums_1.RegionCode.IN }),
+    __metadata("design:type", String)
+], VoiceGallery.prototype, "regionCode", void 0);
 exports.VoiceGallery = VoiceGallery = __decorate([
     (0, mongoose_1.Schema)({
         timestamps: true,
