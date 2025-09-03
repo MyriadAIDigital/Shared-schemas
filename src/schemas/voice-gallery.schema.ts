@@ -2,7 +2,7 @@
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Model, Schema as MongooseSchema, } from 'mongoose';
-import { VoiceType, VoiceSource, VoiceGender, CallingModel } from '../enums/user-enums';
+import { VoiceType, VoiceSource, VoiceGender, CallingModel, RegionCode } from '../enums/user-enums';
 
 
 export type VoiceGalleryDocument = VoiceGallery & Document;
@@ -61,6 +61,11 @@ export class VoiceGallery {
 
     @Prop({ type: Object })
     additionalMetadata?: Record<string, any>;  // Optional metadata field to store any extra information
+
+    // ✅ NEW: Market/country for this voice (ISO 3166-1 alpha-2 like 'IN', 'US')
+    @Prop({ required: true, enum: RegionCode, default: RegionCode.IN })
+    regionCode!: RegionCode;
+
 }
 
 export const VoiceGallerySchema = SchemaFactory.createForClass(VoiceGallery) as unknown as MongooseSchema<

@@ -1,7 +1,7 @@
 // src/interfaces/voice-gallery.interface.ts
 
 import { Document } from 'mongoose';
-import { VoiceType, VoiceSource, VoiceGender, CallingModel } from '../enums/user-enums';
+import { VoiceType, VoiceSource, VoiceGender, CallingModel, RegionCode } from '../enums/user-enums';
 
 
 export interface IVoiceGallery {
@@ -15,6 +15,7 @@ export interface IVoiceGallery {
     description: string;              // A description for the voice
     isEnabled: boolean;               // Whether the voice is enabled for the client
     isDefault: boolean;
+    regionCode: RegionCode;               // Market/country for this voice (ISO 3166-1 alpha-2 like 'IN', 'US')
     isCreditSufficient: boolean;      // Indicates if the system has sufficient credits for this voice
     predefinedVoiceName: string;      // Fixed name for internal system validation
     createdAt: Date;                  // Timestamp for when the voice was created

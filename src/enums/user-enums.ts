@@ -281,6 +281,18 @@ export enum IconType {
     SOCIAL = 'social',       // generic social; specialize later if needed (e.g., 'linkedin', 'x')
 }
 
+
+
+export enum RegionCode {
+    IN = 'IN',
+    US = 'US',
+    GB = 'GB',
+    AU = 'AU',
+    SG = 'SG',
+    AE = 'AE',
+    // add more as needed
+}
+
 // ...existing enums (StepTypeEnum, WorkflowStepStatus, CampaignType, WorkflowTypeEnum, etc.)
 
 export enum ModelType {

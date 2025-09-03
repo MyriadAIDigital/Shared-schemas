@@ -2,7 +2,7 @@
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
-import { CallingModel, VoiceType, VoiceSource, VoiceGender } from '../enums/user-enums';
+import { CallingModel, VoiceType, VoiceSource, VoiceGender, RegionCode } from '../enums/user-enums';
 
 
 export type ClientVoiceGalleryDocument = ClientVoiceGallery & Document;
@@ -70,6 +70,10 @@ export class ClientVoiceGallery {
 
     @Prop({ default: false })
     isVoicePermanentlyDisabled!: boolean;
+
+    // ✅ NEW: Market/country for this voice (ISO 3166-1 alpha-2 like 'IN', 'US')
+    @Prop({ required: true, enum: RegionCode, default: RegionCode.IN })
+    regionCode!: RegionCode;
 
     @Prop({ type: Object })
     additionalMetadata?: Record<string, any>;
