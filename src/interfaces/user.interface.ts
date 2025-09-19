@@ -30,6 +30,7 @@ export interface IUser extends Document {
     customerId: string | null;    // Payment provider customer id
     subscriptionId: string | null; // Payment provider subscription id
     priceId: string | null;        // Price/plan identifier
+    planId: string | null;        // Plan identifier
     hasAccess: boolean;            // Indicates if user currently has access
 
     // Mongoose.timestamps के कारण अपने आप जुड़ जाते हैं:

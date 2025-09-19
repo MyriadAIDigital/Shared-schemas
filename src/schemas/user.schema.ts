@@ -57,6 +57,9 @@ export class User {
     @Prop({ type: String, default: null })
     priceId!: string | null;        // Price/plan identifier
 
+    @Prop({ type: String, default: null })
+    planId!: string | null;        // Price/plan identifier
+
     @Prop({ type: Boolean, default: false })
     hasAccess!: boolean;            // Indicates if user currently has access
 }
