@@ -47,6 +47,18 @@ export class User {
 
     @Prop({ default: '09:00' })
     clientCutoffEnd!: string;      // <-- ‘!’ added
+
+    @Prop({ type: String, default: null })
+    customerId!: string | null;    // Payment provider customer id
+
+    @Prop({ type: String, default: null })
+    subscriptionId!: string | null; // Payment provider subscription id
+
+    @Prop({ type: String, default: null })
+    priceId!: string | null;        // Price/plan identifier
+
+    @Prop({ type: Boolean, default: false })
+    hasAccess!: boolean;            // Indicates if user currently has access
 }
 
 export const UserSchema = SchemaFactory.createForClass(User) as unknown as MongooseSchema<
