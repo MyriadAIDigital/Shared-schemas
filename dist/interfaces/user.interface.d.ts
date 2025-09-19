@@ -21,6 +21,11 @@ export interface IUser extends Document {
     overrideClientCutoff: boolean;
     clientCutoffStart: string;
     clientCutoffEnd: string;
+    /** Payment / subscription fields */
+    customerId: string | null;
+    subscriptionId: string | null;
+    priceId: string | null;
+    hasAccess: boolean;
     createdAt: Date;
     updatedAt: Date;
 }

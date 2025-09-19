@@ -14,6 +14,10 @@ export declare class User {
     overrideClientCutoff: boolean;
     clientCutoffStart: string;
     clientCutoffEnd: string;
+    customerId: string | null;
+    subscriptionId: string | null;
+    priceId: string | null;
+    hasAccess: boolean;
 }
 export declare const UserSchema: MongooseSchema<UserDocument, Model<UserDocument>>;
 //# sourceMappingURL=user.schema.d.ts.map
