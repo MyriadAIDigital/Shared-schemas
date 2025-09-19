@@ -25,6 +25,7 @@ export interface IUser extends Document {
     customerId: string | null;
     subscriptionId: string | null;
     priceId: string | null;
+    planId: string | null;
     hasAccess: boolean;
     createdAt: Date;
     updatedAt: Date;

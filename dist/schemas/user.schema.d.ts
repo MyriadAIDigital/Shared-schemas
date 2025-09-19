@@ -17,6 +17,7 @@ export declare class User {
     customerId: string | null;
     subscriptionId: string | null;
     priceId: string | null;
+    planId: string | null;
     hasAccess: boolean;
 }
 export declare const UserSchema: MongooseSchema<UserDocument, Model<UserDocument>>;

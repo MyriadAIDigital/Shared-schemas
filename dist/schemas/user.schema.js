@@ -77,6 +77,10 @@ __decorate([
     __metadata("design:type", Object)
 ], User.prototype, "priceId", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: String, default: null }),
+    __metadata("design:type", Object)
+], User.prototype, "planId", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ type: Boolean, default: false }),
     __metadata("design:type", Boolean)
 ], User.prototype, "hasAccess", void 0);
