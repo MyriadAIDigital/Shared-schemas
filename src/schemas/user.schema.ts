@@ -21,8 +21,8 @@ export class User {
     @Prop({ required: true })
     password!: string;            // <-- ‘!’ added
 
-    @Prop({ required: true, enum: CompanyName })
-    companyName!: CompanyName;    // <-- ‘!’ added
+    @Prop({ required: true, })
+    companyName!: string;    // <-- ‘!’ added
 
     @Prop({ required: true, enum: Role })
     role!: Role;                  // <-- ‘!’ added

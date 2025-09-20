@@ -12,7 +12,7 @@ export interface IUser extends Document {
     name: string;
     email: string;
     password: string;
-    companyName: CompanyName;
+    companyName: string;
     role: Role;
     tenantID: string;
     defaultModel: CallingModel;
