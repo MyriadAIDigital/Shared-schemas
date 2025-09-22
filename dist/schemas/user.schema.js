@@ -29,7 +29,7 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "password", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ required: true, enum: user_enums_1.CompanyName }),
+    (0, mongoose_1.Prop)({ required: true, }),
     __metadata("design:type", String)
 ], User.prototype, "companyName", void 0);
 __decorate([

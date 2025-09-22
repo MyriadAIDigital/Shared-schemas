@@ -1,5 +1,5 @@
 import { Document } from 'mongoose';
-import { CompanyName, Role, CallingModel } from '../enums/user-enums';
+import { Role, CallingModel } from '../enums/user-enums';
 /**
  * IUser: UserDocument का टाइप सेफ़ इंटरफ़ेस
  * इसमें वही प्रॉपर्टीज़ होंगी जो आपका UserSchema में हैं,
@@ -9,7 +9,7 @@ export interface IUser extends Document {
     name: string;
     email: string;
     password: string;
-    companyName: CompanyName;
+    companyName: string;
     role: Role;
     tenantID: string;
     defaultModel: CallingModel;

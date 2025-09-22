@@ -1,11 +1,11 @@
 import { Document, Model, Schema as MongooseSchema } from 'mongoose';
-import { CompanyName, Role, CallingModel } from '../enums/user-enums';
+import { Role, CallingModel } from '../enums/user-enums';
 export type UserDocument = User & Document;
 export declare class User {
     name: string;
     email: string;
     password: string;
-    companyName: CompanyName;
+    companyName: string;
     role: Role;
     tenantID: string;
     defaultModel: CallingModel;
