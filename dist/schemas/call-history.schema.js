@@ -130,7 +130,7 @@ __decorate([
     __metadata("design:type", String)
 ], CallHistory.prototype, "interestedInDebt", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: Number, default: 9.15 }),
+    (0, mongoose_1.Prop)({ type: Number, default: 0.08 }),
     __metadata("design:type", Number)
 ], CallHistory.prototype, "perMinuteRate", void 0);
 __decorate([
