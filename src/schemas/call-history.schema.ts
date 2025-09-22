@@ -99,7 +99,7 @@ export class CallHistory {
     @Prop({ default: '' })
     interestedInDebt!: string;
 
-    @Prop({ type: Number, default: 9.15 })
+    @Prop({ type: Number, default: 0.08 })
     perMinuteRate!: number;
 
     @Prop({ type: Number, default: 0 })

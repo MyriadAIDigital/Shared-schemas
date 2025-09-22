@@ -38,10 +38,10 @@ export class ClientSetting {
     @Prop({ type: Number, default: 10 })
     maxConcurrency!: number;
 
-    @Prop({ type: Number, required: true, default: 9.15 })
+    @Prop({ type: Number, required: true, default: 0.08 })
     perMinuteRate!: number;
 
-    @Prop({ type: Number, required: true, default: 9.15 })
+    @Prop({ type: Number, required: true, default: 0.08 })
     sandboxAgentRatePerMinute!: number;
 
     @Prop({
