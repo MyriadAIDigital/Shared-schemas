@@ -61,7 +61,10 @@ export class User {
     planId!: string | null;        // Price/plan identifier
 
     @Prop({ type: Boolean, default: false })
-    hasAccess!: boolean;            // Indicates if user currently has access
+    hasAccess!: boolean;
+
+    @Prop({ type: Boolean, default: true })
+    isWalletActivate!: boolean;// Indicates if user currently has access
 }
 
 export const UserSchema = SchemaFactory.createForClass(User) as unknown as MongooseSchema<
