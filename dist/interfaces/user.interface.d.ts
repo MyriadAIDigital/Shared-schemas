@@ -27,6 +27,7 @@ export interface IUser extends Document {
     priceId: string | null;
     planId: string | null;
     hasAccess: boolean;
+    isWalletActivate: boolean;
     createdAt: Date;
     updatedAt: Date;
 }
