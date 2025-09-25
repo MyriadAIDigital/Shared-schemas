@@ -98,6 +98,8 @@ export declare enum StepTypeEnum {
     WHATSAPP = "WHATSAPP",
     WEBHOOK = "WEBHOOK"
 }
+
+
 export declare enum WorkflowStepStatus {
     PENDING = "pending",
     IN_PROGRESS = "in-progress",

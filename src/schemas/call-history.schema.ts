@@ -2,7 +2,7 @@
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Model, Schema as MongooseSchema, Types } from 'mongoose';
-import { CallType, TelephonicProviders, VoiceSource, SttProvider, CreditDeductionStatus } from '../enums/user-enums';
+import { CallType, CurrencyType, TelephonicProviders, VoiceSource, SttProvider, CreditDeductionStatus } from '../enums/user-enums';
 
 
 export type CallHistoryDocument = CallHistory & Document;
@@ -290,6 +290,13 @@ export class CallHistory {
 
     @Prop({ required: true, index: true })
     createdAt!: Date; // ✅ Non-null assertion (you know Mongoose will populate it)
+
+    @Prop({
+        type: String,
+        enum: CurrencyType,
+        default: CurrencyType.USD,
+    })
+    currencyType!: CurrencyType;
 }
 
 export const CallHistorySchema = SchemaFactory.createForClass(CallHistory) as unknown as MongooseSchema<

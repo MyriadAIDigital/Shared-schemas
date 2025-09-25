@@ -1,5 +1,5 @@
 import { Types } from 'mongoose';
-import { CallType, TelephonicProviders, VoiceSource, SttProvider, CreditDeductionStatus } from '../enums/user-enums';
+import { CallType, TelephonicProviders, VoiceSource, SttProvider, CreditDeductionStatus, CurrencyType } from '../enums/user-enums';
 
 export interface IAlternateContact {
     name?: string;
@@ -145,6 +145,8 @@ export interface ICallHistory {
 
     /** Raw error returned on failure */
     creditDeductionErrorResponse?: Record<string, any> | string;
+
+    currencyType?: CurrencyType;
 
 
 }

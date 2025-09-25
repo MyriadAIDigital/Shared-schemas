@@ -108,7 +108,10 @@ export enum CampaignMode {
     AGENT_IN = 'AgentIn',
     NORMAL = 'Normal',
 }
-
+export declare enum CurrencyType {
+    INR = "INR",
+    USD = "USD"
+}
 
 // contact-source-type.enum.ts
 export enum ContactSourceType {
