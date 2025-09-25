@@ -19,7 +19,7 @@ export declare class User {
     priceId: string | null;
     planId: string | null;
     hasAccess: boolean;
-    isWalletActivate: boolean;
+    isWalletActivated: boolean;
 }
 export declare const UserSchema: MongooseSchema<UserDocument, Model<UserDocument>>;
 //# sourceMappingURL=user.schema.d.ts.map

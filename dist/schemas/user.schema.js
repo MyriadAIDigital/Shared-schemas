@@ -87,7 +87,7 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)({ type: Boolean, default: true }),
     __metadata("design:type", Boolean)
-], User.prototype, "isWalletActivate", void 0);
+], User.prototype, "isWalletActivated", void 0);
 exports.User = User = __decorate([
     (0, mongoose_1.Schema)({
         timestamps: true,
