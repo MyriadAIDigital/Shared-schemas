@@ -64,7 +64,7 @@ export class User {
     hasAccess!: boolean;
 
     @Prop({ type: Boolean, default: true })
-    isWalletActivate!: boolean;// Indicates if user currently has access
+    isWalletActivated!: boolean;// Indicates if user currently has access
 }
 
 export const UserSchema = SchemaFactory.createForClass(User) as unknown as MongooseSchema<

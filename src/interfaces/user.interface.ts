@@ -32,7 +32,7 @@ export interface IUser extends Document {
     priceId: string | null;        // Price/plan identifier
     planId: string | null;        // Plan identifier
     hasAccess: boolean;            // Indicates if user currently has access
-    isWalletActivate: boolean;     // Indicates if wallet is active
+    isWalletActivated: boolean;     // Indicates if wallet is active
     // Mongoose.timestamps के कारण अपने आप जुड़ जाते हैं:
     createdAt: Date;
     updatedAt: Date;
