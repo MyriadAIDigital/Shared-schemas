@@ -352,6 +352,14 @@ __decorate([
     (0, mongoose_1.Prop)({ required: true, index: true }),
     __metadata("design:type", Date)
 ], CallHistory.prototype, "createdAt", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({
+        type: String,
+        enum: user_enums_1.CurrencyType,
+        default: user_enums_1.CurrencyType.USD,
+    }),
+    __metadata("design:type", String)
+], CallHistory.prototype, "currencyType", void 0);
 exports.CallHistory = CallHistory = __decorate([
     (0, mongoose_1.Schema)({
         timestamps: true,

@@ -81,6 +81,10 @@ export declare enum CampaignMode {
     AGENT_IN = "AgentIn",
     NORMAL = "Normal"
 }
+export declare enum CurrencyType {
+    INR = "INR",
+    USD = "USD"
+}
 export declare enum ContactSourceType {
     FILE = "File",
     CONTACT_LIST_ID = "ContactListId",
@@ -98,8 +102,6 @@ export declare enum StepTypeEnum {
     WHATSAPP = "WHATSAPP",
     WEBHOOK = "WEBHOOK"
 }
-
-
 export declare enum WorkflowStepStatus {
     PENDING = "pending",
     IN_PROGRESS = "in-progress",
