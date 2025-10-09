@@ -126,6 +126,10 @@ __decorate([
     __metadata("design:type", String)
 ], CallTemplate.prototype, "voice", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: Object, default: {} }),
+    __metadata("design:type", Object)
+], CallTemplate.prototype, "templateContext", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ type: [SelectedTool], default: [] }),
     __metadata("design:type", Array)
 ], CallTemplate.prototype, "selectedTools", void 0);

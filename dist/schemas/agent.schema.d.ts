@@ -36,6 +36,7 @@ declare class BuiltInTool {
 declare class CallTemplate {
     systemPrompt: string;
     voice: string;
+    templateContext?: Record<string, any>;
     selectedTools?: SelectedTool[];
     builtInTools?: BuiltInTool[];
     corpusId?: string;

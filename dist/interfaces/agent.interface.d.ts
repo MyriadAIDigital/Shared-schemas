@@ -29,6 +29,7 @@ export interface ICallTemplate {
     systemPrompt: string;
     summarizePrompt: string;
     voice: string;
+    templateContext?: Record<string, any>;
     selectedTools?: ISelectedTool[];
     builtInTools?: IBuiltInTool[];
     corpusId?: string;
