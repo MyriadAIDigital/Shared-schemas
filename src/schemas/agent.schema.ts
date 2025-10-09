@@ -90,6 +90,9 @@ class CallTemplate {
   @Prop({ required: true })
   voice!: string;
 
+  @Prop({ type: Object, default: {} })
+  templateContext?: Record<string, any>;
+
   @Prop({ type: [SelectedTool], default: [] })
   selectedTools?: SelectedTool[];
 
