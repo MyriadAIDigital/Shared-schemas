@@ -53,6 +53,9 @@ export class CampaignContact {
     @Prop({ type: MongooseSchema.Types.Mixed, default: 'N/A' })
     additionalInfo!: Record<string, any> | string;
 
+    @Prop({ type: Object, default: {} })
+    metadata!: Record<string, any>;
+
     @Prop({ type: String, default: CallStatus.NOT_STARTED })
     lastCallStatus!: string;
 
@@ -61,6 +64,7 @@ export class CampaignContact {
 
     @Prop({ type: Date, default: () => moment().utc().toDate() })
     updatedAt!: Date;
+
 }
 
 export const CampaignContactSchema = SchemaFactory.createForClass(CampaignContact) as unknown as MongooseSchema<

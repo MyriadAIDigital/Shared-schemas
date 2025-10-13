@@ -17,6 +17,17 @@ export interface ICampaignContact {
     callMade: number; // Total number of call attempts
     lastCallStatus: string; // Last call status as a string
     additionalInfo: Record<string, any> | string; // Stores dynamic company-specific data as JSON or string
+    /**
+    * 🆕 Metadata field
+    * Used to store dynamic key–value pairs related to the contact.
+    * Example:
+    * {
+    *   "name": "Sateesh",
+    *   "secondName": "Test",
+    *   "preferredLanguage": "English"
+    * }
+    */
+    metadata: Record<string, any>; // Dynamic metadata for contact   
     createdAt: Date; // Record creation date
     updatedAt: Date; // Record last update date
 }
