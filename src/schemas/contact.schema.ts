@@ -78,6 +78,9 @@ export class Contact {
 
     @Prop({ type: SchemaTypes.Mixed, default: {} })
     additionalInfo!: Record<string, any> | string;
+    @Prop({ type: Object, default: {} })
+    metadata!: Record<string, any>;
+
 
     @Prop({ type: Date, default: () => moment().utc().toDate(), index: true })
     createdAt!: Date;
