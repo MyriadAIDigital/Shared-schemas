@@ -97,6 +97,10 @@ __decorate([
     __metadata("design:type", Object)
 ], Contact.prototype, "additionalInfo", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: Object, default: {} }),
+    __metadata("design:type", Object)
+], Contact.prototype, "metadata", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ type: Date, default: () => (0, moment_1.default)().utc().toDate(), index: true }),
     __metadata("design:type", Date)
 ], Contact.prototype, "createdAt", void 0);

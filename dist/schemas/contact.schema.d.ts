@@ -22,6 +22,7 @@ export declare class Contact {
         email: string;
     };
     additionalInfo: Record<string, any> | string;
+    metadata: Record<string, any>;
     createdAt: Date;
     updatedAt: Date;
 }
