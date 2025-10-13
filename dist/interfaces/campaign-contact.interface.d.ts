@@ -16,6 +16,17 @@ export interface ICampaignContact {
     callMade: number;
     lastCallStatus: string;
     additionalInfo: Record<string, any> | string;
+    /**
+    * 🆕 Metadata field
+    * Used to store dynamic key–value pairs related to the contact.
+    * Example:
+    * {
+    *   "name": "Sateesh",
+    *   "secondName": "Test",
+    *   "preferredLanguage": "English"
+    * }
+    */
+    metadata: Record<string, any>;
     createdAt: Date;
     updatedAt: Date;
 }

@@ -15,6 +15,7 @@ export declare class CampaignContact {
     connectedAttempt: number;
     callMade: number;
     additionalInfo: Record<string, any> | string;
+    metadata: Record<string, any>;
     lastCallStatus: string;
     createdAt: Date;
     updatedAt: Date;
