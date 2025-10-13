@@ -74,6 +74,10 @@ __decorate([
     __metadata("design:type", Object)
 ], CampaignContact.prototype, "additionalInfo", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: Object, default: {} }),
+    __metadata("design:type", Object)
+], CampaignContact.prototype, "metadata", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ type: String, default: user_enums_1.CallStatus.NOT_STARTED }),
     __metadata("design:type", String)
 ], CampaignContact.prototype, "lastCallStatus", void 0);
