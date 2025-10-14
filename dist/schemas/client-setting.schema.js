@@ -88,6 +88,7 @@ __decorate([
                 accountId: { type: String, default: null },
                 credits: { type: Number, default: 0 },
                 phoneNumbers: { type: [String], default: [] },
+                isCreatedByMyriadai: { type: Boolean, default: false },
             },
             twilio: {
                 enabled: { type: Boolean, default: false },
@@ -95,6 +96,7 @@ __decorate([
                 accountId: { type: String, default: null },
                 credits: { type: Number, default: 0 },
                 phoneNumbers: { type: [String], default: [] },
+                isCreatedByMyriadai: { type: Boolean, default: false },
             },
             defaultProvider: {
                 type: String,

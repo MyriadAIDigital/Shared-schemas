@@ -17,6 +17,7 @@ export interface WhatsappSetting {
 }
 export interface TelephonyProviderSetting {
     enabled: boolean;
+    isCreatedByMyriadai: boolean;
     apiKey: string | null;
     accountId: string | null;
     credits: number;
