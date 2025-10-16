@@ -63,6 +63,7 @@ export declare class Agent {
     voiceName: string;
     callingModel: string;
     displayVoiceName: string;
+    webhookId: string;
     regionCode: RegionCode;
     agentCreatedAt: Date;
     isCreatedByMyriadai: boolean;

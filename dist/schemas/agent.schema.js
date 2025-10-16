@@ -246,6 +246,10 @@ __decorate([
     __metadata("design:type", String)
 ], Agent.prototype, "displayVoiceName", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: String, default: '' }),
+    __metadata("design:type", String)
+], Agent.prototype, "webhookId", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ required: true, enum: user_enums_1.RegionCode, default: user_enums_1.RegionCode.IN }),
     __metadata("design:type", String)
 ], Agent.prototype, "regionCode", void 0);

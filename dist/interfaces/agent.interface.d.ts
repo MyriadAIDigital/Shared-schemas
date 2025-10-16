@@ -58,6 +58,7 @@ export interface IAgent {
     callTemplate: ICallTemplate;
     agentId: string;
     description?: string;
+    webhookId?: string;
     type: AgentType;
     voiceDbId: Types.ObjectId;
     voiceName: string;
