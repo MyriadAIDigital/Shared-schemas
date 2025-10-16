@@ -107,4 +107,4 @@ export const WorkflowSchema = SchemaFactory.createForClass(Workflow) as unknown 
     WorkflowDocument,
     Model<WorkflowDocument>
 >;
-WorkflowSchema.index({ name: 1 }, { unique: true });
+
