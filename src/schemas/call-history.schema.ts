@@ -2,7 +2,7 @@
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Model, Schema as MongooseSchema, Types } from 'mongoose';
-import { CallType, CurrencyType, TelephonicProviders, VoiceSource, SttProvider, CreditDeductionStatus } from '../enums/user-enums';
+import { CallType, CurrencyType, TelephonicProviders, VoiceSource, SttProvider, CreditDeductionStatus, ChannelType } from '../enums/user-enums';
 
 
 export type CallHistoryDocument = CallHistory & Document;
@@ -297,6 +297,9 @@ export class CallHistory {
         default: CurrencyType.USD,
     })
     currencyType!: CurrencyType;
+
+    @Prop({ required: true, enum: ChannelType, default: ChannelType.VOICE })
+    channel!: ChannelType;
 }
 
 export const CallHistorySchema = SchemaFactory.createForClass(CallHistory) as unknown as MongooseSchema<

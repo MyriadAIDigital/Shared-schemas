@@ -1,5 +1,5 @@
 import { Types } from 'mongoose';
-import { CallType, TelephonicProviders, VoiceSource, SttProvider, CreditDeductionStatus, CurrencyType } from '../enums/user-enums';
+import { CallType, TelephonicProviders, VoiceSource, SttProvider, CreditDeductionStatus, CurrencyType, ChannelType } from '../enums/user-enums';
 
 export interface IAlternateContact {
     name?: string;
@@ -126,6 +126,7 @@ export interface ICallHistory {
     serviceCharge?: number;
     totalCostWithService?: number;
     totalCostWithoutServiceCharge?: number;
+    channelType: ChannelType;
 
     // New “providerCallId” if your code writes it:
     providerCallId?: string;

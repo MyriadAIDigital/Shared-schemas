@@ -17,7 +17,7 @@ export interface ICampaign {
     defaultVoiceNameOrId: string; // Default system voice name or ID
     campaignMode: CampaignMode; // Campaign mode (e.g., AgentIn, Normal)
     name: string; // Campaign name
-    channel: ChannelType;
+    channelType: ChannelType;
     tenantID: string; // Tenant identifier
     type: CampaignType; // Campaign type
     telephonicProvider: TelephonicProviders; // Telephonic provider

@@ -138,7 +138,7 @@ export class Campaign {
 
     /** ✅ New: channel for all campaigns */
     @Prop({ required: true, enum: ChannelType, default: ChannelType.VOICE })
-    channel!: ChannelType;
+    channelType!: ChannelType;
 
 
     @Prop({ type: Boolean, default: false })
