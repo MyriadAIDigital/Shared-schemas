@@ -1,5 +1,5 @@
 import { Types } from 'mongoose';
-import { CallType, TelephonicProviders, VoiceSource, SttProvider, CreditDeductionStatus, CurrencyType } from '../enums/user-enums';
+import { CallType, TelephonicProviders, VoiceSource, SttProvider, CreditDeductionStatus, CurrencyType, ChannelType } from '../enums/user-enums';
 export interface IAlternateContact {
     name?: string;
     phone?: string;
@@ -81,6 +81,7 @@ export interface ICallHistory {
     serviceCharge?: number;
     totalCostWithService?: number;
     totalCostWithoutServiceCharge?: number;
+    channelType: ChannelType;
     providerCallId?: string;
     additionalMetadata?: Record<string, any>;
     whatsappMessages?: Array<Record<string, any>>;

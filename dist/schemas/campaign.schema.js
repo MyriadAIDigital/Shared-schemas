@@ -184,7 +184,7 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)({ required: true, enum: user_enums_1.ChannelType, default: user_enums_1.ChannelType.VOICE }),
     __metadata("design:type", String)
-], Campaign.prototype, "channel", void 0);
+], Campaign.prototype, "channelType", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: Boolean, default: false }),
     __metadata("design:type", Boolean)

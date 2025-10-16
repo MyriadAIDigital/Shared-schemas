@@ -44,7 +44,7 @@ export declare class Campaign {
     rescheduleCount: number;
     allowLateNightCalls: boolean;
     /** ✅ New: channel for all campaigns */
-    channel: ChannelType;
+    channelType: ChannelType;
     isEmailSend: boolean;
     clientCutoffStart: string;
     clientCutoffEnd: string;

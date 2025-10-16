@@ -1,5 +1,5 @@
 import { Document, Model, Schema as MongooseSchema, Types } from 'mongoose';
-import { CallType, CurrencyType, TelephonicProviders, VoiceSource, SttProvider, CreditDeductionStatus } from '../enums/user-enums';
+import { CallType, CurrencyType, TelephonicProviders, VoiceSource, SttProvider, CreditDeductionStatus, ChannelType } from '../enums/user-enums';
 export type CallHistoryDocument = CallHistory & Document;
 export declare class CallHistory {
     contactListId: Types.ObjectId;
@@ -87,6 +87,7 @@ export declare class CallHistory {
     creditDeductionErrorResponse: Record<string, any>;
     createdAt: Date;
     currencyType: CurrencyType;
+    channel: ChannelType;
 }
 export declare const CallHistorySchema: MongooseSchema<CallHistoryDocument, Model<CallHistoryDocument>>;
 //# sourceMappingURL=call-history.schema.d.ts.map
