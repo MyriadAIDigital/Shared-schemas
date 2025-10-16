@@ -286,6 +286,7 @@ export enum EndBehavior {
 
 export enum IconType {
     OUTBOUND = 'outbound',   // keeps backward compatibility with your current default
+    INBOUND = 'inbound',
     CALL = 'call',
     WHATSAPP = 'whatsapp',
     SMS = 'sms',
