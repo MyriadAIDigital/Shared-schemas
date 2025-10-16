@@ -1,7 +1,7 @@
 "use strict";
 // src/common/enum.ts
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.HttpMethod = exports.KnownValue = exports.ParameterLocation = exports.InitialOutputMedium = exports.ModelType = exports.RegionCode = exports.IconType = exports.EndBehavior = exports.CorpusStatus = exports.AgentToolsType = exports.AgentType = exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.QueueStatus = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CurrencyType = exports.CampaignMode = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.CorpusSourceType = exports.CorpusType = exports.Role = exports.CompanyName = void 0;
+exports.HttpMethod = exports.KnownValue = exports.ParameterLocation = exports.InitialOutputMedium = exports.ModelType = exports.RegionCode = exports.IconType = exports.EndBehavior = exports.CorpusStatus = exports.AgentToolsType = exports.AgentType = exports.CreditDeductionStatus = exports.CallStatus = exports.CallType = exports.QueueStatus = exports.CallQueueStatus = exports.FollowUpStatus = exports.RescheduleType = exports.OngoingStatusSubType = exports.CallingModel = exports.CampaignStatus = exports.OutboundPhoneNumber = exports.WorkflowStepStatus = exports.StepTypeEnum = exports.WorkflowTypeEnum = exports.ContactSourceType = exports.CurrencyType = exports.CampaignMode = exports.ChannelType = exports.CampaignType = exports.RetriggerStatus = exports.Timezone = exports.CountryCode = exports.listType = exports.VoiceSource = exports.VoiceType = exports.VoiceGender = exports.SttProvider = exports.TelephonicProviders = exports.TTSVOICE = exports.CorpusSourceType = exports.CorpusType = exports.Role = exports.CompanyName = void 0;
 var CompanyName;
 (function (CompanyName) {
     CompanyName["HAVISTO_TEA"] = "HAVISTO_TEA";
@@ -103,6 +103,14 @@ var CampaignType;
     CampaignType["INBOUND"] = "Inbound";
     CampaignType["ONDEMAND"] = "OnDemand";
 })(CampaignType || (exports.CampaignType = CampaignType = {}));
+var ChannelType;
+(function (ChannelType) {
+    ChannelType["VOICE"] = "Voice";
+    ChannelType["WHATSAPP"] = "WhatsApp";
+    ChannelType["EMAIL"] = "Email";
+    ChannelType["SMS"] = "SMS";
+    ChannelType["WEB_CHAT"] = "WebChat";
+})(ChannelType || (exports.ChannelType = ChannelType = {}));
 var CampaignMode;
 (function (CampaignMode) {
     CampaignMode["AGENT_IN"] = "AgentIn";

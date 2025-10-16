@@ -1,5 +1,5 @@
 import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
-import { VoiceType, VoiceSource, CallingModel, CampaignType, TelephonicProviders, CampaignStatus, ContactSourceType, OngoingStatusSubType, RescheduleType, CampaignMode } from '../enums/user-enums';
+import { VoiceType, VoiceSource, CallingModel, CampaignType, TelephonicProviders, CampaignStatus, ContactSourceType, OngoingStatusSubType, RescheduleType, CampaignMode, ChannelType } from '../enums/user-enums';
 export type CampaignDocument = Campaign & Document;
 export declare class Campaign {
     voiceGalleryId: Types.ObjectId;
@@ -43,6 +43,8 @@ export declare class Campaign {
     rescheduleType: RescheduleType;
     rescheduleCount: number;
     allowLateNightCalls: boolean;
+    /** ✅ New: channel for all campaigns */
+    channel: ChannelType;
     isEmailSend: boolean;
     clientCutoffStart: string;
     clientCutoffEnd: string;
