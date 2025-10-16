@@ -187,6 +187,9 @@ export class Agent {
   displayVoiceName!: string;
 
 
+  @Prop({ type: String, default: '' })
+  webhookId!: string;
+
   @Prop({ required: true, enum: RegionCode, default: RegionCode.IN })
   regionCode!: RegionCode;
 
