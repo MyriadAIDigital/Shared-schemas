@@ -134,4 +134,3 @@ exports.Workflow = Workflow = __decorate([
     })
 ], Workflow);
 exports.WorkflowSchema = mongoose_1.SchemaFactory.createForClass(Workflow);
-exports.WorkflowSchema.index({ name: 1 }, { unique: true });
