@@ -2,7 +2,7 @@
 
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types, Schema as MongooseSchema, Model } from 'mongoose';
-import { VoiceType, VoiceSource, CallingModel, CampaignType, TelephonicProviders, CampaignStatus, ContactSourceType, OngoingStatusSubType, RescheduleType, CampaignMode } from '../enums/user-enums';
+import { VoiceType, VoiceSource, CallingModel, CampaignType, TelephonicProviders, CampaignStatus, ContactSourceType, OngoingStatusSubType, RescheduleType, CampaignMode, ChannelType } from '../enums/user-enums';
 
 
 export type CampaignDocument = Campaign & Document;
@@ -135,6 +135,11 @@ export class Campaign {
 
     @Prop({ type: Boolean, default: false })
     allowLateNightCalls!: boolean;
+
+    /** ✅ New: channel for all campaigns */
+    @Prop({ required: true, enum: ChannelType, default: ChannelType.VOICE })
+    channel!: ChannelType;
+
 
     @Prop({ type: Boolean, default: false })
     isEmailSend!: boolean;

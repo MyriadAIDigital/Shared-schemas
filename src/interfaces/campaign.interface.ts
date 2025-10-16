@@ -1,5 +1,5 @@
 import { Types } from 'mongoose';
-import { CampaignType, CampaignStatus, VoiceSource, VoiceType, TelephonicProviders, RescheduleType, OngoingStatusSubType, CallingModel, ContactSourceType, CampaignMode } from '../enums/user-enums';
+import { CampaignType, CampaignStatus, VoiceSource, VoiceType, TelephonicProviders, RescheduleType, OngoingStatusSubType, CallingModel, ContactSourceType, CampaignMode, ChannelType } from '../enums/user-enums';
 
 export interface ICampaign {
     _id: Types.ObjectId;
@@ -17,6 +17,7 @@ export interface ICampaign {
     defaultVoiceNameOrId: string; // Default system voice name or ID
     campaignMode: CampaignMode; // Campaign mode (e.g., AgentIn, Normal)
     name: string; // Campaign name
+    channel: ChannelType;
     tenantID: string; // Tenant identifier
     type: CampaignType; // Campaign type
     telephonicProvider: TelephonicProviders; // Telephonic provider

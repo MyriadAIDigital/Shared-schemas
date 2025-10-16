@@ -103,6 +103,15 @@ export enum CampaignType {
     INBOUND = 'Inbound',
     ONDEMAND = 'OnDemand',
 }
+export enum ChannelType {
+    VOICE = 'Voice',
+    WHATSAPP = 'WhatsApp',
+    EMAIL = 'Email',
+    SMS = 'SMS',
+    WEB_CHAT = 'WebChat',
+}
+
+
 
 export enum CampaignMode {
     AGENT_IN = 'AgentIn',
