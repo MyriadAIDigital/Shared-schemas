@@ -267,6 +267,7 @@ var EndBehavior;
 var IconType;
 (function (IconType) {
     IconType["OUTBOUND"] = "outbound";
+    IconType["INBOUND"] = "inbound";
     IconType["CALL"] = "call";
     IconType["WHATSAPP"] = "whatsapp";
     IconType["SMS"] = "sms";
