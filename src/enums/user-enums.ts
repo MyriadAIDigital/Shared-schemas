@@ -289,6 +289,7 @@ export enum IconType {
     INBOUND = 'inbound',
     CALL = 'call',
     WHATSAPP = 'whatsapp',
+    WHATSAPP_CALL = 'whatsapp_call',
     SMS = 'sms',
     EMAIL = 'email',
     SOCIAL = 'social',       // generic social; specialize later if needed (e.g., 'linkedin', 'x')
