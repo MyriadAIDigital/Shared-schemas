@@ -270,6 +270,7 @@ var IconType;
     IconType["INBOUND"] = "inbound";
     IconType["CALL"] = "call";
     IconType["WHATSAPP"] = "whatsapp";
+    IconType["WHATSAPP_CALL"] = "whatsapp_call";
     IconType["SMS"] = "sms";
     IconType["EMAIL"] = "email";
     IconType["SOCIAL"] = "social";
