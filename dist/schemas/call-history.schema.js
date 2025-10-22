@@ -363,7 +363,7 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)({ required: true, enum: user_enums_1.ChannelType, default: user_enums_1.ChannelType.VOICE }),
     __metadata("design:type", String)
-], CallHistory.prototype, "channel", void 0);
+], CallHistory.prototype, "channelType", void 0);
 exports.CallHistory = CallHistory = __decorate([
     (0, mongoose_1.Schema)({
         timestamps: true,

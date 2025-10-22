@@ -87,7 +87,7 @@ export declare class CallHistory {
     creditDeductionErrorResponse: Record<string, any>;
     createdAt: Date;
     currencyType: CurrencyType;
-    channel: ChannelType;
+    channelType: ChannelType;
 }
 export declare const CallHistorySchema: MongooseSchema<CallHistoryDocument, Model<CallHistoryDocument>>;
 //# sourceMappingURL=call-history.schema.d.ts.map
