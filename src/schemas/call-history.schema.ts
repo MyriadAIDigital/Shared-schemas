@@ -299,7 +299,7 @@ export class CallHistory {
     currencyType!: CurrencyType;
 
     @Prop({ required: true, enum: ChannelType, default: ChannelType.VOICE })
-    channel!: ChannelType;
+    channelType!: ChannelType;
 }
 
 export const CallHistorySchema = SchemaFactory.createForClass(CallHistory) as unknown as MongooseSchema<
