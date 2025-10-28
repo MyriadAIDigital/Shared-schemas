@@ -82,8 +82,8 @@ __decorate([
     __metadata("design:type", String)
 ], Campaign.prototype, "outboundPhoneNo", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ required: false, default: '' }),
-    __metadata("design:type", String)
+    (0, mongoose_1.Prop)({ required: false, default: null }),
+    __metadata("design:type", Object)
 ], Campaign.prototype, "humanAgentNumber", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ default: true }),

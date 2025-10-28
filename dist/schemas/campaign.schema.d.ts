@@ -18,7 +18,7 @@ export declare class Campaign {
     type: CampaignType;
     telephonicProvider: TelephonicProviders;
     outboundPhoneNo: string;
-    humanAgentNumber: string;
+    humanAgentNumber: string | null;
     isLiveMode: boolean;
     startDate: string;
     startTime: string;
