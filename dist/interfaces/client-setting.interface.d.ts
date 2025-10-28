@@ -22,6 +22,7 @@ export interface TelephonyProviderSetting {
     accountId: string | null;
     credits: number;
     phoneNumbers: string[];
+    humanAgentNumbers: string[];
 }
 /**
  * Only includes providers that are enabled

@@ -31,6 +31,7 @@ export declare class ClientSetting {
             accountId: string | null;
             credits: number;
             phoneNumbers: string[];
+            humanAgentNumbers: string[];
         };
         twilio: {
             enabled: boolean;
@@ -38,6 +39,7 @@ export declare class ClientSetting {
             accountId: string | null;
             credits: number;
             phoneNumbers: string[];
+            humanAgentNumbers: string[];
         };
         defaultProvider: 'plivo' | 'twilio' | 'none';
     };
