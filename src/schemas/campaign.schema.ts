@@ -61,7 +61,7 @@ export class Campaign {
     @Prop({ required: true })
     outboundPhoneNo!: string;
 
-    @Prop({ required: true, default: '' })
+    @Prop({ required: false, default: '' })
     humanAgentNumber!: string;
 
 
