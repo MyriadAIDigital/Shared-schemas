@@ -61,6 +61,10 @@ export class Campaign {
     @Prop({ required: true })
     outboundPhoneNo!: string;
 
+    @Prop({ required: true, default: '' })
+    humanAgentNumber!: string;
+
+
     @Prop({ default: true })
     isLiveMode!: boolean;
 

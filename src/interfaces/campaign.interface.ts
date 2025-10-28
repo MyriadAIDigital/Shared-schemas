@@ -22,6 +22,7 @@ export interface ICampaign {
     type: CampaignType; // Campaign type
     telephonicProvider: TelephonicProviders; // Telephonic provider
     outboundPhoneNo: string; // Outbound phone number
+    humanAgentNumber: string; // Human agent's phone number
     isLiveMode: boolean; // Indicates live mode status
     startDate: string; // Campaign start date (YYYY-MM-DD)
     startTime: string; // Campaign start time (HH:mm A)

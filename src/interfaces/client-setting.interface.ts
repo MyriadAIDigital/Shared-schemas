@@ -28,6 +28,7 @@ export interface TelephonyProviderSetting {
     accountId: string | null;
     credits: number;
     phoneNumbers: string[];
+    humanAgentNumbers: string[];
 }
 
 /**

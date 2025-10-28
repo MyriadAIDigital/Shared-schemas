@@ -86,6 +86,7 @@ export class ClientSetting {
                 accountId: { type: String, default: null },
                 credits: { type: Number, default: 0 },
                 phoneNumbers: { type: [String], default: [] },
+                humanAgentNumbers: { type: [String], default: [] },
                 isCreatedByMyriadai: { type: Boolean, default: false },
             },
             twilio: {
@@ -94,6 +95,7 @@ export class ClientSetting {
                 accountId: { type: String, default: null },
                 credits: { type: Number, default: 0 },
                 phoneNumbers: { type: [String], default: [] },
+                humanAgentNumbers: { type: [String], default: [] },
                 isCreatedByMyriadai: { type: Boolean, default: false },
             },
             defaultProvider: {
@@ -109,6 +111,7 @@ export class ClientSetting {
                 accountId: null,
                 credits: 0,
                 phoneNumbers: [],
+                humanAgentNumbers: [],
             },
             twilio: {
                 enabled: false,
@@ -116,6 +119,7 @@ export class ClientSetting {
                 accountId: null,
                 credits: 0,
                 phoneNumbers: [],
+                humanAgentNumbers: [],
             },
             defaultProvider: 'none',
         },
@@ -127,6 +131,7 @@ export class ClientSetting {
             accountId: string | null;
             credits: number;
             phoneNumbers: string[];
+            humanAgentNumbers: string[];
         };
         twilio: {
             enabled: boolean;
@@ -134,6 +139,7 @@ export class ClientSetting {
             accountId: string | null;
             credits: number;
             phoneNumbers: string[];
+            humanAgentNumbers: string[];
         };
         defaultProvider: 'plivo' | 'twilio' | 'none';
     };
